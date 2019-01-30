@@ -1,0 +1,89 @@
+ {
+  "title" : "Robusta editor",
+  "namespace" : "http://b3mn.org/stencilset/cmmn1.1#",
+  "description" : "Robusta Custom case editor",
+  "propertyPackages" : [ {
+    "name" : "case_idpackage",
+    "properties" : [ {
+      "id" : "case_id",
+      "type" : "String",
+      "title" : "Case identifier",
+      "value" : "caseModel",
+      "description" : "Unique identifier of the case definition.",
+      "popular" : true
+    } ]
+  },{
+    "name" : "overrideidpackage",
+    "properties" : [ {
+      "id" : "overrideid",
+      "type" : "String",
+      "title" : "Id",
+      "value" : "",
+      "description" : "Unique identifier of the element.",
+      "popular" : true
+    } ]
+  }, {
+    "name" : "namepackage",
+    "properties" : [ {
+      "id" : "name",
+      "type" : "String",
+      "title" : "Name",
+      "value" : "",
+      "description" : "The descriptive name of the BPMN element.",
+      "popular" : true,
+      "refToView" : "text_name"
+    } ]
+  },  {
+    "name" : "documentationpackage",
+    "properties" : [ {
+      "id" : "documentation",
+      "type" : "Text",
+      "title" : "Documentation",
+      "value" : "",
+      "description" : "The descriptive name of the BPMN element.",
+      "popular" : true
+    } ]
+  }, {
+    "name" : "browsertaskbrowsernamepackage",
+    "properties" : [ {
+      "id" : "browsertaskbrowsername",
+      "type" : "String",
+      "title" : "* Browser Name",
+      "value" : "",
+      "description" : "Browser name",
+      "popular" : true
+    } ]
+  }, {
+    "name" : "browsertaskfieldpackage",
+    "properties" : [ {
+      "id" : "browsertaskfield",
+      "type" : "String",
+      "title" : "* Field",
+      "value" : "",
+      "description" : "Locator",
+      "popular" : true
+    } ]
+  }, {
+    "name" : "browsertaskwaittypepackage",
+    "properties" : [ {
+      "id" : "browsertaskwaittype",
+      "type" : "String",
+      "title" : "* Wait for (ENABLED,VISIBLE)",
+      "value" : "VISIBLE",
+      "description" : "Wait for",
+      "popular" : true
+    } ]
+  } ],
+  "stencils" : [ {
+    "type" : "node",
+    "id" : "CustomWebWaitTask",
+    "title" : "Web - Wait Actions",
+    "description" : "Wait actions",
+    "view" : "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<svg\n   xmlns=\"http://www.w3.org/2000/svg\"\n   xmlns:oryx=\"http://www.b3mn.org/oryx\"\n   width=\"40\"\n   height=\"40\"\n   version=\"1.0\">\n  <defs></defs>\n  <oryx:magnets>\n  \t<oryx:magnet oryx:cx=\"16\" oryx:cy=\"16\" oryx:default=\"yes\" />\n  </oryx:magnets>\n  <g pointer-events=\"fill\">\n    <circle id=\"bg_frame\" cx=\"16\" cy=\"16\" r=\"15\" stroke=\"#585858\" fill=\"#ffffff\" stroke-width=\"1\"/>\n\t<text font-size=\"11\" \n\t\tid=\"text_name\" \n\t\tx=\"16\" y=\"33\" \n\t\toryx:align=\"top center\" \n\t\tstroke=\"#373e48\"\n\t></text>\n  </g>\n</svg>",
+    "icon" : "activity/list/type.brw.wait.png",
+    "groups" : [ "Web Application" ],
+    "propertyPackages" : [ "overrideidpackage", "namepackage", "documentationpackage", "browsertaskbrowsernamepackage", "browsertaskfieldpackage",  "browsertaskwaittypepackage"],
+    "hiddenPropertyPackages" : [ ],
+    "roles" : [ "Activity", "sequence_start", "sequence_end", "ActivitiesMorph", "all" ]
+  }]
+ }

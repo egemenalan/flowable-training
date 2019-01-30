@@ -192,7 +192,7 @@
     <!-- BUILD -->
     <build>
 
-        <finalName>flowable-idm</finalName>
+        <finalName>idm</finalName>
 
         <resources>
             <resource>
