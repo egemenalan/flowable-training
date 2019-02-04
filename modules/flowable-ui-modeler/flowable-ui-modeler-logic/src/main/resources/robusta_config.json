@@ -1,0 +1,20 @@
+{
+	"name": "robusta",
+	"version": "1.0.0",
+	"author": "Robusta Inc",
+	"summary": "Installs, configures, and manages the BPMN service.",
+	"license": "Apache-2.0",
+	"source": "https://EArobusta@bitbucket.org/RobustaCA/robustaflowablebpmstudio.git",
+	"modulesfiles": [
+		{
+			"module": "Web App",
+			"path": "C://Robusta//Stencilset//WebAppStencils.json",
+			"description": "Robusta Custom Stencilset Web Apps"
+		},
+		{
+			"module": "ExcellOpt",
+			"path": "C://robusta/Stencilset/WebAppStencils.json",
+			"description": "Robusta Custom Stencilset Excell Apps"
+		}
+	]
+}
