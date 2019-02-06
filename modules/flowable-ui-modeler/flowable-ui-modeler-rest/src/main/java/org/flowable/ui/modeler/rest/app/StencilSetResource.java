@@ -12,9 +12,6 @@
  */
 package org.flowable.ui.modeler.rest.app;
 
-import java.io.FileWriter;
-import java.io.IOException;
-
 import org.flowable.ui.common.service.exception.InternalServerErrorException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,7 +22,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.robusta.util.RobustaConfigModels;
+import com.robusta.util.RobustaConfigPathReader;
+import com.robusta.util.RobustaJsonMerger;
 
 @RestController
 @RequestMapping("/app")
@@ -42,10 +41,11 @@ public class StencilSetResource {
 			JsonNode stencilNode = objectMapper
 					.readTree(this.getClass().getClassLoader().getResourceAsStream("stencilset_bpmn.json"));
 
-			JsonNode robusta = objectMapper
-					.readTree(this.getClass().getClassLoader().getResourceAsStream("custom_stencilset_webapp.json"));
+			String path = RobustaConfigPathReader.readPath(objectMapper, RobustaConfigModels.WEB_APP_AUTOMATION_CONFIG);
 
-			return insert(stencilNode, robusta);
+			JsonNode robusta = objectMapper.readTree(this.getClass().getClassLoader().getResourceAsStream(path));
+
+			return RobustaJsonMerger.insert(stencilNode, robusta);
 		} catch (Exception e) {
 			LOGGER.error("Error reading bpmn stencil set json", e);
 			throw new InternalServerErrorException("Error reading bpmn stencil set json");
@@ -58,10 +58,8 @@ public class StencilSetResource {
 		try {
 			JsonNode stencilNode = objectMapper
 					.readTree(this.getClass().getClassLoader().getResourceAsStream("stencilset_cmmn.json"));
-			JsonNode robusta = objectMapper
-					.readTree(this.getClass().getClassLoader().getResourceAsStream("custom_stencilset_webapp.json"));
 
-			return insert(stencilNode, robusta);
+			return stencilNode;
 
 		} catch (Exception e) {
 			LOGGER.error("Error reading bpmn stencil set json", e);
@@ -69,31 +67,4 @@ public class StencilSetResource {
 		}
 	}
 
-	/**
-	 * Robusta Custom Stencils Merge two JSON tree into one i.e mergedInTo.
-	 *
-	 * @param mainNode
-	 * @param updateNode
-	 * @return
-	 * @throws IOException
-	 */
-
-	public static JsonNode insert(JsonNode mainNode, JsonNode updateNode) throws IOException {
-		ArrayNode opp = (ArrayNode)mainNode.get("propertyPackages");
-		ArrayNode robustaPropertyPackages = (ArrayNode)updateNode.get("propertyPackages");
-		
-		for (int i = 0; i < robustaPropertyPackages.size(); i++) {
-			opp.add(robustaPropertyPackages.get(i));
-		}
-		
-		
-		ArrayNode os = (ArrayNode)mainNode.get("stencils");
-		ArrayNode robustaStencil = (ArrayNode)updateNode.get("stencils");
-		
-		for (int i = 0; i < robustaStencil.size(); i++) {
-			os.add(robustaStencil.get(i));
-		}
-
-   return mainNode;
-	}
 }

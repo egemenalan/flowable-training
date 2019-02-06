@@ -7,14 +7,14 @@
 	"source": "https://EArobusta@bitbucket.org/RobustaCA/robustaflowablebpmstudio.git",
 	"modulesfiles": [
 		{
-			"module": "Web App",
-			"path": "C://Robusta//Stencilset//WebAppStencils.json",
+			"module": "Robusta_Web_Application_Automation_Config",
+			"path": "robusta_custom_stencilset_webapp.json",
 			"description": "Robusta Custom Stencilset Web Apps"
 		},
 		{
-			"module": "ExcellOpt",
-			"path": "C://robusta/Stencilset/WebAppStencils.json",
-			"description": "Robusta Custom Stencilset Excell Apps"
+			"module": "Logo_Path",
+			"path": "C://logo.png",
+			"description": "Robusta Custom logo"
 		}
 	]
 }

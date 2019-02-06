@@ -1,5 +1,5 @@
 {
-  "title": "Web Application Automation",
+  "title": "Robusta Web Application Automation",
   "namespace": "http://b3mn.org/stencilset/bpmn2.0#",
   "description": "Components to automate web applications",
   "propertyPackages": [
