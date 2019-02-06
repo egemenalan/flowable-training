@@ -12,7 +12,7 @@ import javax.servlet.annotation.WebListener;
  */
 
 @WebListener
-public class ContexListsener implements ServletContextListener {
+public class RobustaContexListsener implements ServletContextListener {
 
     public void contextInitialized(ServletContextEvent servletContextEvent) {
     	
@@ -21,35 +21,12 @@ public class ContexListsener implements ServletContextListener {
     	
     	String customerLogoFilePath = tomcatHomeDirectory + java.io.File.separator 
     			+ "customer_configuration" + java.io.File.separator + "customer_logo.png";
-//    	String customerLogoFilePath = System.getProperty("user.dir")+ java.io.File.separator 
-//    			+ "customer_configuration" + java.io.File.separator + "customer_logo.png";
-    	
+
     	String outputFilePath = tomcatHomeDirectory + java.io.File.separator 
     			// FIXME prje ismi ve klasorler hard coded yazildi ileride degistirilirse sorun olur bunlari toplu bir konfigden almak gerek
     			+ "wtpwebapps"  + java.io.File.separator + "flowable-ui-admin-app" + java.io.File.separator + "WEB-INF"  + java.io.File.separator + "classes" + java.io.File.separator + "static"
-    			//+ servletContextEvent.getServletContext().getContextPath()
     			+ java.io.File.separator + "images" + java.io.File.separator +  "flowable-logo.png";
-    	
-//    	String outputFilePath = "wtpwebapps"  + java.io.File.separator + "flowable-ui-idm-app" + java.io.File.separator + "WEB-INF"  + java.io.File.separator + "classes" + java.io.File.separator + "static"
-//    			+ servletContextEvent.getServletContext().getContextPath()
-//    			+ java.io.File.separator + "images" + java.io.File.separator +  "flowable-logo.png";
-    			//C:\Flowable-Engine-WS\flowable-engine\modules\flowable-ui-idm\flowable-ui-idm-app\src\main
-    			
-    			//\wtpwebapps\flowable-ui-idm-app\WEB-INF\classes\static\images
-    			
-    			
-    			/*"flowable-ui-idm-app" + java.io.File.separator 
-    			+ "src" + java.io.File.separator 
-    			+ "main" + java.io.File.separator 
-    			+ "resources" + java.io.File.separator 
-    			+ "static" + java.io.File.separator 
-    			+ "images" + java.io.File.separator +  "flowable-logo@2x.png";
-    			*/
-    	//read
-    	//C:\Flowable-Engine-WS\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\customer_configuration\customer_logo.png
-    	//C:\Flowable-Engine-WS\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\webapps\flowable-ui-admin-app\images\flowable-logo.png
-    	
-    	//write
+
     	
     	BufferedImage img = null;
     	try {

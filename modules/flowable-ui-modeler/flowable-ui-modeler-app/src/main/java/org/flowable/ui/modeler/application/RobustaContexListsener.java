@@ -7,15 +7,16 @@ import javax.imageio.ImageIO;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
+
 /**
  * @author Egemen Alan
  */
 
 @WebListener
-public class ContexListsener implements ServletContextListener {
+public class RobustaContexListsener implements ServletContextListener {
 
     public void contextInitialized(ServletContextEvent servletContextEvent) {
-    	
+
     	System.out.println(System.getProperty("user.dir"));
     	String tomcatHomeDirectory = System.getProperty("catalina.base");
     	
