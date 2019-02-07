@@ -15,7 +15,7 @@ package org.flowable.editor.constants;
 /**
  * @author Tijs Rademakers
  */
-public interface StencilConstants {
+public interface StencilConstants{
 
     // stencil items
     final String STENCIL_EVENT_START_NONE = "StartNoneEvent";
@@ -51,7 +51,32 @@ public interface StencilConstants {
     final String STENCIL_TASK_HTTP = "HttpTask";
     final String STENCIL_TASK_SHELL = "ShellTask";
     final String STENCIL_TASK_DECISION = "DecisionTask";
+    
+    // Robusta Custom Part Egemen ALAN
+    final String STENCIL_TASK_WEBAPP = "CustomWebAppTask";
+    final String STENCIL_TASK_WEBMOUSE= "CustomWebMouseTask";
+    final String STENCIL_TASK_WEBWAIT= "CustomWebWaitTask";
+    final String STENCIL_TASK_WEBSET= "CustomWebSetTask";
+    final String STENCIL_TASK_WEBGET= "CustomWebGetTask";
+    final String STENCIL_TASK_WEBCLOSE= "CustomWebCloseTask";
+    final String STENCIL_TASK_WEBSCROLL= "CustomWebScrollTask";
+    final String STENCIL_TASK_WEBALERT= "CustomWebAlertTask";
+    final String STENCIL_TASK_WEBSWITCH= "CustomWebSwitchTask";
+    final String STENCIL_TASK_WEBDOWNLOAD= "CustomWebDownloadTask";
+    final String STENCIL_TASK_WEBCAPTURE= "CustomWebCaptureTask";
+    final String STENCIL_TASK_WEBFUNCTION= "CustomWebFunctionTask";
+    
+    final String STENCIL_TASK_EXCELAPP = "CustomExcelAppTask";
+    final String STENCIL_TASK_EXCELCLOSE = "CustomExcelCloseTask";
+    final String STENCIL_TASK_EXCELGET = "CustomExcelGetTask";
+    final String STENCIL_TASK_EXCELSET = "CustomExcelSetTask";
 
+    final String STENCIL_TASK_SCRAPEXCEL = "CustomScrapExcelTask";
+    final String STENCIL_TASK_SCRAPBROWSER = "CustomScrapBrowserTask";
+    final String STENCIL_TASK_SCRAPGET = "CustomScrapGetTask";
+    final String STENCIL_TASK_SCRAPEXPORTCSV = "CustomScrapExportCsvTask";
+    // Robusta Custom End
+    
     final String STENCIL_GATEWAY_EXCLUSIVE = "ExclusiveGateway";
     final String STENCIL_GATEWAY_PARALLEL = "ParallelGateway";
     final String STENCIL_GATEWAY_INCLUSIVE = "InclusiveGateway";
@@ -244,6 +269,70 @@ public interface StencilConstants {
     final String PROPERTY_MULETASK_PAYLOAD_EXPRESSION = "muletaskpayloadexpression";
     final String PROPERTY_MULETASK_RESULT_VARIABLE = "muletaskresultvariable";
 
+    // Robusta Custom Part Egemen ALAN
+    final String PROPERTY_BROWSERTASK_URL = "browsertaskurl";
+    final String PROPERTY_BROWSERTASK_TYPE = "browsertasktype";
+    final String PROPERTY_BROWSERTASK_RESULT_VARIABLE = "browsertaskresultvariable";
+    final String PROPERTY_BROWSERTASK_PAGE_LOAD = "browsertaskpageload";
+    final String PROPERTY_BROWSERTASK_ITEM_VISIBLE = "browsertaskvisible";
+    final String PROPERTY_BROWSERTASK_DOWNLOAD = "browsertaskdownload";
+    final String PROPERTY_BROWSERTASK_TIMEOUT = "browsertasktimeout";
+    final String PROPERTY_BROWSERTASK_PROFILE_PATH = "browsertaskprofilepath";
+    final String PROPERTY_BROWSERTASK_MAXIMIZE = "browsertaskmaximize";   
+    final String PROPERTY_BROWSERTASK_FIELD = "browsertaskfield";
+    final String PROPERTY_BROWSERTASK_NAME = "browsertaskbrowsername";
+    final String PROPERTY_BROWSERTASK_DBL = "browsertaskdbl";
+    final String PROPERTY_BROWSERTASK_HOVER = "browsertaskhover";
+    final String PROPERTY_BROWSERTASK_XOFFSET = "browsertaskxoffset";
+    final String PROPERTY_BROWSERTASK_YOFFSET = "browsertaskyoffset";
+    final String PROPERTY_BROWSERTASK_BUTTON = "browsertaskbutton";
+    final String PROPERTY_BROWSERTASK_WAIT_TYPE = "browsertaskwaittype";
+    final String PROPERTY_BROWSERTASK_SWITCH_TYPE = "browsertaskswtichtype";
+    final String PROPERTY_BROWSERTASK_TEXT_TYPE = "browsertasktexttype";
+    final String PROPERTY_BROWSERTASK_TEXT = "browsertasktext";
+    final String PROPERTY_BROWSERTASK_ATTR_NAME = "browsertaskattrname";
+    final String PROPERTY_BROWSERTASK_RET_RESULT_VARIABLE = "browsertaskretresultvariable";
+    final String PROPERTY_BROWSERTASK_ALERT_TYPE = "browsertaskalerttype";
+    final String PROPERTY_BROWSERTASKPROPERTY_EXCELTASK_NAME_SWITCH_TYPE = "browsertaskswitchtype";
+    final String PROPERTY_BROWSERTASK_MATCH_TYPE = "browsertaskmatchtype";
+    final String PROPERTY_BROWSERTASK_TITLE = "browsertasktitle";
+    final String PROPERTY_BROWSERTASK_FILENAME = "browsertaskfilename";
+    final String PROPERTY_BROWSERTASK_FUNCTION = "browsertaskfunction";
+    final String PROPERTY_BROWSERTASK_TABLE = "browsertasktable";
+    final String PROPERTY_BROWSERTASK_HEADER = "browsertaskheader";
+    final String PROPERTY_BROWSERTASK_ROW = "browsertaskrow";
+    final String PROPERTY_BROWSERTASK_COL = "browsertaskcol";
+    final String PROPERTY_BROWSERTASK_AD = "browsertaskad";
+    final String PROPERTY_BROWSERTASK_FIRSTRECORDHEADER = "browsertaskfirstrecordheader";
+    final String PROPERTY_BROWSERTASK_INITIALCLICK = "browsertaskinitialclick";
+    final String PROPERTY_BROWSERTASK_POPUP = "browsertaskpopup";
+    final String PROPERTY_BROWSERTASK_WAIT = "browsertaskwait";
+    final String PROPERTY_BROWSERTASK_NEXTPAGE = "browsertasknextpage";
+
+    final String PROPERTY_EXCELTASK_GETACTION = "exceltaskgetaction";
+    final String PROPERTY_EXCELTASK_FILENAME = "exceltaskfilename";
+    final String PROPERTY_EXCELTASK_NAME = "exceltaskexcelname";
+    final String PROPERTY_EXCELTASK_DATATABLE_NAME = "exceltaskdatatablename";
+    final String PROPERTY_EXCELTASK_SHEET = "exceltasksheet";
+    final String PROPERTY_EXCELTASK_RANGE = "exceltaskrange";
+    final String PROPERTY_EXCELTASK_FIRST_RECORD_HEADER = "exceltaskfirstrecordheader";
+    final String PROPERTY_EXCELTASK_FIRST_RECORD_NUM = "exceltaskfirstrecordnum";
+    final String PROPERTY_EXCELTASK_FETCH_DATA = "exceltaskfetchdata";
+    final String PROPERTY_EXCELTASK_FILTER = "exceltaskfilter";
+    final String PROPERTY_EXCELTASK_ROW = "exceltaskrow";
+    final String PROPERTY_EXCELTASK_COL = "exceltaskcol";
+    final String PROPERTY_EXCELTASK_VALUE = "exceltaskvalue";
+    final String PROPERTY_EXCELTASK_RET_EXCEL_NAME = "exceltaskretexcelname";
+    final String PROPERTY_EXCELTASK_RET_DATATABLE_NAME = "exceltaskretdatatablename";
+    final String PROPERTY_EXCELTASK_RESULT_VARIABLE = "exceltaskresultvariable";
+
+    final String PROPERTY_SCRAPTASK_RESULT_VARIABLE = "exceltaskresultvariable";
+    final String PROPERTY_SCRAPTASK_NAME = "scraptaskname";
+    final String PROPERTY_SCRAPTASK_FILENAME = "scraptaskfilename";
+    final String PROPERTY_SCRAPTASK_DELIMETER = "scraptaskdelimeter";
+    final String PROPERTY_SCRAPTASK_APPEND = "scraptaskappend";
+    // Robusta Custom End
+    
     final String PROPERTY_SEQUENCEFLOW_DEFAULT = "defaultflow";
     final String PROPERTY_SEQUENCEFLOW_CONDITION = "conditionsequenceflow";
     final String PROPERTY_SEQUENCEFLOW_ORDER = "sequencefloworder";

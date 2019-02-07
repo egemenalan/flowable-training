@@ -13,7 +13,7 @@
 		},
 		{
 			"module": "Logo_Path",
-			"path": "C://logo.png",
+			"path": "C://customer_logo.png",
 			"description": "Robusta Custom logo"
 		}
 	]
