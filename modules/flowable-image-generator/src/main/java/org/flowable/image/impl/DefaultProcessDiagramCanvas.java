@@ -124,6 +124,54 @@ public class DefaultProcessDiagramCanvas {
     protected static BufferedImage CAMEL_TASK_IMAGE;
     protected static BufferedImage HTTP_TASK_IMAGE;
 
+    /*
+     * 
+     *
+     *
+     *
+     * 
+     * 
+     * 
+     *  C U S T O M     P A R T
+     *
+     * 
+     * 
+     * 
+     * 
+     * 
+     * 
+     * 
+     */
+    protected static BufferedImage BROWSER_TASK_IMAGE;
+    protected static BufferedImage BRWMOUSE_TASK_IMAGE;
+    protected static BufferedImage BRWWAIT_TASK_IMAGE;
+    protected static BufferedImage BRWSET_TASK_IMAGE;
+    protected static BufferedImage BRWGET_TASK_IMAGE;
+    protected static BufferedImage BRWCLOSE_TASK_IMAGE;
+    protected static BufferedImage BRWSCROLL_TASK_IMAGE;
+    protected static BufferedImage BRWALERT_TASK_IMAGE;
+    protected static BufferedImage BRWSWITCH_TASK_IMAGE;
+    protected static BufferedImage BRWDOWNLOAD_TASK_IMAGE;
+    protected static BufferedImage BRWCAPTURE_TASK_IMAGE;
+    protected static BufferedImage BRWFUNCTION_TASK_IMAGE;
+    
+    protected static BufferedImage EXCELAPP_TASK_IMAGE;
+    protected static BufferedImage EXCELCLOSE_TASK_IMAGE;
+    protected static BufferedImage EXCELGET_TASK_IMAGE;
+    protected static BufferedImage EXCELSET_TASK_IMAGE;
+
+    protected static BufferedImage SCRAPEXCEL_TASK_IMAGE;
+    protected static BufferedImage SCRAPBROWSER_TASK_IMAGE;
+    protected static BufferedImage SCRAPGET_TASK_IMAGE;
+    protected static BufferedImage SCRAPEXPORTCSV_TASK_IMAGE;
+    /*
+     * 
+     * 
+     * END OF CUSTOM
+     * 
+     * 
+     */
+
     protected static BufferedImage TIMER_IMAGE;
     protected static BufferedImage COMPENSATE_THROW_IMAGE;
     protected static BufferedImage COMPENSATE_CATCH_IMAGE;
@@ -232,6 +280,53 @@ public class DefaultProcessDiagramCanvas {
             MULE_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/muleTask.png", customClassLoader));
             HTTP_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/httpTask.png", customClassLoader));
 
+            /*
+             * 
+             *
+             * 
+             * 
+             * 
+             * 
+             * 
+             * C U S T O M  P A R T
+             * 
+             * 
+             * 
+             * 
+             * 
+             * 
+             * 
+             */
+            BROWSER_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/browserTask.png", customClassLoader));
+            BRWMOUSE_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwMouseTask.png", customClassLoader));
+            BRWWAIT_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwWaitTask.png", customClassLoader));
+            BRWSET_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwSetTask.png", customClassLoader));
+            BRWGET_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwGetTask.png", customClassLoader));
+            BRWCLOSE_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwCloseTask.png", customClassLoader));
+            BRWSCROLL_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwScrollTask.png", customClassLoader));
+            BRWALERT_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwAlertTask.png", customClassLoader));
+            BRWSWITCH_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwSwitchTask.png", customClassLoader));
+            BRWDOWNLOAD_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwDownloadTask.png", customClassLoader));
+            BRWCAPTURE_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwCaptureTask.png", customClassLoader));
+            BRWFUNCTION_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwFunctionTask.png", customClassLoader));
+
+            EXCELAPP_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/excelTask.png", customClassLoader));
+            EXCELCLOSE_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/excelSaveTask.png", customClassLoader));
+            EXCELGET_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/excelGetTask.png", customClassLoader));
+            EXCELSET_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/excelSetTask.png", customClassLoader));
+
+            SCRAPEXCEL_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/excelTask.png", customClassLoader));
+            SCRAPBROWSER_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/browserTask.png", customClassLoader));
+            SCRAPGET_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/scrapGetTask.png", customClassLoader));
+            SCRAPEXPORTCSV_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/scrapExportCsvTask.png", customClassLoader));
+            /*
+             * 
+             * 
+             * END OF CUSTOM
+             * 
+             * 
+             */
+            
             TIMER_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/timer.png", customClassLoader));
             COMPENSATE_THROW_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/compensate-throw.png", customClassLoader));
             COMPENSATE_CATCH_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/compensate.png", customClassLoader));
@@ -288,7 +383,10 @@ public class DefaultProcessDiagramCanvas {
         minX = (minX <= 5) ? 5 : minX;
         minY = (minY <= 5) ? 5 : minY;
         BufferedImage imageToSerialize = processDiagram;
-        imageToSerialize = processDiagram.getSubimage(minX - 5, minY - 5, canvasWidth - minX + 5, canvasHeight - minY + 5);
+	
+        if (minX >= 0 && minY >= 0) { // Robusta Custom 
+            imageToSerialize = processDiagram.getSubimage(minX - 5, minY - 5, canvasWidth - minX + 5, canvasHeight - minY + 5);
+        }
         return imageToSerialize;
     }
 
@@ -793,15 +891,17 @@ public class DefaultProcessDiagramCanvas {
                 currentHeight += height;
             }
         }
-
-        float currentY = y + (centered ? ((boxHeight - currentHeight) / 2) : 0);
-        float currentX = 0;
+	int currentY = y + (centered ? ((boxHeight - currentHeight) / 2) : 0); //Robusta Custom
+        int currentX = 0; //Robusta Custom
+        //float currentY = y + (centered ? ((boxHeight - currentHeight) / 2) : 0);
+        //float currentX = 0;
 
         // Actually draw the lines
         for (TextLayout textLayout : layouts) {
 
             currentY += textLayout.getAscent();
-            currentX = x + (centered ? ((boxWidth - ((Double) textLayout.getBounds().getWidth()).floatValue()) / 2) : 0);
+	    currentX = x + (centered ? ((boxWidth - ((Double) textLayout.getBounds().getWidth()).intValue()) / 2) : 0); // Robusta Custom
+            //currentX = x + (centered ? ((boxWidth - ((Double) textLayout.getBounds().getWidth()).floatValue()) / 2) : 0);
 
             textLayout.draw(g, currentX, currentY);
             currentY += textLayout.getDescent() + textLayout.getLeading();
@@ -870,6 +970,115 @@ public class DefaultProcessDiagramCanvas {
         drawTask(MULE_TASK_IMAGE, name, graphicInfo, scaleFactor);
     }
 
+    /*
+     *
+     *
+     *
+     *
+     *
+     *
+     *
+     * 
+     * 
+     * C U S T O M   P A R T
+     *
+     * 
+     * 
+     * 
+     *
+     * 
+     * 
+     * 
+     * 
+     */
+       
+    public void drawBrowserTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
+        drawTask(BROWSER_TASK_IMAGE, name, graphicInfo, scaleFactor);
+    }
+
+    public void drawBrwMouseTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
+        drawTask(BRWMOUSE_TASK_IMAGE, name, graphicInfo, scaleFactor);
+    }
+
+    public void drawBrwCaptureTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
+        drawTask(BRWCAPTURE_TASK_IMAGE, name, graphicInfo, scaleFactor);
+    }
+
+    public void drawBrwDownloadTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
+        drawTask(BRWDOWNLOAD_TASK_IMAGE, name, graphicInfo, scaleFactor);
+    }
+
+    public void drawBrwFunctionTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
+        drawTask(BRWFUNCTION_TASK_IMAGE, name, graphicInfo, scaleFactor);
+    }
+
+    public void drawBrwSwitchTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
+        drawTask(BRWSWITCH_TASK_IMAGE, name, graphicInfo, scaleFactor);
+    }
+
+    public void drawBrwAlertTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
+        drawTask(BRWALERT_TASK_IMAGE, name, graphicInfo, scaleFactor);
+    }
+
+    public void drawBrwCloseTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
+        drawTask(BRWCLOSE_TASK_IMAGE, name, graphicInfo, scaleFactor);
+    }
+
+    public void drawBrwWaitTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
+        drawTask(BRWWAIT_TASK_IMAGE, name, graphicInfo, scaleFactor);
+    }
+
+    public void drawBrwSetTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
+        drawTask(BRWSET_TASK_IMAGE, name, graphicInfo, scaleFactor);
+    }
+
+    public void drawBrwGetTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
+        drawTask(BRWGET_TASK_IMAGE, name, graphicInfo, scaleFactor);
+    }
+
+    public void drawBrwScrollTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
+        drawTask(BRWSCROLL_TASK_IMAGE, name, graphicInfo, scaleFactor);
+    }
+
+    public void drawExcelTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
+        drawTask(EXCELAPP_TASK_IMAGE, name, graphicInfo, scaleFactor);
+    }
+
+    public void drawExcelCloseTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
+        drawTask(EXCELCLOSE_TASK_IMAGE, name, graphicInfo, scaleFactor);
+    }
+
+    public void drawExcelGetTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
+        drawTask(EXCELGET_TASK_IMAGE, name, graphicInfo, scaleFactor);
+    }
+
+    public void drawExcelSetTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
+        drawTask(EXCELSET_TASK_IMAGE, name, graphicInfo, scaleFactor);
+    }
+
+    public void drawScrapBrowserTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
+        drawTask(SCRAPBROWSER_TASK_IMAGE, name, graphicInfo, scaleFactor);
+    }
+
+    public void drawScrapExcelTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
+        drawTask(SCRAPEXCEL_TASK_IMAGE, name, graphicInfo, scaleFactor);
+    }
+
+    public void drawScrapGetTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
+        drawTask(SCRAPGET_TASK_IMAGE, name, graphicInfo, scaleFactor);
+    }
+
+    public void drawScrapExportCsvTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
+        drawTask(SCRAPEXPORTCSV_TASK_IMAGE, name, graphicInfo, scaleFactor);
+    }
+    /*
+     * 
+     * 
+     * End of custom
+     * 
+     * 
+     * 
+     */
     public void drawHttpTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
         drawTask(HTTP_TASK_IMAGE, name, graphicInfo, scaleFactor);
     }
@@ -1133,6 +1342,7 @@ public class DefaultProcessDiagramCanvas {
         g.setFont(ANNOTATION_FONT);
 
         Path2D path = new Path2D.Double();
+        x += .5; // Robusta Custom
         int lineLength = 18;
         path.moveTo(x + lineLength, y);
         path.lineTo(x, y);
@@ -1177,7 +1387,8 @@ public class DefaultProcessDiagramCanvas {
             g.setFont(LABEL_FONT);
 
             int wrapWidth = 100;
-            double textY = graphicInfo.getY();
+	    int textY = (int) graphicInfo.getY(); // Robusta Custom
+            //double textY = graphicInfo.getY();
 
             // TODO: use drawMultilineText()
             AttributedString as = new AttributedString(text);
@@ -1195,7 +1406,8 @@ public class DefaultProcessDiagramCanvas {
                 if (centered) {
                     tX += (int) (graphicInfo.getWidth() / 2 - bb.getWidth() / 2);
                 }
-                tl.draw(g, (float) tX, (float) textY);
+		tl.draw(g, (float) tX, textY); // Robusta Custom
+                //tl.draw(g, (float) tX, (float) textY);
                 textY += tl.getDescent() + tl.getLeading() + (interline - 1.0f) * tl.getAscent();
             }
 

@@ -36,7 +36,8 @@ public class ServiceTaskParseHandler extends AbstractActivityBpmnParseHandler<Se
     @Override
     protected void executeParse(BpmnParse bpmnParse, ServiceTask serviceTask) {
 
-        // Email, Mule, Http and Shell service tasks
+        System.out.println("ServiceTaskParseHandler-executeParse type:"+serviceTask.getType());
+    	// Email, Mule, Http and Shell service tasks
         if (StringUtils.isNotEmpty(serviceTask.getType())) {
 
             if (serviceTask.getType().equalsIgnoreCase("mail")) {
@@ -56,6 +57,11 @@ public class ServiceTaskParseHandler extends AbstractActivityBpmnParseHandler<Se
 
             } else if (serviceTask.getType().equalsIgnoreCase("http")) {
                 serviceTask.setBehavior(bpmnParse.getActivityBehaviorFactory().createHttpActivityBehavior(serviceTask));
+            } else if (serviceTask.getType().startsWith("custom")) {
+            	 
+            	 // Robusta Custom part Egemen ALAN
+            
+            	serviceTask.setBehavior(bpmnParse.getActivityBehaviorFactory().createClassDelegateServiceTask(serviceTask));
 
             } else {
                 LOGGER.warn("Invalid type: '{}' for service task {}", serviceTask.getType(), serviceTask.getId());

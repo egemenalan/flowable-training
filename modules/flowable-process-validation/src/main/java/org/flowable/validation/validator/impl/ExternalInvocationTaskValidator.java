@@ -93,6 +93,346 @@ public abstract class ExternalInvocationTaskValidator extends ProcessLevelValida
         }
     }
 
+     
+    // Robusta Custom Part Egemen ALAN
+    protected void validateFieldDeclarationsForBrowser(org.flowable.bpmn.model.Process process, TaskWithFieldExtensions task, List<FieldExtension> fieldExtensions, List<ValidationError> errors) {
+    	boolean urlDefined = false;
+    	boolean typeDefined = false;
+        boolean nameDefined = false;
+
+        for (FieldExtension fieldExtension : fieldExtensions) {
+            String fieldName = fieldExtension.getFieldName();
+            String fieldValue = fieldExtension.getStringValue();
+            String fieldExpression = fieldExtension.getExpression();
+
+            if (fieldName.equals("url") && ((fieldValue != null && fieldValue.length() > 0) || (fieldExpression != null && fieldExpression.length() > 0))) {
+                urlDefined = true;
+            }
+            if (fieldName.equals("type") && ((fieldValue != null && fieldValue.length() > 0) || (fieldExpression != null && fieldExpression.length() > 0))) {
+                typeDefined = true;
+            }
+            if (fieldName.equals("resultVariable") && ((fieldValue != null && fieldValue.length() > 0) || (fieldExpression != null && fieldExpression.length() > 0))) {
+                nameDefined = true;
+            }
+        }
+
+        if (!urlDefined) {
+            addError(errors, Problems.BRW_URL_NO_KEY, process, task, "No url address is defined on the browser activity");
+        }
+        if (!nameDefined) {
+            addError(errors, Problems.BRW_NAME_NO_KEY, process, task, "No browser name is defined on the browser activity");
+        }
+        if (!typeDefined) {
+            addError(errors, Problems.BRW_TYPE_NO_KEY, process, task, "No browser type is defined on the browser activity(e.g. CHROME)");
+        }
+    }
+
+    protected void validateFieldDeclarationsForBrwMouse(org.flowable.bpmn.model.Process process, TaskWithFieldExtensions task, List<FieldExtension> fieldExtensions, List<ValidationError> errors) {
+        boolean fieldDefined = false;
+        boolean nameDefined = false;
+
+        for (FieldExtension fieldExtension : fieldExtensions) {
+            String fieldName = fieldExtension.getFieldName();
+            String fieldValue = fieldExtension.getStringValue();
+            String fieldExpression = fieldExtension.getExpression();
+
+            if (fieldName.equals("field") && ((fieldValue != null && fieldValue.length() > 0) || (fieldExpression != null && fieldExpression.length() > 0))) {
+                fieldDefined = true;
+            }
+            if (fieldName.equals("browserName") && ((fieldValue != null && fieldValue.length() > 0) || (fieldExpression != null && fieldExpression.length() > 0))) {
+                nameDefined = true;
+            }
+            
+        }
+
+        if (!fieldDefined) {
+            addError(errors, Problems.BRW_FIELD_NO_KEY, process, task, "No field is defined on the browser");
+        }
+        if (!nameDefined) {
+            addError(errors, Problems.BRW_NAME_NO_KEY, process, task, "No browser name is defined on the browser");
+        }
+    }
+
+    protected void validateFieldDeclarationsForBrwFunction(org.flowable.bpmn.model.Process process, TaskWithFieldExtensions task, List<FieldExtension> fieldExtensions, List<ValidationError> errors) {
+        boolean fieldDefined = false;
+        boolean nameDefined = false;
+        boolean functionDefined = false;
+        boolean resultDefined = false;
+
+        for (FieldExtension fieldExtension : fieldExtensions) {
+            String fieldName = fieldExtension.getFieldName();
+            String fieldValue = fieldExtension.getStringValue();
+            String fieldExpression = fieldExtension.getExpression();
+
+            if (fieldName.equals("field") && ((fieldValue != null && fieldValue.length() > 0) || (fieldExpression != null && fieldExpression.length() > 0))) {
+                fieldDefined = true;
+            }
+            if (fieldName.equals("browserName") && ((fieldValue != null && fieldValue.length() > 0) || (fieldExpression != null && fieldExpression.length() > 0))) {
+                nameDefined = true;
+            }
+            if (fieldName.equals("function") && ((fieldValue != null && fieldValue.length() > 0) || (fieldExpression != null && fieldExpression.length() > 0))) {
+                functionDefined = true;
+            }
+            if (fieldName.equals("resultVariable") && ((fieldValue != null && fieldValue.length() > 0) || (fieldExpression != null && fieldExpression.length() > 0))) {
+                resultDefined = true;
+            }
+        }
+
+        if (!fieldDefined) {
+            addError(errors, Problems.BRW_FIELD_NO_KEY, process, task, "No field is defined on the browser");
+        }
+        if (!nameDefined) {
+            addError(errors, Problems.BRW_NAME_NO_KEY, process, task, "No browser name is defined on the browser");
+        }
+        if (!functionDefined) {
+            addError(errors, Problems.BRW_FUNCTION_NO_KEY, process, task, "No function is defined on the browser");
+        }
+        if (!resultDefined) {
+            addError(errors, Problems.SERVICE_TASK_RESULT_VAR_NAME_WITH_DELEGATE, process, task, "No result variable is defined on the browser");
+        }        
+    }
+
+    protected void validateFieldDeclarationsForBrwScroll(org.flowable.bpmn.model.Process process, TaskWithFieldExtensions task, List<FieldExtension> fieldExtensions, List<ValidationError> errors) {
+        boolean nameDefined = false;
+
+        for (FieldExtension fieldExtension : fieldExtensions) {
+            String fieldName = fieldExtension.getFieldName();
+            String fieldValue = fieldExtension.getStringValue();
+            String fieldExpression = fieldExtension.getExpression();
+
+            if (fieldName.equals("browserName") && ((fieldValue != null && fieldValue.length() > 0) || (fieldExpression != null && fieldExpression.length() > 0))) {
+                nameDefined = true;
+            }
+            
+        }
+
+        if (!nameDefined) {
+            addError(errors, Problems.BRW_NAME_NO_KEY, process, task, "No browser name is defined on the browser");
+        }
+    }
+
+    protected void validateFieldDeclarationsForBrwClose(org.flowable.bpmn.model.Process process, TaskWithFieldExtensions task, List<FieldExtension> fieldExtensions, List<ValidationError> errors) {
+        boolean nameDefined = false;
+
+        for (FieldExtension fieldExtension : fieldExtensions) {
+            String fieldName = fieldExtension.getFieldName();
+            String fieldValue = fieldExtension.getStringValue();
+            String fieldExpression = fieldExtension.getExpression();
+
+            if (fieldName.equals("browserName") && ((fieldValue != null && fieldValue.length() > 0) || (fieldExpression != null && fieldExpression.length() > 0))) {
+                nameDefined = true;
+            }
+            
+        }
+
+        if (!nameDefined) {
+            addError(errors, Problems.BRW_NAME_NO_KEY, process, task, "No browser name is defined on the browser");
+        }
+    }
+
+    protected void validateFieldDeclarationsForBrwWait(org.flowable.bpmn.model.Process process, TaskWithFieldExtensions task, List<FieldExtension> fieldExtensions, List<ValidationError> errors) {
+        boolean fieldDefined = false;
+        boolean nameDefined = false;
+        boolean typeDefined = false;
+
+        for (FieldExtension fieldExtension : fieldExtensions) {
+            String fieldName = fieldExtension.getFieldName();
+            String fieldValue = fieldExtension.getStringValue();
+            String fieldExpression = fieldExtension.getExpression();
+
+            if (fieldName.equals("field") && ((fieldValue != null && fieldValue.length() > 0) || (fieldExpression != null && fieldExpression.length() > 0))) {
+                fieldDefined = true;
+            }
+            if (fieldName.equals("browserName") && ((fieldValue != null && fieldValue.length() > 0) || (fieldExpression != null && fieldExpression.length() > 0))) {
+                nameDefined = true;
+            }
+            if (fieldName.equals("waitType") && ((fieldValue != null && fieldValue.length() > 0) || (fieldExpression != null && fieldExpression.length() > 0))) {
+                typeDefined = true;
+            }
+            
+        }
+
+        if (!fieldDefined) {
+            addError(errors, Problems.BRW_FIELD_NO_KEY, process, task, "No field is defined on the browser");
+        }
+        if (!nameDefined) {
+            addError(errors, Problems.BRW_NAME_NO_KEY, process, task, "No browser name is defined on the browser");
+        }
+        if (!typeDefined) {
+            addError(errors, Problems.BRW_WAIT_TYPE_NO_KEY, process, task, "No wait option is defined on the browser");
+        }
+    }
+
+
+    protected void validateFieldDeclarationsForBrwDownload(org.flowable.bpmn.model.Process process, TaskWithFieldExtensions task, List<FieldExtension> fieldExtensions, List<ValidationError> errors) {
+        boolean nameDefined = false;
+
+        for (FieldExtension fieldExtension : fieldExtensions) {
+            String fieldName = fieldExtension.getFieldName();
+            String fieldValue = fieldExtension.getStringValue();
+            String fieldExpression = fieldExtension.getExpression();
+
+            if (fieldName.equals("browserName") && ((fieldValue != null && fieldValue.length() > 0) || (fieldExpression != null && fieldExpression.length() > 0))) {
+                nameDefined = true;
+            }
+        }
+        if (!nameDefined) {
+            addError(errors, Problems.BRW_NAME_NO_KEY, process, task, "No browser name is defined on the browser");
+        }
+    }
+
+    protected void validateFieldDeclarationsForBrwSwitch(org.flowable.bpmn.model.Process process, TaskWithFieldExtensions task, List<FieldExtension> fieldExtensions, List<ValidationError> errors) {
+        boolean fieldDefined = false;
+        boolean nameDefined = false;
+        boolean typeDefined = false;
+
+        for (FieldExtension fieldExtension : fieldExtensions) {
+            String fieldName = fieldExtension.getFieldName();
+            String fieldValue = fieldExtension.getStringValue();
+            String fieldExpression = fieldExtension.getExpression();
+
+            if (fieldName.equals("browserName") && ((fieldValue != null && fieldValue.length() > 0) || (fieldExpression != null && fieldExpression.length() > 0))) {
+                nameDefined = true;
+            }
+            if (fieldName.equals("switchType") && ((fieldValue != null && fieldValue.length() > 0) || (fieldExpression != null && fieldExpression.length() > 0))) {
+                typeDefined = true;
+            }
+            
+        }
+
+        if (!nameDefined) {
+            addError(errors, Problems.BRW_NAME_NO_KEY, process, task, "No browser name is defined on the browser");
+        }
+        if (!typeDefined) {
+            addError(errors, Problems.BRW_SWITCH_TYPE_NO_KEY, process, task, "No switch action is defined on the browser");
+        }
+    }
+
+    protected void validateFieldDeclarationsForBrwAlert(org.flowable.bpmn.model.Process process, TaskWithFieldExtensions task, List<FieldExtension> fieldExtensions, List<ValidationError> errors) {
+        boolean fieldDefined = false;
+        boolean nameDefined = false;
+        boolean typeDefined = false;
+
+        for (FieldExtension fieldExtension : fieldExtensions) {
+            String fieldName = fieldExtension.getFieldName();
+            String fieldValue = fieldExtension.getStringValue();
+            String fieldExpression = fieldExtension.getExpression();
+            if (fieldName.equals("browserName") && ((fieldValue != null && fieldValue.length() > 0) || (fieldExpression != null && fieldExpression.length() > 0))) {
+                nameDefined = true;
+            }
+            if (fieldName.equals("alertType") && ((fieldValue != null && fieldValue.length() > 0) || (fieldExpression != null && fieldExpression.length() > 0))) {
+                typeDefined = true;
+            }
+            
+        }
+
+        if (!nameDefined) {
+            addError(errors, Problems.BRW_NAME_NO_KEY, process, task, "No browser name is defined on the browser");
+        }
+//        if (!typeDefined) {
+//            addError(errors, Problems.BRW_WAIT_TYPE_NO_KEY, process, task, "No wait option is defined on the browser");
+//        }
+    }
+
+    protected void validateFieldDeclarationsForBrwSet(org.flowable.bpmn.model.Process process, TaskWithFieldExtensions task, List<FieldExtension> fieldExtensions, List<ValidationError> errors) {
+        boolean fieldDefined = false;
+        boolean nameDefined = false;
+        boolean typeDefined = false;
+
+        for (FieldExtension fieldExtension : fieldExtensions) {
+            String fieldName = fieldExtension.getFieldName();
+            String fieldValue = fieldExtension.getStringValue();
+            String fieldExpression = fieldExtension.getExpression();
+
+            if (fieldName.equals("field") && ((fieldValue != null && fieldValue.length() > 0) || (fieldExpression != null && fieldExpression.length() > 0))) {
+                fieldDefined = true;
+            }
+            if (fieldName.equals("browserName") && ((fieldValue != null && fieldValue.length() > 0) || (fieldExpression != null && fieldExpression.length() > 0))) {
+                nameDefined = true;
+            }
+            if (fieldName.equals("textType") && ((fieldValue != null && fieldValue.length() > 0) || (fieldExpression != null && fieldExpression.length() > 0))) {
+                typeDefined = true;
+            }
+            
+        }
+
+        if (!fieldDefined) {
+            addError(errors, Problems.BRW_FIELD_NO_KEY, process, task, "No field is defined on the browser");
+        }
+        if (!nameDefined) {
+            addError(errors, Problems.BRW_NAME_NO_KEY, process, task, "No browser name is defined on the browser");
+        }
+        if (!typeDefined) {
+            addError(errors, Problems.BRW_TEXT_TYPE_NO_KEY, process, task, "No setting target option is defined on the browser");
+        }
+    }
+
+    protected void validateFieldDeclarationsForBrwCapture(org.flowable.bpmn.model.Process process, TaskWithFieldExtensions task, List<FieldExtension> fieldExtensions, List<ValidationError> errors) {
+        boolean fieldDefined = false;
+        boolean nameDefined = false;
+        boolean typeDefined = false;
+
+        for (FieldExtension fieldExtension : fieldExtensions) {
+            String fieldName = fieldExtension.getFieldName();
+            String fieldValue = fieldExtension.getStringValue();
+            String fieldExpression = fieldExtension.getExpression();
+
+            if (fieldName.equals("field") && ((fieldValue != null && fieldValue.length() > 0) || (fieldExpression != null && fieldExpression.length() > 0))) {
+                fieldDefined = true;
+            }
+            if (fieldName.equals("browserName") && ((fieldValue != null && fieldValue.length() > 0) || (fieldExpression != null && fieldExpression.length() > 0))) {
+                nameDefined = true;
+            }
+        }
+
+        if (!fieldDefined) {
+            addError(errors, Problems.BRW_FIELD_NO_KEY, process, task, "No field is defined on the browser");
+        }
+        if (!nameDefined) {
+            addError(errors, Problems.BRW_NAME_NO_KEY, process, task, "No browser name is defined on the browser");
+        }
+    }
+
+    protected void validateFieldDeclarationsForBrwGet(org.flowable.bpmn.model.Process process, TaskWithFieldExtensions task, List<FieldExtension> fieldExtensions, List<ValidationError> errors) {
+        boolean fieldDefined = false;
+        boolean nameDefined = false;
+        boolean typeDefined = false;
+        boolean resultDefined = false;
+
+        for (FieldExtension fieldExtension : fieldExtensions) {
+            String fieldName = fieldExtension.getFieldName();
+            String fieldValue = fieldExtension.getStringValue();
+            String fieldExpression = fieldExtension.getExpression();
+
+            if (fieldName.equals("field") && ((fieldValue != null && fieldValue.length() > 0) || (fieldExpression != null && fieldExpression.length() > 0))) {
+                fieldDefined = true;
+            }
+            if (fieldName.equals("browserName") && ((fieldValue != null && fieldValue.length() > 0) || (fieldExpression != null && fieldExpression.length() > 0))) {
+                nameDefined = true;
+            }
+            if (fieldName.equals("textType") && ((fieldValue != null && fieldValue.length() > 0) || (fieldExpression != null && fieldExpression.length() > 0))) {
+                typeDefined = true;
+            }
+            if (fieldName.equals("resultVariable") && ((fieldValue != null && fieldValue.length() > 0) || (fieldExpression != null && fieldExpression.length() > 0))) {
+                resultDefined = true;
+            }
+            
+        }
+
+        if (!fieldDefined) {
+            addError(errors, Problems.BRW_FIELD_NO_KEY, process, task, "No field is defined on the browser");
+        }
+        if (!nameDefined) {
+            addError(errors, Problems.BRW_NAME_NO_KEY, process, task, "No browser name is defined on the browser");
+        }
+        if (!typeDefined) {
+            addError(errors, Problems.BRW_TEXT_TYPE_NO_KEY, process, task, "No setting target option is defined on the browser");
+        }
+        if (!resultDefined) {
+            addError(errors, Problems.SERVICE_TASK_RESULT_VAR_NAME_WITH_DELEGATE, process, task, "No result variable is defined on the browser");
+        }        
+    }
+
     protected void validateFieldDeclarationsForHttp(org.flowable.bpmn.model.Process process, TaskWithFieldExtensions task, List<FieldExtension> fieldExtensions, List<ValidationError> errors) {
         boolean requestMethodDefined = false;
         boolean requestUrlDefined = false;

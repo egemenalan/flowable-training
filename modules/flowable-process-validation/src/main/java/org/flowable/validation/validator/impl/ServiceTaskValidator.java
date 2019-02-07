@@ -46,7 +46,9 @@ public class ServiceTaskValidator extends ExternalInvocationTaskValidator {
         if (!ImplementationType.IMPLEMENTATION_TYPE_CLASS.equalsIgnoreCase(serviceTask.getImplementationType())
                 && !ImplementationType.IMPLEMENTATION_TYPE_DELEGATEEXPRESSION.equalsIgnoreCase(serviceTask.getImplementationType())
                 && !ImplementationType.IMPLEMENTATION_TYPE_EXPRESSION.equalsIgnoreCase(serviceTask.getImplementationType())
-                && !ImplementationType.IMPLEMENTATION_TYPE_WEBSERVICE.equalsIgnoreCase(serviceTask.getImplementationType()) 
+                //&& !ImplementationType.IMPLEMENTATION_TYPE_WEBSERVICE.equalsIgnoreCase(serviceTask.getImplementationType()) 
+		//Robusta Custom
+		&& !ImplementationType.IMPLEMENTATION_TYPE_WEBSERVICE.equalsIgnoreCase(serviceTask.getImplementationType()) && StringUtils.isEmpty(serviceTask.getType())
                 && !ServiceTask.CASE_TASK.equalsIgnoreCase(serviceTask.getType()) 
                 && StringUtils.isEmpty(serviceTask.getType())) {
             
@@ -58,10 +60,16 @@ public class ServiceTaskValidator extends ExternalInvocationTaskValidator {
     protected void verifyType(Process process, ServiceTask serviceTask, List<ValidationError> errors) {
         if (StringUtils.isNotEmpty(serviceTask.getType())) {
 
-            if (!serviceTask.getType().equalsIgnoreCase("mail") && !serviceTask.getType().equalsIgnoreCase("mule") && !serviceTask.getType().equalsIgnoreCase("camel")
-                    && !serviceTask.getType().equalsIgnoreCase("shell") && !serviceTask.getType().equalsIgnoreCase("dmn") 
-                    && !serviceTask.getType().equalsIgnoreCase("http") && !serviceTask.getType().equalsIgnoreCase("case")) {
-
+            //if (!serviceTask.getType().equalsIgnoreCase("mail") && !serviceTask.getType().equalsIgnoreCase("mule") && !serviceTask.getType().equalsIgnoreCase("camel")
+            //        && !serviceTask.getType().equalsIgnoreCase("shell") && !serviceTask.getType().equalsIgnoreCase("dmn") 
+            //        && !serviceTask.getType().equalsIgnoreCase("http") && !serviceTask.getType().equalsIgnoreCase("case")) {
+	    
+	    //Robusta Custom
+	    if (!serviceTask.getType().equalsIgnoreCase("mail") && !serviceTask.getType().equalsIgnoreCase("mule") 
+            		&& !serviceTask.getType().equalsIgnoreCase("camel") && !serviceTask.getType().equalsIgnoreCase("shell") 
+            		&& !serviceTask.getType().equalsIgnoreCase("dmn") && !serviceTask.getType().equalsIgnoreCase("http")
+            		&& !serviceTask.getType().startsWith("custom"))
+            {
                 addError(errors, Problems.SERVICE_TASK_INVALID_TYPE, process, serviceTask, "Invalid or unsupported service task type");
             }
 
@@ -71,6 +79,32 @@ public class ServiceTaskValidator extends ExternalInvocationTaskValidator {
                 validateFieldDeclarationsForShell(process, serviceTask, serviceTask.getFieldExtensions(), errors);
             } else if (serviceTask.getType().equalsIgnoreCase("dmn")) {
                 validateFieldDeclarationsForDmn(process, serviceTask, serviceTask.getFieldExtensions(), errors);
+             
+                //Robusta Custom Part Egemen ALAN
+            } else if (serviceTask.getType().equalsIgnoreCase("customwebapp")) {
+                validateFieldDeclarationsForBrowser(process, serviceTask, serviceTask.getFieldExtensions(), errors);
+            } else if (serviceTask.getType().equalsIgnoreCase("customwebmouse")) {
+                validateFieldDeclarationsForBrwMouse(process, serviceTask, serviceTask.getFieldExtensions(), errors);
+            } else if (serviceTask.getType().equalsIgnoreCase("customwebdownload")) {
+                validateFieldDeclarationsForBrwDownload(process, serviceTask, serviceTask.getFieldExtensions(), errors);
+            } else if (serviceTask.getType().equalsIgnoreCase("customwebcapture")) {
+                validateFieldDeclarationsForBrwCapture(process, serviceTask, serviceTask.getFieldExtensions(), errors);
+            } else if (serviceTask.getType().equalsIgnoreCase("customwebalert")) {
+                validateFieldDeclarationsForBrwAlert(process, serviceTask, serviceTask.getFieldExtensions(), errors);
+            } else if (serviceTask.getType().equalsIgnoreCase("customwebscroll")) {
+                validateFieldDeclarationsForBrwScroll(process, serviceTask, serviceTask.getFieldExtensions(), errors);
+            } else if (serviceTask.getType().equalsIgnoreCase("customwebfunction")) {
+                validateFieldDeclarationsForBrwFunction(process, serviceTask, serviceTask.getFieldExtensions(), errors);
+            } else if (serviceTask.getType().equalsIgnoreCase("customwebswitch")) {
+                validateFieldDeclarationsForBrwSwitch(process, serviceTask, serviceTask.getFieldExtensions(), errors);
+            } else if (serviceTask.getType().equalsIgnoreCase("customwebclose")) {
+                validateFieldDeclarationsForBrwClose(process, serviceTask, serviceTask.getFieldExtensions(), errors);
+            } else if (serviceTask.getType().equalsIgnoreCase("customwebwait")) {
+                validateFieldDeclarationsForBrwWait(process, serviceTask, serviceTask.getFieldExtensions(), errors);
+            } else if (serviceTask.getType().equalsIgnoreCase("customwebset")) {
+                validateFieldDeclarationsForBrwSet(process, serviceTask, serviceTask.getFieldExtensions(), errors);
+            } else if (serviceTask.getType().equalsIgnoreCase("customwebget")) {
+                validateFieldDeclarationsForBrwGet(process, serviceTask, serviceTask.getFieldExtensions(), errors);
             } else if (serviceTask.getType().equalsIgnoreCase("http")) {
                 validateFieldDeclarationsForHttp(process, serviceTask, serviceTask.getFieldExtensions(), errors);
             } else if (serviceTask.getType().equalsIgnoreCase("case")) {
@@ -82,9 +116,11 @@ public class ServiceTaskValidator extends ExternalInvocationTaskValidator {
 
     protected void verifyResultVariableName(Process process, ServiceTask serviceTask, List<ValidationError> errors) {
         if (StringUtils.isNotEmpty(serviceTask.getResultVariableName())
-                && (ImplementationType.IMPLEMENTATION_TYPE_CLASS.equals(serviceTask.getImplementationType()) || 
-                                ImplementationType.IMPLEMENTATION_TYPE_DELEGATEEXPRESSION.equals(serviceTask.getImplementationType()))) {
-            
+                //&& (ImplementationType.IMPLEMENTATION_TYPE_CLASS.equals(serviceTask.getImplementationType()) || 
+                //                ImplementationType.IMPLEMENTATION_TYPE_DELEGATEEXPRESSION.equals(serviceTask.getImplementationType()))) {
+	     //Robusta Custom			
+             && (ImplementationType.IMPLEMENTATION_TYPE_CLASS.equals(serviceTask.getImplementationType()) || ImplementationType.IMPLEMENTATION_TYPE_DELEGATEEXPRESSION.equals(serviceTask
+                        .getImplementationType()))) {
             addError(errors, Problems.SERVICE_TASK_RESULT_VAR_NAME_WITH_DELEGATE, process, serviceTask, "'resultVariableName' not supported for service tasks using 'class' or 'delegateExpression");
         }
 

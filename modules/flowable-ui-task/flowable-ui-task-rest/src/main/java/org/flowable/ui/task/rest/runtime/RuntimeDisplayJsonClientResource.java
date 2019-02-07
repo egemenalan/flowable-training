@@ -409,6 +409,7 @@ public class RuntimeDisplayJsonClientResource {
 
                 if (element instanceof ServiceTask) {
                     ServiceTask serviceTask = (ServiceTask) element;
+                    System.out.println("RuntimeDisplayJsonClientResource.java type:"+serviceTask.getType());
                     if (ServiceTask.MAIL_TASK.equals(serviceTask.getType())) {
                         elementNode.put("taskType", "mail");
 
@@ -422,7 +423,10 @@ public class RuntimeDisplayJsonClientResource {
                         elementNode.put("taskType", "http");
                     } else if (ServiceTask.SHELL_TASK.equals(serviceTask.getType())) {
                         elementNode.put("taskType", "shell");
-                    }
+			//Robusta Custom Egemen ALAN
+                    } else if (serviceTask.getType().startsWith("custom")) {
+                        elementNode.put("taskType", serviceTask.getType());
+                    } 
                 }
 
                 if (propertyMappers.containsKey(className)) {

@@ -215,9 +215,10 @@ public class BpmnDisplayJsonConverter {
                 String className = element.getClass().getSimpleName();
                 elementNode.put("type", className);
                 fillEventTypes(className, element, elementNode);
-
+                System.out.println("BpmnDisplayJsonConverter-processElements type:"+className);
                 if (element instanceof ServiceTask) {
                     ServiceTask serviceTask = (ServiceTask) element;
+                    System.out.println("BpmnDisplayJsonConverter-processElements servicetype:"+serviceTask.getType());
                     if (ServiceTask.MAIL_TASK.equals(serviceTask.getType())) {
                         elementNode.put("taskType", "mail");
 
@@ -231,7 +232,11 @@ public class BpmnDisplayJsonConverter {
                         elementNode.put("taskType", "http");
                     } else if (ServiceTask.SHELL_TASK.equals(serviceTask.getType())) {
                         elementNode.put("taskType", "shell");
-                    }
+			//Robusta Custom Part Egemen ALAN
+                    } else if (serviceTask.getType().startsWith("custom")) {
+                        System.out.println("BpmnDisplayJsonConverter-processElements set custom:"+className);
+                        elementNode.put("taskType", serviceTask.getType());
+                    } 
 
                 } else if (element instanceof BoundaryEvent) {
                     BoundaryEvent boundaryEvent = (BoundaryEvent) element;

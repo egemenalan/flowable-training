@@ -154,4 +154,19 @@ FLOWABLE.PROPERTY_CONFIG =
             "readModeTemplateUrl": "editor-app/configuration/properties/trigger-mode-read-template.html",
             "writeModeTemplateUrl": "editor-app/configuration/properties/trigger-mode-write-template.html"
     },
+    /*Robusta Custom
+     * Egemen ALAN
+     */
+    "robusta-browser-type" : {
+        "readModeTemplateUrl": "editor-app/configuration/properties/default-value-display-template.html",
+        "writeModeTemplateUrl": "editor-app/configuration/properties/robusta-browser-type-property-write-template.html"
+    },
+    "robusta-browser-switch-type" : {
+        "readModeTemplateUrl": "editor-app/configuration/properties/default-value-display-template.html",
+        "writeModeTemplateUrl": "editor-app/configuration/properties/robusta-browser-switch-type-property-write-template.html"
+    },
+    "robusta-browser-alert-type" : {
+        "readModeTemplateUrl": "editor-app/configuration/properties/default-value-display-template.html",
+        "writeModeTemplateUrl": "editor-app/configuration/properties/robusta-browser-alert-type-property-write-template.html"
+    },
 };
