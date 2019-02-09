@@ -21,6 +21,7 @@ import org.flowable.bpmn.model.TaskWithFieldExtensions;
 import org.flowable.validation.ValidationError;
 import org.flowable.validation.validator.Problems;
 import org.flowable.validation.validator.ProcessLevelValidator;
+import org.flowable.validation.validator.RobustaWebProblems;
 
 public abstract class ExternalInvocationTaskValidator extends ProcessLevelValidator {
 
@@ -117,13 +118,13 @@ public abstract class ExternalInvocationTaskValidator extends ProcessLevelValida
         }
 
         if (!urlDefined) {
-            addError(errors, Problems.BRW_URL_NO_KEY, process, task, "No url address is defined on the browser activity");
+            addError(errors, RobustaWebProblems.BRW_URL_NO_KEY, process, task, "No url address is defined on the browser activity");
         }
         if (!nameDefined) {
-            addError(errors, Problems.BRW_NAME_NO_KEY, process, task, "No browser name is defined on the browser activity");
+            addError(errors, RobustaWebProblems.BRW_NAME_NO_KEY, process, task, "No browser name is defined on the browser activity");
         }
         if (!typeDefined) {
-            addError(errors, Problems.BRW_TYPE_NO_KEY, process, task, "No browser type is defined on the browser activity(e.g. CHROME)");
+            addError(errors, RobustaWebProblems.BRW_TYPE_NO_KEY, process, task, "No browser type is defined on the browser activity(e.g. CHROME)");
         }
     }
 
@@ -146,10 +147,10 @@ public abstract class ExternalInvocationTaskValidator extends ProcessLevelValida
         }
 
         if (!fieldDefined) {
-            addError(errors, Problems.BRW_FIELD_NO_KEY, process, task, "No field is defined on the browser");
+            addError(errors, RobustaWebProblems.BRW_FIELD_NO_KEY, process, task, "No field is defined on the browser");
         }
         if (!nameDefined) {
-            addError(errors, Problems.BRW_NAME_NO_KEY, process, task, "No browser name is defined on the browser");
+            addError(errors, RobustaWebProblems.BRW_NAME_NO_KEY, process, task, "No browser name is defined on the browser");
         }
     }
 
@@ -179,13 +180,13 @@ public abstract class ExternalInvocationTaskValidator extends ProcessLevelValida
         }
 
         if (!fieldDefined) {
-            addError(errors, Problems.BRW_FIELD_NO_KEY, process, task, "No field is defined on the browser");
+            addError(errors, RobustaWebProblems.BRW_FIELD_NO_KEY, process, task, "No field is defined on the browser");
         }
         if (!nameDefined) {
-            addError(errors, Problems.BRW_NAME_NO_KEY, process, task, "No browser name is defined on the browser");
+            addError(errors, RobustaWebProblems.BRW_NAME_NO_KEY, process, task, "No browser name is defined on the browser");
         }
         if (!functionDefined) {
-            addError(errors, Problems.BRW_FUNCTION_NO_KEY, process, task, "No function is defined on the browser");
+            addError(errors, RobustaWebProblems.BRW_FUNCTION_NO_KEY, process, task, "No function is defined on the browser");
         }
         if (!resultDefined) {
             addError(errors, Problems.SERVICE_TASK_RESULT_VAR_NAME_WITH_DELEGATE, process, task, "No result variable is defined on the browser");
@@ -207,7 +208,7 @@ public abstract class ExternalInvocationTaskValidator extends ProcessLevelValida
         }
 
         if (!nameDefined) {
-            addError(errors, Problems.BRW_NAME_NO_KEY, process, task, "No browser name is defined on the browser");
+            addError(errors, RobustaWebProblems.BRW_NAME_NO_KEY, process, task, "No browser name is defined on the browser");
         }
     }
 
@@ -226,7 +227,7 @@ public abstract class ExternalInvocationTaskValidator extends ProcessLevelValida
         }
 
         if (!nameDefined) {
-            addError(errors, Problems.BRW_NAME_NO_KEY, process, task, "No browser name is defined on the browser");
+            addError(errors, RobustaWebProblems.BRW_NAME_NO_KEY, process, task, "No browser name is defined on the browser");
         }
     }
 
@@ -253,13 +254,13 @@ public abstract class ExternalInvocationTaskValidator extends ProcessLevelValida
         }
 
         if (!fieldDefined) {
-            addError(errors, Problems.BRW_FIELD_NO_KEY, process, task, "No field is defined on the browser");
+            addError(errors, RobustaWebProblems.BRW_FIELD_NO_KEY, process, task, "No field is defined on the browser");
         }
         if (!nameDefined) {
-            addError(errors, Problems.BRW_NAME_NO_KEY, process, task, "No browser name is defined on the browser");
+            addError(errors, RobustaWebProblems.BRW_NAME_NO_KEY, process, task, "No browser name is defined on the browser");
         }
         if (!typeDefined) {
-            addError(errors, Problems.BRW_WAIT_TYPE_NO_KEY, process, task, "No wait option is defined on the browser");
+            addError(errors, RobustaWebProblems.BRW_WAIT_TYPE_NO_KEY, process, task, "No wait option is defined on the browser");
         }
     }
 
@@ -277,7 +278,7 @@ public abstract class ExternalInvocationTaskValidator extends ProcessLevelValida
             }
         }
         if (!nameDefined) {
-            addError(errors, Problems.BRW_NAME_NO_KEY, process, task, "No browser name is defined on the browser");
+            addError(errors, RobustaWebProblems.BRW_NAME_NO_KEY, process, task, "No browser name is defined on the browser");
         }
     }
 
@@ -301,10 +302,10 @@ public abstract class ExternalInvocationTaskValidator extends ProcessLevelValida
         }
 
         if (!nameDefined) {
-            addError(errors, Problems.BRW_NAME_NO_KEY, process, task, "No browser name is defined on the browser");
+            addError(errors, RobustaWebProblems.BRW_NAME_NO_KEY, process, task, "No browser name is defined on the browser");
         }
         if (!typeDefined) {
-            addError(errors, Problems.BRW_SWITCH_TYPE_NO_KEY, process, task, "No switch action is defined on the browser");
+            addError(errors, RobustaWebProblems.BRW_SWITCH_TYPE_NO_KEY, process, task, "No switch action is defined on the browser");
         }
     }
 
@@ -327,7 +328,7 @@ public abstract class ExternalInvocationTaskValidator extends ProcessLevelValida
         }
 
         if (!nameDefined) {
-            addError(errors, Problems.BRW_NAME_NO_KEY, process, task, "No browser name is defined on the browser");
+            addError(errors, RobustaWebProblems.BRW_NAME_NO_KEY, process, task, "No browser name is defined on the browser");
         }
 //        if (!typeDefined) {
 //            addError(errors, Problems.BRW_WAIT_TYPE_NO_KEY, process, task, "No wait option is defined on the browser");
@@ -357,13 +358,13 @@ public abstract class ExternalInvocationTaskValidator extends ProcessLevelValida
         }
 
         if (!fieldDefined) {
-            addError(errors, Problems.BRW_FIELD_NO_KEY, process, task, "No field is defined on the browser");
+            addError(errors, RobustaWebProblems.BRW_FIELD_NO_KEY, process, task, "No field is defined on the browser");
         }
         if (!nameDefined) {
-            addError(errors, Problems.BRW_NAME_NO_KEY, process, task, "No browser name is defined on the browser");
+            addError(errors, RobustaWebProblems.BRW_NAME_NO_KEY, process, task, "No browser name is defined on the browser");
         }
         if (!typeDefined) {
-            addError(errors, Problems.BRW_TEXT_TYPE_NO_KEY, process, task, "No setting target option is defined on the browser");
+            addError(errors, RobustaWebProblems.BRW_TEXT_TYPE_NO_KEY, process, task, "No setting target option is defined on the browser");
         }
     }
 
@@ -386,10 +387,10 @@ public abstract class ExternalInvocationTaskValidator extends ProcessLevelValida
         }
 
         if (!fieldDefined) {
-            addError(errors, Problems.BRW_FIELD_NO_KEY, process, task, "No field is defined on the browser");
+            addError(errors, RobustaWebProblems.BRW_FIELD_NO_KEY, process, task, "No field is defined on the browser");
         }
         if (!nameDefined) {
-            addError(errors, Problems.BRW_NAME_NO_KEY, process, task, "No browser name is defined on the browser");
+            addError(errors, RobustaWebProblems.BRW_NAME_NO_KEY, process, task, "No browser name is defined on the browser");
         }
     }
 
@@ -420,13 +421,13 @@ public abstract class ExternalInvocationTaskValidator extends ProcessLevelValida
         }
 
         if (!fieldDefined) {
-            addError(errors, Problems.BRW_FIELD_NO_KEY, process, task, "No field is defined on the browser");
+            addError(errors, RobustaWebProblems.BRW_FIELD_NO_KEY, process, task, "No field is defined on the browser");
         }
         if (!nameDefined) {
-            addError(errors, Problems.BRW_NAME_NO_KEY, process, task, "No browser name is defined on the browser");
+            addError(errors, RobustaWebProblems.BRW_NAME_NO_KEY, process, task, "No browser name is defined on the browser");
         }
         if (!typeDefined) {
-            addError(errors, Problems.BRW_TEXT_TYPE_NO_KEY, process, task, "No setting target option is defined on the browser");
+            addError(errors, RobustaWebProblems.BRW_TEXT_TYPE_NO_KEY, process, task, "No setting target option is defined on the browser");
         }
         if (!resultDefined) {
             addError(errors, Problems.SERVICE_TASK_RESULT_VAR_NAME_WITH_DELEGATE, process, task, "No result variable is defined on the browser");

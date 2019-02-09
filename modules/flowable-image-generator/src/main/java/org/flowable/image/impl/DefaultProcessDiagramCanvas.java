@@ -280,52 +280,30 @@ public class DefaultProcessDiagramCanvas {
             MULE_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/muleTask.png", customClassLoader));
             HTTP_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/httpTask.png", customClassLoader));
 
-            /*
-             * 
-             *
-             * 
-             * 
-             * 
-             * 
-             * 
-             * C U S T O M  P A R T
-             * 
-             * 
-             * 
-             * 
-             * 
-             * 
-             * 
-             */
+            //Robusta Custom Part Egemen Alan
             BROWSER_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/browserTask.png", customClassLoader));
-            BRWMOUSE_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwMouseTask.png", customClassLoader));
-            BRWWAIT_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwWaitTask.png", customClassLoader));
-            BRWSET_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwSetTask.png", customClassLoader));
-            BRWGET_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwGetTask.png", customClassLoader));
-            BRWCLOSE_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwCloseTask.png", customClassLoader));
-            BRWSCROLL_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwScrollTask.png", customClassLoader));
-            BRWALERT_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwAlertTask.png", customClassLoader));
-            BRWSWITCH_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwSwitchTask.png", customClassLoader));
-            BRWDOWNLOAD_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwDownloadTask.png", customClassLoader));
-            BRWCAPTURE_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwCaptureTask.png", customClassLoader));
-            BRWFUNCTION_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwFunctionTask.png", customClassLoader));
+//            BRWMOUSE_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwMouseTask.png", customClassLoader));
+//            BRWWAIT_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwWaitTask.png", customClassLoader));
+//            BRWSET_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwSetTask.png", customClassLoader));
+//            BRWGET_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwGetTask.png", customClassLoader));
+//            BRWCLOSE_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwCloseTask.png", customClassLoader));
+//            BRWSCROLL_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwScrollTask.png", customClassLoader));
+//            BRWALERT_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwAlertTask.png", customClassLoader));
+//            BRWSWITCH_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwSwitchTask.png", customClassLoader));
+//            BRWDOWNLOAD_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwDownloadTask.png", customClassLoader));
+//            BRWCAPTURE_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwCaptureTask.png", customClassLoader));
+//            BRWFUNCTION_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwFunctionTask.png", customClassLoader));
 
-            EXCELAPP_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/excelTask.png", customClassLoader));
-            EXCELCLOSE_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/excelSaveTask.png", customClassLoader));
-            EXCELGET_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/excelGetTask.png", customClassLoader));
-            EXCELSET_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/excelSetTask.png", customClassLoader));
-
-            SCRAPEXCEL_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/excelTask.png", customClassLoader));
-            SCRAPBROWSER_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/browserTask.png", customClassLoader));
-            SCRAPGET_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/scrapGetTask.png", customClassLoader));
-            SCRAPEXPORTCSV_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/scrapExportCsvTask.png", customClassLoader));
-            /*
-             * 
-             * 
-             * END OF CUSTOM
-             * 
-             * 
-             */
+//            EXCELAPP_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/excelTask.png", customClassLoader));
+//            EXCELCLOSE_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/excelSaveTask.png", customClassLoader));
+//            EXCELGET_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/excelGetTask.png", customClassLoader));
+//            EXCELSET_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/excelSetTask.png", customClassLoader));
+//
+//            SCRAPEXCEL_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/excelTask.png", customClassLoader));
+//            SCRAPBROWSER_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/browserTask.png", customClassLoader));
+//            SCRAPGET_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/scrapGetTask.png", customClassLoader));
+//            SCRAPEXPORTCSV_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/scrapExportCsvTask.png", customClassLoader));
+            // Robusta End Custom
             
             TIMER_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/timer.png", customClassLoader));
             COMPENSATE_THROW_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/compensate-throw.png", customClassLoader));

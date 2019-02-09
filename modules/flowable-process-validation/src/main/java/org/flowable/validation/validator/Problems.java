@@ -15,7 +15,7 @@ package org.flowable.validation.validator;
 /**
  * @author jbarrez
  */
-public interface Problems {
+public interface Problems extends RobustaWebProblems {
 
     String ALL_PROCESS_DEFINITIONS_NOT_EXECUTABLE = "flowable-process-definition-not-executable";
     String PROCESS_DEFINITION_NOT_EXECUTABLE = "flowable-specific-process-definition-not-executable";
@@ -130,16 +130,6 @@ public interface Problems {
     String DI_INVALID_REFERENCE = "flowable-di-invalid-reference";
     String DI_DOES_NOT_REFERENCE_FLOWNODE = "flowable-di-does-not-reference-flownode";
     String DI_DOES_NOT_REFERENCE_SEQ_FLOW = "flowable-di-does-not-reference-seq-flow";
-
-   // Robusta Custom Part Egemen ALAN
-    String BRW_URL_NO_KEY = "flowable-browsertask-no-url-key";
-    String BRW_NAME_NO_KEY = "flowable-browsertask-no-name-key";
-    String BRW_TYPE_NO_KEY = "flowable-browsertask-no-type-key";
-    String BRW_FIELD_NO_KEY = "flowable-browsertask-no-field-key";
-    String BRW_WAIT_TYPE_NO_KEY = "flowable-browsertask-no-wait-type-key";
-    String BRW_FUNCTION_NO_KEY = "flowable-browsertask-no-function-key";
-    String BRW_SWITCH_TYPE_NO_KEY = "flowable-browsertask-no-switch-type-key";
-    String BRW_TEXT_TYPE_NO_KEY = "flowable-browsertask-no-text-type-key";
     
     // Custom Part End
 }

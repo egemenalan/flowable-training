@@ -221,6 +221,49 @@ public class DefaultProcessDiagramGenerator implements ProcessDiagramGenerator {
                     processDiagramCanvas.drawDMNTask(serviceTask.getName(), graphicInfo, scaleFactor);
                 } else if (ServiceTask.SHELL_TASK.equalsIgnoreCase(serviceTask.getType())) {
                     processDiagramCanvas.drawShellTask(serviceTask.getName(), graphicInfo, scaleFactor);
+                
+                    //Robusta Custom Node Egemen ALAN
+                } else if ("customwebmouse".equalsIgnoreCase(serviceTask.getType())) {
+                    processDiagramCanvas.drawBrwMouseTask(serviceTask.getName(), graphicInfo, scaleFactor);
+                } else if ("customwebscroll".equalsIgnoreCase(serviceTask.getType())) {
+                    processDiagramCanvas.drawBrwScrollTask(serviceTask.getName(), graphicInfo, scaleFactor);
+                } else if ("customwebdownload".equalsIgnoreCase(serviceTask.getType())) {
+                    processDiagramCanvas.drawBrwDownloadTask(serviceTask.getName(), graphicInfo, scaleFactor);
+                } else if ("customwebcapture".equalsIgnoreCase(serviceTask.getType())) {
+                    processDiagramCanvas.drawBrwCaptureTask(serviceTask.getName(), graphicInfo, scaleFactor);
+                } else if ("customwebfunction".equalsIgnoreCase(serviceTask.getType())) {
+                    processDiagramCanvas.drawBrwFunctionTask(serviceTask.getName(), graphicInfo, scaleFactor);
+                } else if ("customwebswitch".equalsIgnoreCase(serviceTask.getType())) {
+                    processDiagramCanvas.drawBrwSwitchTask(serviceTask.getName(), graphicInfo, scaleFactor);
+                } else if ("customwebalert".equalsIgnoreCase(serviceTask.getType())) {
+                    processDiagramCanvas.drawBrwAlertTask(serviceTask.getName(), graphicInfo, scaleFactor);
+                } else if ("customwebclose".equalsIgnoreCase(serviceTask.getType())) {
+                    processDiagramCanvas.drawBrwCloseTask(serviceTask.getName(), graphicInfo, scaleFactor);
+                } else if ("customwebapp".equalsIgnoreCase(serviceTask.getType())) {
+                    processDiagramCanvas.drawBrowserTask(serviceTask.getName(), graphicInfo, scaleFactor);
+                } else if ("customwebwait".equalsIgnoreCase(serviceTask.getType())) {
+                    processDiagramCanvas.drawBrwWaitTask(serviceTask.getName(), graphicInfo, scaleFactor);
+                } else if ("customwebset".equalsIgnoreCase(serviceTask.getType())) {
+                    processDiagramCanvas.drawBrwSetTask(serviceTask.getName(), graphicInfo, scaleFactor);
+                } else if ("customwebget".equalsIgnoreCase(serviceTask.getType())) {
+                    processDiagramCanvas.drawBrwGetTask(serviceTask.getName(), graphicInfo, scaleFactor);
+                } else if ("customexcelapp".equalsIgnoreCase(serviceTask.getType())) {
+                    processDiagramCanvas.drawExcelTask(serviceTask.getName(), graphicInfo, scaleFactor);
+                } else if ("customexcelclose".equalsIgnoreCase(serviceTask.getType())) {
+                    processDiagramCanvas.drawExcelCloseTask(serviceTask.getName(), graphicInfo, scaleFactor);
+                } else if ("customexcelget".equalsIgnoreCase(serviceTask.getType())) {
+                    processDiagramCanvas.drawExcelGetTask(serviceTask.getName(), graphicInfo, scaleFactor);
+                } else if ("customexcelset".equalsIgnoreCase(serviceTask.getType())) {
+                    processDiagramCanvas.drawExcelSetTask(serviceTask.getName(), graphicInfo, scaleFactor);
+                } else if ("customscrapexcel".equalsIgnoreCase(serviceTask.getType())) {
+                    processDiagramCanvas.drawScrapExcelTask(serviceTask.getName(), graphicInfo, scaleFactor);
+                } else if ("customscrapbrowser".equalsIgnoreCase(serviceTask.getType())) {
+                	System.out.println("DefaultProcessDiagramGenerator-custom scrap browser");
+                    processDiagramCanvas.drawScrapBrowserTask(serviceTask.getName(), graphicInfo, scaleFactor);
+                } else if ("customscrapget".equalsIgnoreCase(serviceTask.getType())) {
+                    processDiagramCanvas.drawScrapGetTask(serviceTask.getName(), graphicInfo, scaleFactor);
+                } else if ("customscrapexportcsv".equalsIgnoreCase(serviceTask.getType())) {
+                    processDiagramCanvas.drawScrapExportCsvTask(serviceTask.getName(), graphicInfo, scaleFactor);
                 } else {
                     processDiagramCanvas.drawServiceTask(serviceTask.getName(), graphicInfo, scaleFactor);
                 }

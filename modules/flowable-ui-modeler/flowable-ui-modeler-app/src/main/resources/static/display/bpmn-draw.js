@@ -140,7 +140,15 @@ function _drawAdhocSubProcess(element)
         "fill" : "#373e48"
   	});
 }
-
+//Robusta Custom
+function _drawWebOpenBrowser(element)
+{
+	var webOpenBrowser = _drawEvent(element, NORMAL_STROKE, 15);
+	webOpenBrowser.click(function() {
+		_zoom(true);
+	});
+	_addHoverLogic(element, "circle", MAIN_STROKE_COLOR);
+}
 function _drawStartEvent(element)
 {
 	var startEvent = _drawEvent(element, NORMAL_STROKE, 15);
