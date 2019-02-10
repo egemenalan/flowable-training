@@ -16,7 +16,7 @@ public class RobustaContexListsener implements ServletContextListener {
 
     public void contextInitialized(ServletContextEvent servletContextEvent) {
     	
-    	
+    	System.out.println("Egemen-İDM");
     	System.out.println(System.getProperty("user.dir"));
     	String tomcatHomeDirectory = System.getProperty("catalina.base");
     	
@@ -53,14 +53,14 @@ public class RobustaContexListsener implements ServletContextListener {
     	//write
     	
     	BufferedImage img = null;
-    	try {
-    	    img = ImageIO.read(new File(customerLogoFilePath));
-    	    
-    	    ImageIO.write(img, "png", new File(outputFilePath));
-    	    
-    	} catch (IOException e) {
-    		e.printStackTrace();
-    	}
+//    	try {
+//    	    img = ImageIO.read(new File(customerLogoFilePath));
+//    	    
+//    	    ImageIO.write(img, "png", new File(outputFilePath));
+//    	    
+//    	} catch (IOException e) {
+//    		e.printStackTrace();
+//    	}
     	
     	System.out.println(tomcatHomeDirectory);
     	System.out.println(customerLogoFilePath);

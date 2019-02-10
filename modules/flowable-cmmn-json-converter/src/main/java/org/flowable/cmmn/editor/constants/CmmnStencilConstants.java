@@ -62,6 +62,7 @@ public interface CmmnStencilConstants {
 
     String PROPERTY_FORMKEY = "formkeydefinition";
     String PROPERTY_FORM_REFERENCE = "formreference";
+    String PROPERTY_FORM_FIELD_VALIDATION = "formfieldvalidation";
 
     String PROPERTY_IS_BLOCKING = "isblocking";
     String PROPERTY_IS_BLOCKING_EXPRESSION = "isblockingexpression";
@@ -171,6 +172,6 @@ public interface CmmnStencilConstants {
     String PROPERTY_TIMER_START_TRIGGER_SOURCE_REF = "timerstarttriggersourceref";
     String PROPERTY_TIMER_START_TRIGGER_STANDARD_EVENT = "transitionevent";
 
-    String PROPERTY_EVENT_LISTENER_CREATE_CONDITION = "createcondition";
+    String PROPERTY_EVENT_LISTENER_AVAILABLE_CONDITION = "availablecondition";
 
 }

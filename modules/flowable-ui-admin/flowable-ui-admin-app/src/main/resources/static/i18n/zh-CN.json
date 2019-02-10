@@ -1,45 +1,45 @@
 {
     "GENERAL": {
-        "YES": "是",
-        "NO": "否",
+        "YES": "æ˜¯",
+        "NO": "å�¦",
         "ACTION": {
-            "LOGOUT": "退出",
-            "DISMISS-ALERT": "单击此处可删除此消息",
-            "RETURN-TO-LIST": "返回列表",
-            "SHOW-RESULTS": "显示{{size}}结果集",
-            "REFRESH-LIST": "刷新列表",
-            "SORT-BY": "根据{{sort}}排序",
-            "CLEAR-FILTERS": "清除过滤器",
-            "CANCEL-AND-CLOSE": "取消并且关闭",
-            "CANCEL": "取消",
-            "NEXT": "下一页",
-            "PREVIOUS": "上一页",
-            "CLOSE": "关闭",
-            "SHOWLICENSE": "许可证信息"
+            "LOGOUT": "é€€å‡º",
+            "DISMISS-ALERT": "å�•å‡»æ­¤å¤„å�¯åˆ é™¤æ­¤æ¶ˆæ�¯",
+            "RETURN-TO-LIST": "è¿”å›�åˆ—è¡¨",
+            "SHOW-RESULTS": "æ˜¾ç¤º{{size}}ç»“æ�œé›†",
+            "REFRESH-LIST": "åˆ·æ–°åˆ—è¡¨",
+            "SORT-BY": "æ ¹æ�®{{sort}}æ�’åº�",
+            "CLEAR-FILTERS": "æ¸…é™¤è¿‡æ»¤å™¨",
+            "CANCEL-AND-CLOSE": "å�–æ¶ˆå¹¶ä¸”å…³é—­",
+            "CANCEL": "å�–æ¶ˆ",
+            "NEXT": "ä¸‹ä¸€é¡µ",
+            "PREVIOUS": "ä¸Šä¸€é¡µ",
+            "CLOSE": "å…³é—­",
+            "SHOWLICENSE": "è®¸å�¯è¯�ä¿¡æ�¯"
         },
         "TITLE": {
-            "MAIN": "flowable管理员",
-            "ACTIONS": "动作",
-            "FILTERS": "过滤器"
+            "MAIN": "flowableç®¡ç�†å‘˜",
+            "ACTIONS": "åŠ¨ä½œ",
+            "FILTERS": "è¿‡æ»¤å™¨"
         },
         "MENU": {
-            "PROCESS-ENGINE": "流程引擎",
-            "CMMN-ENGINE": "CMMN引擎",
-            "APP-ENGINE": "App引擎",
-            "FORM-ENGINE": "表单引擎",
-            "CONTENT-ENGINE": "Content引擎",
-            "DMN-ENGINE": "DMN引擎",
-            "DEPLOYMENTS": "部署对象",
-            "DEFINITIONS": "定义",
-            "INSTANCES": "实例",
-            "TASKS": "任务",
+            "PROCESS-ENGINE": "æµ�ç¨‹å¼•æ“�",
+            "CMMN-ENGINE": "CMMNå¼•æ“�",
+            "APP-ENGINE": "Appå¼•æ“�",
+            "FORM-ENGINE": "è¡¨å�•å¼•æ“�",
+            "CONTENT-ENGINE": "Contentå¼•æ“�",
+            "DMN-ENGINE": "DMNå¼•æ“�",
+            "DEPLOYMENTS": "éƒ¨ç½²å¯¹è±¡",
+            "DEFINITIONS": "å®šä¹‰",
+            "INSTANCES": "å®�ä¾‹",
+            "TASKS": "ä»»åŠ¡",
             "JOBS": "Jobs",
-            "EVENT-SUBSCRIPTIONS": "事件订阅",
-            "CONFIGURATION": "配置",
-            "CONFIGURATION-ENGINE": "引擎",
-            "DECISION-TABLES": "决策表",
-            "DECISION-TABLE-EXECUTIONS": "执行实例",
-            "CONTENT-ITEMS": "Content主题"
+            "EVENT-SUBSCRIPTIONS": "äº‹ä»¶è®¢é˜…",
+            "CONFIGURATION": "é…�ç½®",
+            "CONFIGURATION-ENGINE": "å¼•æ“�",
+            "DECISION-TABLES": "å†³ç­–è¡¨",
+            "DECISION-TABLE-EXECUTIONS": "æ‰§è¡Œå®�ä¾‹",
+            "CONTENT-ITEMS": "Contentä¸»é¢˜"
         },
         "RESULT-SIZES": {
             "10": "10",
@@ -51,1184 +51,1184 @@
     },
     "PROCESS-DEFINITION": {
         "ID": "ID:",
-        "NAME": "名称:",
-        "VERSION": "版本:",
-        "DESCRIPTION": "描述:",
+        "NAME": "å��ç§°:",
+        "VERSION": "ç‰ˆæœ¬:",
+        "DESCRIPTION": "æ��è¿°:",
         "KEY": "Key:",
-        "CATEGORY": "分类:",
-        "SUSPENDED": "挂起:",
-        "DEPLOYMENT": "部署:",
-        "TENANT": "租户:",
-        "START-FORM-DEFINED": "开始表单定义:",
-        "GRAPHICAL-NOTATION-DEFINED": "图形符号定义:",
-        "PROCESS-INSTANCES-SIZE": "定义有 {{total}}个流程实例正在运行",
-        "PROCESS-INSTANCES-SHOWING": ", 显示 {{size}}个最近启动的",
-        "PROCESS-INSTANCES-EMPTY": "定义中没有运行的流程实例",
-        "JOBS-SIZE": "定义有{{total}}个jobs正在运行",
-        "JOBS-EMPTY": "定义中没有运行的jobs",
-        "DECISION-TABLES-SIZE": "定义有 {{total}}个决策表.",
-        "DECISION-TABLES-EMPTY": "定义中没有决策表.",
-        "FORM-DEFINITIONS-SIZE": "定义有 {{total}}个表单定义.",
-        "FORM-DEFINITIONS-EMPTY": "定义中没有表单定义.",
+        "CATEGORY": "åˆ†ç±»:",
+        "SUSPENDED": "æŒ‚èµ·:",
+        "DEPLOYMENT": "éƒ¨ç½²:",
+        "TENANT": "ç§Ÿæˆ·:",
+        "START-FORM-DEFINED": "å¼€å§‹è¡¨å�•å®šä¹‰:",
+        "GRAPHICAL-NOTATION-DEFINED": "å›¾å½¢ç¬¦å�·å®šä¹‰:",
+        "PROCESS-INSTANCES-SIZE": "å®šä¹‰æœ‰ {{total}}ä¸ªæµ�ç¨‹å®�ä¾‹æ­£åœ¨è¿�è¡Œ",
+        "PROCESS-INSTANCES-SHOWING": ", æ˜¾ç¤º {{size}}ä¸ªæœ€è¿‘å�¯åŠ¨çš„",
+        "PROCESS-INSTANCES-EMPTY": "å®šä¹‰ä¸­æ²¡æœ‰è¿�è¡Œçš„æµ�ç¨‹å®�ä¾‹",
+        "JOBS-SIZE": "å®šä¹‰æœ‰{{total}}ä¸ªjobsæ­£åœ¨è¿�è¡Œ",
+        "JOBS-EMPTY": "å®šä¹‰ä¸­æ²¡æœ‰è¿�è¡Œçš„jobs",
+        "DECISION-TABLES-SIZE": "å®šä¹‰æœ‰ {{total}}ä¸ªå†³ç­–è¡¨.",
+        "DECISION-TABLES-EMPTY": "å®šä¹‰ä¸­æ²¡æœ‰å†³ç­–è¡¨.",
+        "FORM-DEFINITIONS-SIZE": "å®šä¹‰æœ‰ {{total}}ä¸ªè¡¨å�•å®šä¹‰.",
+        "FORM-DEFINITIONS-EMPTY": "å®šä¹‰ä¸­æ²¡æœ‰è¡¨å�•å®šä¹‰.",
         "TITLE": {
-            "PROCESS-INSTANCES": "流程实例",
+            "PROCESS-INSTANCES": "æµ�ç¨‹å®�ä¾‹",
             "JOBS": "Jobs",
-            "DECISION-TABLES": "决策表",
-            "FORMS": "表单定义"
+            "DECISION-TABLES": "å†³ç­–è¡¨",
+            "FORMS": "è¡¨å�•å®šä¹‰"
         },
         "ACTION": {
-            "EDIT-CATEGORY": "编辑分类",
-            "SHOW-ALL-JOBS": "显示所有的jobs",
-            "SHOW-ALL-PROCESSES": "显示所有的历程",
-            "SHOW-DIAGRAM": "显示流程图片"
+            "EDIT-CATEGORY": "ç¼–è¾‘åˆ†ç±»",
+            "SHOW-ALL-JOBS": "æ˜¾ç¤ºæ‰€æœ‰çš„jobs",
+            "SHOW-ALL-PROCESSES": "æ˜¾ç¤ºæ‰€æœ‰çš„å�†ç¨‹",
+            "SHOW-DIAGRAM": "æ˜¾ç¤ºæµ�ç¨‹å›¾ç‰‡"
         },
         "POPUP": {
             "EDIT-CATEGORY": {
-                "TITLE": "定义编辑分类",
-                "MESSAGE": "从BPMN 2 XM中的目标命名空间属性填充定义的初始分类, 但部署后可以更改。",
-                "CATEGORY": "分类",
-                "CATEGORY-PLACEHOLDER": "输入一个分类",
-                "CONFIRM": "更新分类"
+                "TITLE": "å®šä¹‰ç¼–è¾‘åˆ†ç±»",
+                "MESSAGE": "ä»�BPMN 2 XMä¸­çš„ç›®æ ‡å‘½å��ç©ºé—´å±�æ€§å¡«å……å®šä¹‰çš„åˆ�å§‹åˆ†ç±», ä½†éƒ¨ç½²å��å�¯ä»¥æ›´æ”¹ã€‚",
+                "CATEGORY": "åˆ†ç±»",
+                "CATEGORY-PLACEHOLDER": "è¾“å…¥ä¸€ä¸ªåˆ†ç±»",
+                "CONFIRM": "æ›´æ–°åˆ†ç±»"
             },
             "SHOW-PROCESS-MODEL": {
-                "TITLE": "流程图片"
+                "TITLE": "æµ�ç¨‹å›¾ç‰‡"
             }
         }
     },
     "PROCESS-DEFINITIONS": {
-        "LIST-MESSAGE": "显示{{size}}个结果, 匹配到的定义总数{{total}}",
-        "LIST-MESSAGE-EMPTY": "没有匹配的流程定义.",
+        "LIST-MESSAGE": "æ˜¾ç¤º{{size}}ä¸ªç»“æ�œ, åŒ¹é…�åˆ°çš„å®šä¹‰æ€»æ•°{{total}}",
+        "LIST-MESSAGE-EMPTY": "æ²¡æœ‰åŒ¹é…�çš„æµ�ç¨‹å®šä¹‰.",
         "FILTER": {
-            "NAME": "名称(case sensitive)",
+            "NAME": "å��ç§°(case sensitive)",
             "KEY": "Key (case sensitive)",
-            "DEPLOYMENT-ID": "部署ID",
-            "TENANT-ID": "租户ID",
-            "LATEST": "最新版本",
-            "LATEST-HELP": "只显示最新版本"
+            "DEPLOYMENT-ID": "éƒ¨ç½²ID",
+            "TENANT-ID": "ç§Ÿæˆ·ID",
+            "LATEST": "æœ€æ–°ç‰ˆæœ¬",
+            "LATEST-HELP": "å�ªæ˜¾ç¤ºæœ€æ–°ç‰ˆæœ¬"
         },
         "TITLE": {
-            "MAIN": "流程定义"
+            "MAIN": "æµ�ç¨‹å®šä¹‰"
         },
         "SORT": {
             "ID": "ID",
-            "NAME": "名称",
-            "VERSION": "版本"
+            "NAME": "å��ç§°",
+            "VERSION": "ç‰ˆæœ¬"
         },
         "HEADER": {
             "ID": "ID",
-            "NAME": "名称",
-            "VERSION": "版本",
+            "NAME": "å��ç§°",
+            "VERSION": "ç‰ˆæœ¬",
             "KEY": "Key",
-            "TENANT": "租户"
+            "TENANT": "ç§Ÿæˆ·"
         },
         "ACTIONS": {
-            "UPLOAD-FROM-MODELER": "从Flowable编辑编辑器上传"
+            "UPLOAD-FROM-MODELER": "ä»�Flowableç¼–è¾‘ç¼–è¾‘å™¨ä¸Šä¼ "
         },
         "POPUP": {
             "UPLOAD-FROM-MODELER": {
-                "NAME": "用户名",
-                "PASSWORD": "密码",
-                "ERROR": "我们不能连接到编辑器",
-                "UNAUTHORIZED": "域相关参数设置有误",
-                "UPLOAD-DESCRIPTION": "流程模型现在将被获取并部署到当前活动的Flowable集群中。为部署包选择适当的名称。"
+                "NAME": "ç”¨æˆ·å��",
+                "PASSWORD": "å¯†ç �",
+                "ERROR": "æˆ‘ä»¬ä¸�èƒ½è¿�æ�¥åˆ°ç¼–è¾‘å™¨",
+                "UNAUTHORIZED": "åŸŸç›¸å…³å�‚æ•°è®¾ç½®æœ‰è¯¯",
+                "UPLOAD-DESCRIPTION": "æµ�ç¨‹æ¨¡å�‹ç�°åœ¨å°†è¢«è�·å�–å¹¶éƒ¨ç½²åˆ°å½“å‰�æ´»åŠ¨çš„Flowableé›†ç¾¤ä¸­ã€‚ä¸ºéƒ¨ç½²åŒ…é€‰æ‹©é€‚å½“çš„å��ç§°ã€‚"
             }
         }
     },
     "PROCESS-INSTANCE": {
         "ID": "ID:",
-        "NAME": "名称:",
-        "DESCRIPTION": "描述:",
+        "NAME": "å��ç§°:",
+        "DESCRIPTION": "æ��è¿°:",
         "BUSINESS-KEY": "Business key:",
-        "TENANT-ID": "租户:",
-        "STATUS": "状态:",
-        "STATUS-ACTIVE": "有效",
-        "STATUS-COMPLETED": "完成的",
-        "ACTIVITY-ID-STARTED": "启动的活动ID:",
-        "ACTIVITY-ID-ENDED": "结束的活动:",
-        "DELETE-REASON": "删除原因:",
+        "TENANT-ID": "ç§Ÿæˆ·:",
+        "STATUS": "çŠ¶æ€�:",
+        "STATUS-ACTIVE": "æœ‰æ•ˆ",
+        "STATUS-COMPLETED": "å®Œæˆ�çš„",
+        "ACTIVITY-ID-STARTED": "å�¯åŠ¨çš„æ´»åŠ¨ID:",
+        "ACTIVITY-ID-ENDED": "ç»“æ�Ÿçš„æ´»åŠ¨:",
+        "DELETE-REASON": "åˆ é™¤å�Ÿå› :",
         "STARTED-BY": "Started by:",
-        "END-TIME": "结束时间:",
-        "DURATION": "持续时间:",
-        "SUPER-PROCESS-INSTANCE-ID": "父流程实例ID:",
-        "TASKS-SIZE": "这个流程实例有{{total}}个任务.",
-        "TASKS-EMPTY": "这个流程实例没有任务.",
-        "VARIABLES-SIZE": "这个流程实例有{{total}}个变量.",
-        "VARIABLES-EMPTY": "这个流程实例没有变量.",
-        "JOBS-SIZE": "这个流程实例有{{total}}个jobs.",
-        "JOBS-EMPTY": "这个流程实例没有jobs.",
-        "流程图片-SIZE": "这个流程实例有{{total}}个子流程.",
-        "SUBPROCESSES-EMPTY": "这个流程实例没有子流程.",
-        "DECISION-TABLES-SIZE": "这个流程实例有{{total}}个决策表.",
-        "DECISION-TABLES-EMPTY": "这个流程实例没有决策表.",
-        "FORM-INSTANCES-SIZE": "这个流程实例有{{total}}个表单实例.",
-        "FORM-INSTANCES-EMPTY": "这个流程实例没有子流程.",
+        "END-TIME": "ç»“æ�Ÿæ—¶é—´:",
+        "DURATION": "æŒ�ç»­æ—¶é—´:",
+        "SUPER-PROCESS-INSTANCE-ID": "çˆ¶æµ�ç¨‹å®�ä¾‹ID:",
+        "TASKS-SIZE": "è¿™ä¸ªæµ�ç¨‹å®�ä¾‹æœ‰{{total}}ä¸ªä»»åŠ¡.",
+        "TASKS-EMPTY": "è¿™ä¸ªæµ�ç¨‹å®�ä¾‹æ²¡æœ‰ä»»åŠ¡.",
+        "VARIABLES-SIZE": "è¿™ä¸ªæµ�ç¨‹å®�ä¾‹æœ‰{{total}}ä¸ªå�˜é‡�.",
+        "VARIABLES-EMPTY": "è¿™ä¸ªæµ�ç¨‹å®�ä¾‹æ²¡æœ‰å�˜é‡�.",
+        "JOBS-SIZE": "è¿™ä¸ªæµ�ç¨‹å®�ä¾‹æœ‰{{total}}ä¸ªjobs.",
+        "JOBS-EMPTY": "è¿™ä¸ªæµ�ç¨‹å®�ä¾‹æ²¡æœ‰jobs.",
+        "æµ�ç¨‹å›¾ç‰‡-SIZE": "è¿™ä¸ªæµ�ç¨‹å®�ä¾‹æœ‰{{total}}ä¸ªå­�æµ�ç¨‹.",
+        "SUBPROCESSES-EMPTY": "è¿™ä¸ªæµ�ç¨‹å®�ä¾‹æ²¡æœ‰å­�æµ�ç¨‹.",
+        "DECISION-TABLES-SIZE": "è¿™ä¸ªæµ�ç¨‹å®�ä¾‹æœ‰{{total}}ä¸ªå†³ç­–è¡¨.",
+        "DECISION-TABLES-EMPTY": "è¿™ä¸ªæµ�ç¨‹å®�ä¾‹æ²¡æœ‰å†³ç­–è¡¨.",
+        "FORM-INSTANCES-SIZE": "è¿™ä¸ªæµ�ç¨‹å®�ä¾‹æœ‰{{total}}ä¸ªè¡¨å�•å®�ä¾‹.",
+        "FORM-INSTANCES-EMPTY": "è¿™ä¸ªæµ�ç¨‹å®�ä¾‹æ²¡æœ‰å­�æµ�ç¨‹.",
         "TITLE": {
-            "TASKS": "任务",
-            "VARIABLES": "变量",
+            "TASKS": "ä»»åŠ¡",
+            "VARIABLES": "å�˜é‡�",
             "JOBS": "Jobs",
-            "SUBPROCESSES": "子流程",
-            "DECISION-TABLES": "决策表",
-            "FORM-INSTANCES": "表单实例"
+            "SUBPROCESSES": "å­�æµ�ç¨‹",
+            "DECISION-TABLES": "å†³ç­–è¡¨",
+            "FORM-INSTANCES": "è¡¨å�•å®�ä¾‹"
         },
         "ACTION": {
-            "DELETE": "删除流程实例",
-            "TERMINATE": "终止流程实例",
-            "SHOW-ALL-TASKS": "显示所有任务",
-            "SHOW-ALL-JOBS": "显示所有jobs",
-            "SHOW-ALL-SUBPROCESSES": "显示所有子流程",
-            "SHOW-DIAGRAM": "显示流程图片",
-            "TITLE-VARIABLES": "对选定变量的操作",
-            "DELETE-VARIABLE": "删除这个变量",
-            "UPDATE-VALUE": "更新变量",
-            "ADD-VARIABLE": "添加变量"
+            "DELETE": "åˆ é™¤æµ�ç¨‹å®�ä¾‹",
+            "TERMINATE": "ç»ˆæ­¢æµ�ç¨‹å®�ä¾‹",
+            "SHOW-ALL-TASKS": "æ˜¾ç¤ºæ‰€æœ‰ä»»åŠ¡",
+            "SHOW-ALL-JOBS": "æ˜¾ç¤ºæ‰€æœ‰jobs",
+            "SHOW-ALL-SUBPROCESSES": "æ˜¾ç¤ºæ‰€æœ‰å­�æµ�ç¨‹",
+            "SHOW-DIAGRAM": "æ˜¾ç¤ºæµ�ç¨‹å›¾ç‰‡",
+            "TITLE-VARIABLES": "å¯¹é€‰å®šå�˜é‡�çš„æ“�ä½œ",
+            "DELETE-VARIABLE": "åˆ é™¤è¿™ä¸ªå�˜é‡�",
+            "UPDATE-VALUE": "æ›´æ–°å�˜é‡�",
+            "ADD-VARIABLE": "æ·»åŠ å�˜é‡�"
         },
         "POPUP": {
             "DELETE": {
-                "TITLE": "删除删除流程实例",
-                "MESSAGE-DELETE": "确实要删除流程实例吗？",
-                "MESSAGE-TERMINATE": "确实要终止流程实例吗？",
-                "DELETE-REASON": "删除原因",
-                "DELETE-REASON-HELP": "输入一个可选的删除原因",
-                "CONFIRM-DELETE": "删除流程实例",
-                "CONFIRM-TERMINATE": "终止流程实例"
+                "TITLE": "åˆ é™¤åˆ é™¤æµ�ç¨‹å®�ä¾‹",
+                "MESSAGE-DELETE": "ç¡®å®�è¦�åˆ é™¤æµ�ç¨‹å®�ä¾‹å�—ï¼Ÿ",
+                "MESSAGE-TERMINATE": "ç¡®å®�è¦�ç»ˆæ­¢æµ�ç¨‹å®�ä¾‹å�—ï¼Ÿ",
+                "DELETE-REASON": "åˆ é™¤å�Ÿå› ",
+                "DELETE-REASON-HELP": "è¾“å…¥ä¸€ä¸ªå�¯é€‰çš„åˆ é™¤å�Ÿå› ",
+                "CONFIRM-DELETE": "åˆ é™¤æµ�ç¨‹å®�ä¾‹",
+                "CONFIRM-TERMINATE": "ç»ˆæ­¢æµ�ç¨‹å®�ä¾‹"
             },
             "SHOW-PROCESS-MODEL": {
-                "TITLE": "流程图片"
+                "TITLE": "æµ�ç¨‹å›¾ç‰‡"
             },
             "CREATE-VARIABLE": {
-                "TITLE": "创建变量",
-                "NAME": "变量名称",
-                "TYPE": "Flowable变量类型",
-                "VALUE": "变量值",
-                "CREATE": "创建"
+                "TITLE": "åˆ›å»ºå�˜é‡�",
+                "NAME": "å�˜é‡�å��ç§°",
+                "TYPE": "Flowableå�˜é‡�ç±»å�‹",
+                "VALUE": "å�˜é‡�å€¼",
+                "CREATE": "åˆ›å»º"
             },
             "UPDATE-VARIABLE": {
-                "TITLE": "更新的变量'{{name}}'",
-                "NAME": "变量名称",
-                "VALUE": "值",
+                "TITLE": "æ›´æ–°çš„å�˜é‡�'{{name}}'",
+                "NAME": "å�˜é‡�å��ç§°",
+                "VALUE": "å€¼",
                 "CHECKED": "true",
                 "UNCHECKED": "false",
-                "DATE-HELP": "ISO-8601格式 (例子 : 2016-01-28T23:00:00Z)",
-                "ACTION-UPDATE": "更新"
+                "DATE-HELP": "ISO-8601æ ¼å¼� (ä¾‹å­� : 2016-01-28T23:00:00Z)",
+                "ACTION-UPDATE": "æ›´æ–°"
             },
             "DELETE-VARIABLE": {
-                "TITLE": "删除变量'{{name}}",
-                "MESSAGE": "确实要删除此变量吗?",
-                "DELETE": "删除"
+                "TITLE": "åˆ é™¤å�˜é‡�'{{name}}",
+                "MESSAGE": "ç¡®å®�è¦�åˆ é™¤æ­¤å�˜é‡�å�—?",
+                "DELETE": "åˆ é™¤"
             }
         }
     },
     "PROCESS-INSTANCES": {
-        "TITLE": "流程实例",
-        "LIST-MESSAGE": "显示{{size}}个结果, 总计{{total}}个匹配到的流程实例.",
-        "LIST-MESSAGE-EMPTY": "没有匹配到流程实例",
+        "TITLE": "æµ�ç¨‹å®�ä¾‹",
+        "LIST-MESSAGE": "æ˜¾ç¤º{{size}}ä¸ªç»“æ�œ, æ€»è®¡{{total}}ä¸ªåŒ¹é…�åˆ°çš„æµ�ç¨‹å®�ä¾‹.",
+        "LIST-MESSAGE-EMPTY": "æ²¡æœ‰åŒ¹é…�åˆ°æµ�ç¨‹å®�ä¾‹",
         "FILTER": {
-            "NAME": "名称",
-            "PROCESS-DEFINITION": "流程定义",
-            "ALL-PROCESS-DEFINITIONS": "所有的流程定义",
-            "STATUS": "状态",
-            "STATUS-ANY": "任何状态",
-            "STATUS-ACTIVE": "活动的实例",
-            "STATUS-COMPLETE": "完成的实例",
+            "NAME": "å��ç§°",
+            "PROCESS-DEFINITION": "æµ�ç¨‹å®šä¹‰",
+            "ALL-PROCESS-DEFINITIONS": "æ‰€æœ‰çš„æµ�ç¨‹å®šä¹‰",
+            "STATUS": "çŠ¶æ€�",
+            "STATUS-ANY": "ä»»ä½•çŠ¶æ€�",
+            "STATUS-ACTIVE": "æ´»åŠ¨çš„å®�ä¾‹",
+            "STATUS-COMPLETE": "å®Œæˆ�çš„å®�ä¾‹",
             "BUSINESS-KEY": "Business key",
-            "SUPER-PROCESS-INSTANCE-ID": "父流程实例ID",
-            "STARTED-BEFORE": "开始之前",
-            "STARTED-AFTER": "开始后",
-            "ENDED-BEFORE": "结束前",
-            "ENDED-AFTER": "结束后",
-            "VARIABLE": "变量",
-            "VARIABLE-NAME": "变量名称",
-            "VARIABLE-VALUE": "变量值",
-            "VARIABLE-BOOLEAN-VALUE": "Boolean值: {{value}}",
-            "TENANT-ID": "租户标识符"
+            "SUPER-PROCESS-INSTANCE-ID": "çˆ¶æµ�ç¨‹å®�ä¾‹ID",
+            "STARTED-BEFORE": "å¼€å§‹ä¹‹å‰�",
+            "STARTED-AFTER": "å¼€å§‹å��",
+            "ENDED-BEFORE": "ç»“æ�Ÿå‰�",
+            "ENDED-AFTER": "ç»“æ�Ÿå��",
+            "VARIABLE": "å�˜é‡�",
+            "VARIABLE-NAME": "å�˜é‡�å��ç§°",
+            "VARIABLE-VALUE": "å�˜é‡�å€¼",
+            "VARIABLE-BOOLEAN-VALUE": "Booleanå€¼: {{value}}",
+            "TENANT-ID": "ç§Ÿæˆ·æ ‡è¯†ç¬¦"
         },
         "SORT": {
             "ID": "ID",
-            "START-TIME": "启动时间"
+            "START-TIME": "å�¯åŠ¨æ—¶é—´"
         },
         "HEADER": {
             "ID": "ID",
-            "NAME": "名称",
+            "NAME": "å��ç§°",
             "BUSINESS-KEY": "Business key",
-            "PROCESS-DEFINITION": "流程定义",
-            "CREATE-TIME": "创建",
-            "END-TIME": "完成",
-            "STATUS": "状态"
+            "PROCESS-DEFINITION": "æµ�ç¨‹å®šä¹‰",
+            "CREATE-TIME": "åˆ›å»º",
+            "END-TIME": "å®Œæˆ�",
+            "STATUS": "çŠ¶æ€�"
         }
     },
     "TASK": {
         "ID": "ID:",
-        "NAME": "名称:",
-        "STATUS": "状态:",
-        "STATUS-COMPLETED": "完成的",
-        "STATUS-ACTIVE": "有效",
-        "DESCRIPTION": "描述:",
-        "TASK-DEFINITION-KEY": "定义key:",
-        "FORM-KEY": "表单key:",
-        "优先级": "优先级:",
-        "DELEGATION-STATE": "委派状态:",
-        "CATEGORY": "分类:",
-        "TENANT-ID": "租户:",
-        "PARENT": "父任务:",
-        "ASSIGNEE": "分配人:",
+        "NAME": "å��ç§°:",
+        "STATUS": "çŠ¶æ€�:",
+        "STATUS-COMPLETED": "å®Œæˆ�çš„",
+        "STATUS-ACTIVE": "æœ‰æ•ˆ",
+        "DESCRIPTION": "æ��è¿°:",
+        "TASK-DEFINITION-KEY": "å®šä¹‰key:",
+        "FORM-KEY": "è¡¨å�•key:",
+        "ä¼˜å…ˆçº§": "ä¼˜å…ˆçº§:",
+        "DELEGATION-STATE": "å§”æ´¾çŠ¶æ€�:",
+        "CATEGORY": "åˆ†ç±»:",
+        "TENANT-ID": "ç§Ÿæˆ·:",
+        "PARENT": "çˆ¶ä»»åŠ¡:",
+        "ASSIGNEE": "åˆ†é…�äºº:",
         "OWNER": "Owner:",
-        "START-DATE": "开始时间:",
-        "DUE-DATE": "到期时间:",
-        "END-DATE": "结束时间:",
-        "DELETE-REASON": "删除原因:",
-        "PROCESS-INSTANCE": "流程实例",
-        "PROCESS-DEFINITION": "流程定义",
-        "CASE-INSTANCE": "Case实例",
-        "CASE-DEFINITION": "Case定义",
-        "EXECUTION-ID": "执行实例ID:",
-        "SUBTASKS-MESSAGE": "这个任务有{{total}}个 子任务, 显示 {{size}}.",
-        "SUBTASKS-MESSAGE-EMPTY": "这个任务没有子任务.",
-        "VARIABLES-MESSAGE": "这个任务有{{size}}个变量.",
-        "VARIABLES-MESSAGE-EMPTY": "这个任务有没有变量.",
-        "IDENTITY-LINKS-MESSAGE": "这个任务有{{size}}个处理人.",
-        "IDENTITY-LINKS-MESSAGE-EMPTY": "这个任务没有处理人",
+        "START-DATE": "å¼€å§‹æ—¶é—´:",
+        "DUE-DATE": "åˆ°æœŸæ—¶é—´:",
+        "END-DATE": "ç»“æ�Ÿæ—¶é—´:",
+        "DELETE-REASON": "åˆ é™¤å�Ÿå› :",
+        "PROCESS-INSTANCE": "æµ�ç¨‹å®�ä¾‹",
+        "PROCESS-DEFINITION": "æµ�ç¨‹å®šä¹‰",
+        "CASE-INSTANCE": "Caseå®�ä¾‹",
+        "CASE-DEFINITION": "Caseå®šä¹‰",
+        "EXECUTION-ID": "æ‰§è¡Œå®�ä¾‹ID:",
+        "SUBTASKS-MESSAGE": "è¿™ä¸ªä»»åŠ¡æœ‰{{total}}ä¸ª å­�ä»»åŠ¡, æ˜¾ç¤º {{size}}.",
+        "SUBTASKS-MESSAGE-EMPTY": "è¿™ä¸ªä»»åŠ¡æ²¡æœ‰å­�ä»»åŠ¡.",
+        "VARIABLES-MESSAGE": "è¿™ä¸ªä»»åŠ¡æœ‰{{size}}ä¸ªå�˜é‡�.",
+        "VARIABLES-MESSAGE-EMPTY": "è¿™ä¸ªä»»åŠ¡æœ‰æ²¡æœ‰å�˜é‡�.",
+        "IDENTITY-LINKS-MESSAGE": "è¿™ä¸ªä»»åŠ¡æœ‰{{size}}ä¸ªå¤„ç�†äºº.",
+        "IDENTITY-LINKS-MESSAGE-EMPTY": "è¿™ä¸ªä»»åŠ¡æ²¡æœ‰å¤„ç�†äºº",
         "ACTION": {
-            "EDIT": "编辑任务",
-            "ASSIGN-CLAIM": "分配/签收任务",
-            "DELEGATE": "委托任务",
-            "RESOLVE": "Resolve任务",
-            "COMPLETE": "完成任务",
-            "DELETE": "删除任务",
-            "SHOW-ALL-SUBTASKS": "显示所有子任务",
-            "SHOW-SUBMITTED-FORM": "显示表单实例"
+            "EDIT": "ç¼–è¾‘ä»»åŠ¡",
+            "ASSIGN-CLAIM": "åˆ†é…�/ç­¾æ”¶ä»»åŠ¡",
+            "DELEGATE": "å§”æ‰˜ä»»åŠ¡",
+            "RESOLVE": "Resolveä»»åŠ¡",
+            "COMPLETE": "å®Œæˆ�ä»»åŠ¡",
+            "DELETE": "åˆ é™¤ä»»åŠ¡",
+            "SHOW-ALL-SUBTASKS": "æ˜¾ç¤ºæ‰€æœ‰å­�ä»»åŠ¡",
+            "SHOW-SUBMITTED-FORM": "æ˜¾ç¤ºè¡¨å�•å®�ä¾‹"
         },
         "TITLE": {
-            "SUBTASKS": "子任务",
+            "SUBTASKS": "å­�ä»»åŠ¡",
             "IDENTITY-LINKS": "Identity links",
-            "VARIABLES": "变量"
+            "VARIABLES": "å�˜é‡�"
         },
         "POPUP": {
             "ASSIGN": {
-                "TITLE": "分配任务",
-                "MESSAGE": "你确定要分配任务",
-                "NEW-ASSIGNEE": "新的分配人",
-                "NEW-ASSIGNEE-HELP": "如果要将任务分配给任何人，请将assign字段设为空。注意：当提供用户ID时，确保它存在。",
-                "CONFIRM": "分配任务"
+                "TITLE": "åˆ†é…�ä»»åŠ¡",
+                "MESSAGE": "ä½ ç¡®å®šè¦�åˆ†é…�ä»»åŠ¡",
+                "NEW-ASSIGNEE": "æ–°çš„åˆ†é…�äºº",
+                "NEW-ASSIGNEE-HELP": "å¦‚æ�œè¦�å°†ä»»åŠ¡åˆ†é…�ç»™ä»»ä½•äººï¼Œè¯·å°†assignå­—æ®µè®¾ä¸ºç©ºã€‚æ³¨æ„�ï¼šå½“æ��ä¾›ç”¨æˆ·IDæ—¶ï¼Œç¡®ä¿�å®ƒå­˜åœ¨ã€‚",
+                "CONFIRM": "åˆ†é…�ä»»åŠ¡"
             },
             "COMPLETE": {
-                "TITLE": "完成任务",
-                "MESSAGE": "你确定要完成任务吗？",
-                "CONFIRM": "完成任务"
+                "TITLE": "å®Œæˆ�ä»»åŠ¡",
+                "MESSAGE": "ä½ ç¡®å®šè¦�å®Œæˆ�ä»»åŠ¡å�—ï¼Ÿ",
+                "CONFIRM": "å®Œæˆ�ä»»åŠ¡"
             },
             "DELEGATE": {
-                "TITLE": "委托任务",
-                "MESSAGE": "你确定要委托任务吗？",
-                "CONFIRM": "委托任务",
-                "DELEGATE-TO": "用户委托给"
+                "TITLE": "å§”æ‰˜ä»»åŠ¡",
+                "MESSAGE": "ä½ ç¡®å®šè¦�å§”æ‰˜ä»»åŠ¡å�—ï¼Ÿ",
+                "CONFIRM": "å§”æ‰˜ä»»åŠ¡",
+                "DELEGATE-TO": "ç”¨æˆ·å§”æ‰˜ç»™"
             },
             "RESOLVE": {
-                "TITLE": "Resolve任务",
-                "MESSAGE": "你确定要resolve任务吗？",
-                "CONFIRM": "Resolve任务"
+                "TITLE": "Resolveä»»åŠ¡",
+                "MESSAGE": "ä½ ç¡®å®šè¦�resolveä»»åŠ¡å�—ï¼Ÿ",
+                "CONFIRM": "Resolveä»»åŠ¡"
             },
             "DELETE": {
-                "TITLE": "删除任务",
-                "MESSAGE": "你确定要删除任务吗？",
-                "CONFIRM": "删除任务"
+                "TITLE": "åˆ é™¤ä»»åŠ¡",
+                "MESSAGE": "ä½ ç¡®å®šè¦�åˆ é™¤ä»»åŠ¡å�—ï¼Ÿ",
+                "CONFIRM": "åˆ é™¤ä»»åŠ¡"
             },
             "EDIT": {
-                "TITLE": "编辑任务",
-                "CONFIRM": "更新任务",
-                "NAME": "名称",
-                "DESCRIPTION": "描述",
-                "PRIORITY": "优先级",
-                "CATEGORY": "分类",
-                "ASSIGNEE": "分配人",
+                "TITLE": "ç¼–è¾‘ä»»åŠ¡",
+                "CONFIRM": "æ›´æ–°ä»»åŠ¡",
+                "NAME": "å��ç§°",
+                "DESCRIPTION": "æ��è¿°",
+                "PRIORITY": "ä¼˜å…ˆçº§",
+                "CATEGORY": "åˆ†ç±»",
+                "ASSIGNEE": "åˆ†é…�äºº",
                 "OWNER": "Owner",
-                "DUE-DATE": "到期时间"
+                "DUE-DATE": "åˆ°æœŸæ—¶é—´"
             }
         }
     },
     "TASKS": {
-        "TITLE": "任务",
-        "LIST-MESSAGE": "显示{{size}}个结果,总计{{total}}个匹配到的任务。",
-        "LIST-MESSAGE-EMPTY": "没有匹配到任务",
+        "TITLE": "ä»»åŠ¡",
+        "LIST-MESSAGE": "æ˜¾ç¤º{{size}}ä¸ªç»“æ�œ,æ€»è®¡{{total}}ä¸ªåŒ¹é…�åˆ°çš„ä»»åŠ¡ã€‚",
+        "LIST-MESSAGE-EMPTY": "æ²¡æœ‰åŒ¹é…�åˆ°ä»»åŠ¡",
         "FILTER": {
-            "NAME": "名称 (case sensitive)",
-            "ASSIGNEE": "分配人(case sensitive)",
-            "STATUS": "状态",
-            "STATUS-ANY": "任何状态",
-            "STATUS-ACTIVE": "激活任务",
-            "STATUS-COMPLETE": "完成的任务",
-            "PROCESS-INSTANCE-ID": "流程实例ID",
-            "CASE-INSTANCE-ID": "Case实例ID",
-            "TENANT-ID": "租户标识符",
+            "NAME": "å��ç§° (case sensitive)",
+            "ASSIGNEE": "åˆ†é…�äºº(case sensitive)",
+            "STATUS": "çŠ¶æ€�",
+            "STATUS-ANY": "ä»»ä½•çŠ¶æ€�",
+            "STATUS-ACTIVE": "æ¿€æ´»ä»»åŠ¡",
+            "STATUS-COMPLETE": "å®Œæˆ�çš„ä»»åŠ¡",
+            "PROCESS-INSTANCE-ID": "æµ�ç¨‹å®�ä¾‹ID",
+            "CASE-INSTANCE-ID": "Caseå®�ä¾‹ID",
+            "TENANT-ID": "ç§Ÿæˆ·æ ‡è¯†ç¬¦",
             "OWNER": "Owner (case sensitive)",
-            "PARENT-TASK-ID": "父任务ID",
-            "CREATED-BEFORE": "创建前",
-            "CREATED-AFTER": "创建后",
-            "ENDED-BEFORE": "结束前",
-            "ENDED-AFTER": "结束后",
-            "DUE-BEFORE": "到期前",
-            "DUE-AFTER": "到期",
-            "TASK-VARIABLE": "任务局部变量",
-            "PROCESS-VARIABLE": "流程变量",
-            "VARIABLE-NAME": "变量名称",
-            "VARIABLE-VALUE": "变量值",
-            "VARIABLE-BOOLEAN-VALUE": "Boolean值: {{value}}"
+            "PARENT-TASK-ID": "çˆ¶ä»»åŠ¡ID",
+            "CREATED-BEFORE": "åˆ›å»ºå‰�",
+            "CREATED-AFTER": "åˆ›å»ºå��",
+            "ENDED-BEFORE": "ç»“æ�Ÿå‰�",
+            "ENDED-AFTER": "ç»“æ�Ÿå��",
+            "DUE-BEFORE": "åˆ°æœŸå‰�",
+            "DUE-AFTER": "åˆ°æœŸ",
+            "TASK-VARIABLE": "ä»»åŠ¡å±€éƒ¨å�˜é‡�",
+            "PROCESS-VARIABLE": "æµ�ç¨‹å�˜é‡�",
+            "VARIABLE-NAME": "å�˜é‡�å��ç§°",
+            "VARIABLE-VALUE": "å�˜é‡�å€¼",
+            "VARIABLE-BOOLEAN-VALUE": "Booleanå€¼: {{value}}"
         },
         "SORT": {
-            "NAME": "名称",
-            "DUE-DATE": "到期时间",
-            "START-TIME": "开始时间",
+            "NAME": "å��ç§°",
+            "DUE-DATE": "åˆ°æœŸæ—¶é—´",
+            "START-TIME": "å¼€å§‹æ—¶é—´",
             "END-TIME": "Time ended",
-            "PRIORITY": "优先级"
+            "PRIORITY": "ä¼˜å…ˆçº§"
         },
         "HEADER": {
             "ID": "ID",
-            "NAME": "名称",
-            "ASSIGNEE": "分配人",
+            "NAME": "å��ç§°",
+            "ASSIGNEE": "åˆ†é…�äºº",
             "OWNER": "Owner",
-            "CREATE-TIME": "创建",
-            "END-TIME": "结束了",
-            "PRIORITY": "优先级"
+            "CREATE-TIME": "åˆ›å»º",
+            "END-TIME": "ç»“æ�Ÿäº†",
+            "PRIORITY": "ä¼˜å…ˆçº§"
         }
     },
     "DEPLOYMENTS": {
-        "TITLE": "部署对象",
-        "LIST-MESSAGE": "显示{{size}} 条结果,总计{{total}}个匹配到的部署对象.",
-        "LIST-MESSAGE-EMPTY": "没有匹配到部署对象.",
+        "TITLE": "éƒ¨ç½²å¯¹è±¡",
+        "LIST-MESSAGE": "æ˜¾ç¤º{{size}} æ�¡ç»“æ�œ,æ€»è®¡{{total}}ä¸ªåŒ¹é…�åˆ°çš„éƒ¨ç½²å¯¹è±¡.",
+        "LIST-MESSAGE-EMPTY": "æ²¡æœ‰åŒ¹é…�åˆ°éƒ¨ç½²å¯¹è±¡.",
         "FILTER": {
-            "NAME": "名称 (case sensitive)",
-            "TENANTID": "租户标识符 (case sensitive)"
+            "NAME": "å��ç§° (case sensitive)",
+            "TENANTID": "ç§Ÿæˆ·æ ‡è¯†ç¬¦ (case sensitive)"
         },
         "SORT": {
             "ID": "ID",
-            "NAME": "名称"
+            "NAME": "å��ç§°"
         },
         "HEADER": {
             "ID": "ID",
-            "NAME": "名称",
-            "DEPLOY-TIME": "部署时间",
-            "CATEGORY": "分类",
-            "TENANT": "租户"
+            "NAME": "å��ç§°",
+            "DEPLOY-TIME": "éƒ¨ç½²æ—¶é—´",
+            "CATEGORY": "åˆ†ç±»",
+            "TENANT": "ç§Ÿæˆ·"
         },
         "ACTION": {
-            "UPLOAD": "上传流程或者包",
-            "DELETE": "删除部署"
+            "UPLOAD": "ä¸Šä¼ æµ�ç¨‹æˆ–è€…åŒ…",
+            "DELETE": "åˆ é™¤éƒ¨ç½²"
         },
         "POPUP": {
             "UPLOAD": {
-                "DESCRIPTION": "选择一个.bpmn, .bpmn20.xml流程文件 去部署或者上传一个包含资产的应用程序的 .zip或者.bar文件。",
-                "DROPZONE": "或在此处拖拽一个文件",
-                "NO-DROP": "浏览器不支持文件丢拖拽",
-                "CANCEL-UPLOAD": "取消上传",
-                "ERROR": "不能上传这个文件"
+                "DESCRIPTION": "é€‰æ‹©ä¸€ä¸ª.bpmn, .bpmn20.xmlæµ�ç¨‹æ–‡ä»¶ å�»éƒ¨ç½²æˆ–è€…ä¸Šä¼ ä¸€ä¸ªåŒ…å�«èµ„äº§çš„åº”ç”¨ç¨‹åº�çš„ .zipæˆ–è€….baræ–‡ä»¶ã€‚",
+                "DROPZONE": "æˆ–åœ¨æ­¤å¤„æ‹–æ‹½ä¸€ä¸ªæ–‡ä»¶",
+                "NO-DROP": "æµ�è§ˆå™¨ä¸�æ”¯æŒ�æ–‡ä»¶ä¸¢æ‹–æ‹½",
+                "CANCEL-UPLOAD": "å�–æ¶ˆä¸Šä¼ ",
+                "ERROR": "ä¸�èƒ½ä¸Šä¼ è¿™ä¸ªæ–‡ä»¶"
             },
             "DELETE": {
-            	"CONFIRM-MESSAGE": "删除部署 '{{name}}'?"
+            	"CONFIRM-MESSAGE": "åˆ é™¤éƒ¨ç½² '{{name}}'?"
             	}
         }
     },
     "DEPLOYMENT": {
         "ID": "ID:",
-        "NAME": "名称:",
-        "TIME": "部署时间:",
-        "CATEGORY": "分类:",
-        "PARENT-DEPLOYMENT-ID": "父部署ID:",
-        "TENANTID": "租户标识符:",
-        "DEFINITIONS-MESSAGE": "这个部署有 {{total}}个流程定义, 显示 {{size}}.",
-        "DEFINITIONS-MESSAGE-EMPTY": "这个部署没有流程定义",
+        "NAME": "å��ç§°:",
+        "TIME": "éƒ¨ç½²æ—¶é—´:",
+        "CATEGORY": "åˆ†ç±»:",
+        "PARENT-DEPLOYMENT-ID": "çˆ¶éƒ¨ç½²ID:",
+        "TENANTID": "ç§Ÿæˆ·æ ‡è¯†ç¬¦:",
+        "DEFINITIONS-MESSAGE": "è¿™ä¸ªéƒ¨ç½²æœ‰ {{total}}ä¸ªæµ�ç¨‹å®šä¹‰, æ˜¾ç¤º {{size}}.",
+        "DEFINITIONS-MESSAGE-EMPTY": "è¿™ä¸ªéƒ¨ç½²æ²¡æœ‰æµ�ç¨‹å®šä¹‰",
         "TITLE": {
-            "DEFINITIONS": "流程定义",
+            "DEFINITIONS": "æµ�ç¨‹å®šä¹‰",
             "RESOURCES": "Resources"
         },
         "ACTION": {
-            "SHOW-ALL-DEFINITIONS": "显示所有定义"
+            "SHOW-ALL-DEFINITIONS": "æ˜¾ç¤ºæ‰€æœ‰å®šä¹‰"
         }
     },
     "JOB": {
         "TITLE": {
             "MAIN": "Job {{id}}",
-            "EXCEPTION": "异常"
+            "EXCEPTION": "å¼‚å¸¸"
         },
         "ACTIONS": {
-            "EXECUTE": "执行job",
-            "MOVE": "移除job",
-            "DELETE": "删除job"
+            "EXECUTE": "æ‰§è¡Œjob",
+            "MOVE": "ç§»é™¤job",
+            "DELETE": "åˆ é™¤job"
         },
         "POPUP": {
             "DELETE-JOB": {
-                "TITLE": "删除job'{{id}}'",
-                "MESSAGE": "你确定要删除job{{id}}?",
-                "CONFIRM": "删除job"
+                "TITLE": "åˆ é™¤job'{{id}}'",
+                "MESSAGE": "ä½ ç¡®å®šè¦�åˆ é™¤job{{id}}?",
+                "CONFIRM": "åˆ é™¤job"
             }
         },
         "ID": "ID:",
-        "EXECUTION-ID": "执行ID:",
-        "PROCESS-INSTANCE": "流程实例:",
-        "PROCESS-DEFINITION": "流程定义:",
-        "CASE-INSTANCE": "Case实例:",
-        "CASE-DEFINITION": "Case定义:",
-        "DUEDATE": "到期时间:",
-        "RETRIES-LEFT": "左边重试:",
-        "TENANT-ID": "租户:"
+        "EXECUTION-ID": "æ‰§è¡ŒID:",
+        "PROCESS-INSTANCE": "æµ�ç¨‹å®�ä¾‹:",
+        "PROCESS-DEFINITION": "æµ�ç¨‹å®šä¹‰:",
+        "CASE-INSTANCE": "Caseå®�ä¾‹:",
+        "CASE-DEFINITION": "Caseå®šä¹‰:",
+        "DUEDATE": "åˆ°æœŸæ—¶é—´:",
+        "RETRIES-LEFT": "å·¦è¾¹é‡�è¯•:",
+        "TENANT-ID": "ç§Ÿæˆ·:"
     },
     "JOBS": {
         "TITLE": "Jobs",
-        "LIST-MESSAGE": "显示{{size}} 条结果,总计{{total}}个匹配到的jobs.",
-        "LIST-MESSAGE-EMPTY": "没有匹配到jobs",
+        "LIST-MESSAGE": "æ˜¾ç¤º{{size}} æ�¡ç»“æ�œ,æ€»è®¡{{total}}ä¸ªåŒ¹é…�åˆ°çš„jobs.",
+        "LIST-MESSAGE-EMPTY": "æ²¡æœ‰åŒ¹é…�åˆ°jobs",
         "FILTER": {
         	"JOBTYPE": {
-        		"LABEL": "Job类型",
-        		"EXECUTABLE-JOB": "可以执行的jobs",
-        		"TIMER-JOB": "定时的jobs",
-        		"SUSPENDED-JOB": "挂起的jobs",
-        		"DEADLETTER-JOB": "死信的jobs"
+        		"LABEL": "Jobç±»å�‹",
+        		"EXECUTABLE-JOB": "å�¯ä»¥æ‰§è¡Œçš„jobs",
+        		"TIMER-JOB": "å®šæ—¶çš„jobs",
+        		"SUSPENDED-JOB": "æŒ‚èµ·çš„jobs",
+        		"DEADLETTER-JOB": "æ­»ä¿¡çš„jobs"
         	},
-            "PROCESS-DEFINITION": "流程定义",
-            "ALL-PROCESS-DEFINITIONS": "所有的流程定义",
-            "PROCESS-INSTANCE-ID": "流程实例ID",
-            "CASE-DEFINITION": "Case定义",
-            "ALL-CASE-DEFINITIONS": "所有Case定义",
-            "CASE-INSTANCE-ID": "Case实例ID",
-            "TENANT-ID": "租户标识符",
-            "DUE-BEFORE": "到期前",
-            "DUE-AFTER": "到期后",
-            "EXCEPTION": "异常",
-            "EXCEPTION-HELP": "只显示有异常的jobs"
+            "PROCESS-DEFINITION": "æµ�ç¨‹å®šä¹‰",
+            "ALL-PROCESS-DEFINITIONS": "æ‰€æœ‰çš„æµ�ç¨‹å®šä¹‰",
+            "PROCESS-INSTANCE-ID": "æµ�ç¨‹å®�ä¾‹ID",
+            "CASE-DEFINITION": "Caseå®šä¹‰",
+            "ALL-CASE-DEFINITIONS": "æ‰€æœ‰Caseå®šä¹‰",
+            "CASE-INSTANCE-ID": "Caseå®�ä¾‹ID",
+            "TENANT-ID": "ç§Ÿæˆ·æ ‡è¯†ç¬¦",
+            "DUE-BEFORE": "åˆ°æœŸå‰�",
+            "DUE-AFTER": "åˆ°æœŸå��",
+            "EXCEPTION": "å¼‚å¸¸",
+            "EXCEPTION-HELP": "å�ªæ˜¾ç¤ºæœ‰å¼‚å¸¸çš„jobs"
         },
         "SORT": {
             "ID": "Job ID",
-            "DUE-DATE": "到期时间",
-            "PROCESS-INSTANCE-ID": "流程实例ID",
-            "CASE-INSTANCE-ID": "Case实例ID"
+            "DUE-DATE": "åˆ°æœŸæ—¶é—´",
+            "PROCESS-INSTANCE-ID": "æµ�ç¨‹å®�ä¾‹ID",
+            "CASE-INSTANCE-ID": "Caseå®�ä¾‹ID"
         },
         "HEADER": {
             "ID": "ID",
-            "DUE-DATE": "到期时间",
-            "PROCESS-DEFINITION": "流程定义",
-            "CASE-DEFINITION": "Case定义",
-            "RETRIES": "重试",
-            "EXCEPTION": "异常"
+            "DUE-DATE": "åˆ°æœŸæ—¶é—´",
+            "PROCESS-DEFINITION": "æµ�ç¨‹å®šä¹‰",
+            "CASE-DEFINITION": "Caseå®šä¹‰",
+            "RETRIES": "é‡�è¯•",
+            "EXCEPTION": "å¼‚å¸¸"
         }
     },
     "EVENT-SUBSCRIPTION": {
         "TITLE": {
-            "MAIN": "事件订阅{{id}}"
+            "MAIN": "äº‹ä»¶è®¢é˜…{{id}}"
         },
         "ACTIONS": {
-            "TRIGGER": "触发事件"
+            "TRIGGER": "è§¦å�‘äº‹ä»¶"
         },
         "ID": "ID:",
-        "ACTIVITY-ID": "活动ID:",
-        "EXECUTION-ID": "执行ID:",
-        "PROCESS-INSTANCE": "流程实例:",
-        "PROCESS-DEFINITION": "流程定义:",
-        "CREATE-DATE": "已经创建:",
-        "EVENT-TYPE": "事件类型:",
-        "EVENT-NAME": "事件名称:",
-        "TENANT-ID": "租户:"
+        "ACTIVITY-ID": "æ´»åŠ¨ID:",
+        "EXECUTION-ID": "æ‰§è¡ŒID:",
+        "PROCESS-INSTANCE": "æµ�ç¨‹å®�ä¾‹:",
+        "PROCESS-DEFINITION": "æµ�ç¨‹å®šä¹‰:",
+        "CREATE-DATE": "å·²ç»�åˆ›å»º:",
+        "EVENT-TYPE": "äº‹ä»¶ç±»å�‹:",
+        "EVENT-NAME": "äº‹ä»¶å��ç§°:",
+        "TENANT-ID": "ç§Ÿæˆ·:"
     },
     "EVENT-SUBSCRIPTIONS": {
-    	"TITLE": "事件订阅",
-        "LIST-MESSAGE": "显示{{size}} 条结果,总计{{total}}个匹配到的事件订阅",
-        "LIST-MESSAGE-EMPTY": "没有匹配到事件订阅",
+    	"TITLE": "äº‹ä»¶è®¢é˜…",
+        "LIST-MESSAGE": "æ˜¾ç¤º{{size}} æ�¡ç»“æ�œ,æ€»è®¡{{total}}ä¸ªåŒ¹é…�åˆ°çš„äº‹ä»¶è®¢é˜…",
+        "LIST-MESSAGE-EMPTY": "æ²¡æœ‰åŒ¹é…�åˆ°äº‹ä»¶è®¢é˜…",
     	"FILTER": {
-            "PROCESS-DEFINITION": "流程定义",
-            "ALL-PROCESS-DEFINITIONS": "所有的流程定义",
-            "PROCESS-INSTANCE-ID": "流程实例ID",
-            "TENANT-ID": "租户标识符",
-            "CREATED-BEFORE": "创建前",
-            "CREATED-AFTER": "创建后"
+            "PROCESS-DEFINITION": "æµ�ç¨‹å®šä¹‰",
+            "ALL-PROCESS-DEFINITIONS": "æ‰€æœ‰çš„æµ�ç¨‹å®šä¹‰",
+            "PROCESS-INSTANCE-ID": "æµ�ç¨‹å®�ä¾‹ID",
+            "TENANT-ID": "ç§Ÿæˆ·æ ‡è¯†ç¬¦",
+            "CREATED-BEFORE": "åˆ›å»ºå‰�",
+            "CREATED-AFTER": "åˆ›å»ºå��"
         },
         "SORT": {
-            "ID": "事件订阅ID",
-            "CREATE-DATE": "已经创建",
-            "PROCESS-INSTANCE-ID": "流程实例ID"
+            "ID": "äº‹ä»¶è®¢é˜…ID",
+            "CREATE-DATE": "å·²ç»�åˆ›å»º",
+            "PROCESS-INSTANCE-ID": "æµ�ç¨‹å®�ä¾‹ID"
         },
     	"HEADER": {
             "ID": "ID",
-            "CREATE-DATE": "已经创建",
-            "PROCESS-DEFINITION": "流程定义",
-            "EVENT-TYPE": "事件类型",
-            "EVENT-NAME": "事件名称"
+            "CREATE-DATE": "å·²ç»�åˆ›å»º",
+            "PROCESS-DEFINITION": "æµ�ç¨‹å®šä¹‰",
+            "EVENT-TYPE": "äº‹ä»¶ç±»å�‹",
+            "EVENT-NAME": "äº‹ä»¶å��ç§°"
         }
     },
     "LOGIN": {
-        "TITLE": "登录",
-        "USERNAME": "用户名",
-        "USERNAME-PLACEHOLDER": "输入您的用户名",
-        "PASSWORD": "密码",
-        "PASSWORD-PLACEHOLDER": "输入您的密码",
+        "TITLE": "ç™»å½•",
+        "USERNAME": "ç”¨æˆ·å��",
+        "USERNAME-PLACEHOLDER": "è¾“å…¥æ‚¨çš„ç”¨æˆ·å��",
+        "PASSWORD": "å¯†ç �",
+        "PASSWORD-PLACEHOLDER": "è¾“å…¥æ‚¨çš„å¯†ç �",
         "ACTION": {
-            "CONFIRM": "登录"
+            "CONFIRM": "ç™»å½•"
         }
     },
     "USER": {
         "POPUP": {
             "CHANGE-PASSWORD": {
-                "TITLE": "修改'{{login}}'的密码",
-                "OLD-PASSWORD": "旧密码",
-                "NEW-PASSWORD": "新密码",
-                "CONFIRM": "修改密码"
+                "TITLE": "ä¿®æ”¹'{{login}}'çš„å¯†ç �",
+                "OLD-PASSWORD": "æ—§å¯†ç �",
+                "NEW-PASSWORD": "æ–°å¯†ç �",
+                "CONFIRM": "ä¿®æ”¹å¯†ç �"
             },
             "DELETE": {
-                "TITLE": "删除{{login}}用户",
-                "MESSAGE": "你确定要删除'{{login}}'用户?",
-                "CONFIRM": "删除用户"
+                "TITLE": "åˆ é™¤{{login}}ç”¨æˆ·",
+                "MESSAGE": "ä½ ç¡®å®šè¦�åˆ é™¤'{{login}}'ç”¨æˆ·?",
+                "CONFIRM": "åˆ é™¤ç”¨æˆ·"
             },
             "EDIT": {
-                "TITLE": "编辑{{login}}用户",
-                "LOGIN": "登录",
-                "EMAIL": "邮箱",
-                "FIRSTNAME": "名字",
-                "LASTNAME": "姓氏",
-                "CONFIRM": "更新用户"
+                "TITLE": "ç¼–è¾‘{{login}}ç”¨æˆ·",
+                "LOGIN": "ç™»å½•",
+                "EMAIL": "é‚®ç®±",
+                "FIRSTNAME": "å��å­—",
+                "LASTNAME": "å§“æ°�",
+                "CONFIRM": "æ›´æ–°ç”¨æˆ·"
             },
             "NEW": {
-                "TITLE": "创建新用户",
-                "LOGIN": "登录",
-                "EMAIL": "邮箱",
-                "FIRSTNAME": "名字",
-                "LASTNAME": "姓氏",
-                "PASSWORD": "密码",
-                "ADMIN": "有管理员权限",
-                "CONFIRM": "创建用户"
+                "TITLE": "åˆ›å»ºæ–°ç”¨æˆ·",
+                "LOGIN": "ç™»å½•",
+                "EMAIL": "é‚®ç®±",
+                "FIRSTNAME": "å��å­—",
+                "LASTNAME": "å§“æ°�",
+                "PASSWORD": "å¯†ç �",
+                "ADMIN": "æœ‰ç®¡ç�†å‘˜æ�ƒé™�",
+                "CONFIRM": "åˆ›å»ºç”¨æˆ·"
             }
         }
     },
     "USERS": {
-        "TITLE": "用户",
+        "TITLE": "ç”¨æˆ·",
         "ACTION": {
-            "EDIT": "编辑用户",
-            "NEW": "创建新用户",
-            "DELETE": "删除用户",
-            "CHANGE-PASSWORD": "修改密码"
+            "EDIT": "ç¼–è¾‘ç”¨æˆ·",
+            "NEW": "åˆ›å»ºæ–°ç”¨æˆ·",
+            "DELETE": "åˆ é™¤ç”¨æˆ·",
+            "CHANGE-PASSWORD": "ä¿®æ”¹å¯†ç �"
         },
         "HEADER": {
-            "LOGIN": "登录",
-            "FIRSTNAME": "名字",
-            "LASTNAME": "姓氏",
-            "EMAIL": "邮箱",
-            "CLUSTER_USER": "集群用户"
+            "LOGIN": "ç™»å½•",
+            "FIRSTNAME": "å��å­—",
+            "LASTNAME": "å§“æ°�",
+            "EMAIL": "é‚®ç®±",
+            "CLUSTER_USER": "é›†ç¾¤ç”¨æˆ·"
         }
     },
     "LICENSE": {
         "POPUP": {
-            "TITLE": "许可证信息",
-            "HOLDER": "持有人",
-            "SUBJECT": "主体",
-            "PRODUCTKEY": "产品类型",
-            "GOODAFTERDATE": "许可证有效后",
-            "GOODBEFOREDATE": "许可证有效，直到",
-            "NUMBER_OF_PROCESSES": "活动流程数量",
-            "NUMBER_OF_ADMINS": "管理员用户数",
-            "MULTI_TENANT": "多租户",
-            "DEFAULT_TENANT": "默认租户"
+            "TITLE": "è®¸å�¯è¯�ä¿¡æ�¯",
+            "HOLDER": "æŒ�æœ‰äºº",
+            "SUBJECT": "ä¸»ä½“",
+            "PRODUCTKEY": "äº§å“�ç±»å�‹",
+            "GOODAFTERDATE": "è®¸å�¯è¯�æœ‰æ•ˆå��",
+            "GOODBEFOREDATE": "è®¸å�¯è¯�æœ‰æ•ˆï¼Œç›´åˆ°",
+            "NUMBER_OF_PROCESSES": "æ´»åŠ¨æµ�ç¨‹æ•°é‡�",
+            "NUMBER_OF_ADMINS": "ç®¡ç�†å‘˜ç”¨æˆ·æ•°",
+            "MULTI_TENANT": "å¤šç§Ÿæˆ·",
+            "DEFAULT_TENANT": "é»˜è®¤ç§Ÿæˆ·"
         }
     },
     "CLUSTER": {
-        "NAME": "名称:",
-        "USER": "用户:",
-        "MASTER-MANDATORY": "强制使用主配置:",
+        "NAME": "å��ç§°:",
+        "USER": "ç”¨æˆ·:",
+        "MASTER-MANDATORY": "å¼ºåˆ¶ä½¿ç”¨ä¸»é…�ç½®:",
         "METRICS-SEND-INTERVAL": "Metric send interval:",
-        "ENDPOINT-HELP": "端点配置（每个集群只有一个）需要指向 Flowable REST的安装。然后，这个端点将被用于检索和管理其他部分中使用的数据此应用程序(例如部署、流程定义等等。) ",
-        "ENDPOINT-NAME": "名称:",
-        "ENDPOINT-DESCRIPTION": "描述:",
-        "ENDPOINT-ADDRESS": "服务地址（address）:",
-        "ENDPOINT-PORT": "服务端口（port）:",
-        "ENDPOINT-CONTEXT-ROOT": "上下文根:",
-        "ENDPOINT-REST-ROOT": "REST根:",
-        "ENDPOINT-USERNAME": "用户名:",
-        "PROCESS-ENGINE-HELP": "这部分允许您为群集定义一个‘主配置’。集群中的所有实例将在启动时使用此配置。(如果群集配置jar包位于类路径上，或者如果设置了相应的属性). 如果没有设置，实例将使用它们的本地配置文件。",
-        "NO-MASTER-DEFINED": "没有定义主配置",
+        "ENDPOINT-HELP": "ç«¯ç‚¹é…�ç½®ï¼ˆæ¯�ä¸ªé›†ç¾¤å�ªæœ‰ä¸€ä¸ªï¼‰éœ€è¦�æŒ‡å�‘ Flowable RESTçš„å®‰è£…ã€‚ç„¶å��ï¼Œè¿™ä¸ªç«¯ç‚¹å°†è¢«ç”¨äº�æ£€ç´¢å’Œç®¡ç�†å…¶ä»–éƒ¨åˆ†ä¸­ä½¿ç”¨çš„æ•°æ�®æ­¤åº”ç”¨ç¨‹åº�(ä¾‹å¦‚éƒ¨ç½²ã€�æµ�ç¨‹å®šä¹‰ç­‰ç­‰ã€‚) ",
+        "ENDPOINT-NAME": "å��ç§°:",
+        "ENDPOINT-DESCRIPTION": "æ��è¿°:",
+        "ENDPOINT-ADDRESS": "æœ�åŠ¡åœ°å�€ï¼ˆaddressï¼‰:",
+        "ENDPOINT-PORT": "æœ�åŠ¡ç«¯å�£ï¼ˆportï¼‰:",
+        "ENDPOINT-CONTEXT-ROOT": "ä¸Šä¸‹æ–‡æ ¹:",
+        "ENDPOINT-REST-ROOT": "RESTæ ¹:",
+        "ENDPOINT-USERNAME": "ç”¨æˆ·å��:",
+        "PROCESS-ENGINE-HELP": "è¿™éƒ¨åˆ†å…�è®¸æ‚¨ä¸ºç¾¤é›†å®šä¹‰ä¸€ä¸ªâ€˜ä¸»é…�ç½®â€™ã€‚é›†ç¾¤ä¸­çš„æ‰€æœ‰å®�ä¾‹å°†åœ¨å�¯åŠ¨æ—¶ä½¿ç”¨æ­¤é…�ç½®ã€‚(å¦‚æ�œç¾¤é›†é…�ç½®jaråŒ…ä½�äº�ç±»è·¯å¾„ä¸Šï¼Œæˆ–è€…å¦‚æ�œè®¾ç½®äº†ç›¸åº”çš„å±�æ€§). å¦‚æ�œæ²¡æœ‰è®¾ç½®ï¼Œå®�ä¾‹å°†ä½¿ç”¨å®ƒä»¬çš„æœ¬åœ°é…�ç½®æ–‡ä»¶ã€‚",
+        "NO-MASTER-DEFINED": "æ²¡æœ‰å®šä¹‰ä¸»é…�ç½®",
         "ACTION": {
-            "SHOW-PASSWORD": "显示密码",
-            "EDIT-CLUSTER-CONFIG": "编辑集群配置",
-            "CREATE-CLUSTER-CONFIG": "创建新集群",
-            "DELETE-CLUSTER-CONFIG": "删除集群配置",
-            "GENERATE-JAR": "生成集群配置jar",
-            "EDIT-ENDPOINT": "编辑REST端点",
-            "CHECK-ENDPOINT": "检查 REST端点",
-            "SELECT-MASTER": "选择主配置",
-            "ADD-CONFIGURATION": "添加主配置",
-            "EDIT-CONFIGURATION": "编辑主配置",
-            "DELETE-CONFIGURATION": "删除主配置"
+            "SHOW-PASSWORD": "æ˜¾ç¤ºå¯†ç �",
+            "EDIT-CLUSTER-CONFIG": "ç¼–è¾‘é›†ç¾¤é…�ç½®",
+            "CREATE-CLUSTER-CONFIG": "åˆ›å»ºæ–°é›†ç¾¤",
+            "DELETE-CLUSTER-CONFIG": "åˆ é™¤é›†ç¾¤é…�ç½®",
+            "GENERATE-JAR": "ç”Ÿæˆ�é›†ç¾¤é…�ç½®jar",
+            "EDIT-ENDPOINT": "ç¼–è¾‘RESTç«¯ç‚¹",
+            "CHECK-ENDPOINT": "æ£€æŸ¥ RESTç«¯ç‚¹",
+            "SELECT-MASTER": "é€‰æ‹©ä¸»é…�ç½®",
+            "ADD-CONFIGURATION": "æ·»åŠ ä¸»é…�ç½®",
+            "EDIT-CONFIGURATION": "ç¼–è¾‘ä¸»é…�ç½®",
+            "DELETE-CONFIGURATION": "åˆ é™¤ä¸»é…�ç½®"
         },
         "TITLE": {
-            "PROCESS-ENDPOINT": "流程API端点配置",
-            "CMMN-ENDPOINT": "CMMN API端点配置",
-            "DMN-ENDPOINT": "DMN API端点配置",
-            "FORM-ENDPOINT": "表单API端点配置",
-            "CONTENT-ENDPOINT": "Content API端点配置",
-            "APP-ENDPOINT": "应用程序API端点配置"
+            "PROCESS-ENDPOINT": "æµ�ç¨‹APIç«¯ç‚¹é…�ç½®",
+            "CMMN-ENDPOINT": "CMMN APIç«¯ç‚¹é…�ç½®",
+            "DMN-ENDPOINT": "DMN APIç«¯ç‚¹é…�ç½®",
+            "FORM-ENDPOINT": "è¡¨å�•APIç«¯ç‚¹é…�ç½®",
+            "CONTENT-ENDPOINT": "Content APIç«¯ç‚¹é…�ç½®",
+            "APP-ENDPOINT": "åº”ç”¨ç¨‹åº�APIç«¯ç‚¹é…�ç½®"
         },
         "POPUP": {
             "EDIT-ENDPOINT": {
-                "ENDPOINT-NAME": "名称",
-                "ENDPOINT-DESCRIPTION": "描述",
-                "ENDPOINT-ADDRESS": "服务地址（address）",
-                "ENDPOINT-PORT": "服务端口（port） ",
-                "ENDPOINT-CONTEXT-ROOT": "上下文根(root)",
-                "ENDPOINT-REST-ROOT": "REST根(root)",
-                "ENDPOINT-密码": "用户名",
-                "ENDPOINT-PASSWORD": "密码",
-                "ENDPOINT-PASSWORD-HELP": "离开当前的去保存密码",
-                "ENDPOINT-URL-PREVIEW": "URL预览",
-                "ACTION-CONFIRM": "保存endpoint配置",
-                "ERROR-401": "错误:无效凭据",
-                "ERROR-403": "错误: 无效凭据或URL",
-                "ERROR-404": "错误: URL没找到",
-                "ERROR-500": "错误: 服务器错误。检查服务器日志。"
+                "ENDPOINT-NAME": "å��ç§°",
+                "ENDPOINT-DESCRIPTION": "æ��è¿°",
+                "ENDPOINT-ADDRESS": "æœ�åŠ¡åœ°å�€ï¼ˆaddressï¼‰",
+                "ENDPOINT-PORT": "æœ�åŠ¡ç«¯å�£ï¼ˆportï¼‰ ",
+                "ENDPOINT-CONTEXT-ROOT": "ä¸Šä¸‹æ–‡æ ¹(root)",
+                "ENDPOINT-REST-ROOT": "RESTæ ¹(root)",
+                "ENDPOINT-å¯†ç �": "ç”¨æˆ·å��",
+                "ENDPOINT-PASSWORD": "å¯†ç �",
+                "ENDPOINT-PASSWORD-HELP": "ç¦»å¼€å½“å‰�çš„å�»ä¿�å­˜å¯†ç �",
+                "ENDPOINT-URL-PREVIEW": "URLé¢„è§ˆ",
+                "ACTION-CONFIRM": "ä¿�å­˜endpointé…�ç½®",
+                "ERROR-401": "é”™è¯¯:æ— æ•ˆå‡­æ�®",
+                "ERROR-403": "é”™è¯¯: æ— æ•ˆå‡­æ�®æˆ–URL",
+                "ERROR-404": "é”™è¯¯: URLæ²¡æ‰¾åˆ°",
+                "ERROR-500": "é”™è¯¯: æœ�åŠ¡å™¨é”™è¯¯ã€‚æ£€æŸ¥æœ�åŠ¡å™¨æ—¥å¿—ã€‚"
             }
         }
     },
     "APP-DEPLOYMENTS": {
-        "TITLE": "应用程序部署对象",
-        "LIST-MESSAGE": "显示{{size}} 条结果,总计{{total}}个匹配到的应用部署对象.",
-        "LIST-MESSAGE-EMPTY": "没有匹配到应用部署对象.",
+        "TITLE": "åº”ç”¨ç¨‹åº�éƒ¨ç½²å¯¹è±¡",
+        "LIST-MESSAGE": "æ˜¾ç¤º{{size}} æ�¡ç»“æ�œ,æ€»è®¡{{total}}ä¸ªåŒ¹é…�åˆ°çš„åº”ç”¨éƒ¨ç½²å¯¹è±¡.",
+        "LIST-MESSAGE-EMPTY": "æ²¡æœ‰åŒ¹é…�åˆ°åº”ç”¨éƒ¨ç½²å¯¹è±¡.",
         "FILTER": {
-            "NAME": "名称",
-            "TENANTID": "租户标识符",
-            "LATEST": "最新版本",
-            "LATEST-HELP": "仅显示最近的部署时间"
+            "NAME": "å��ç§°",
+            "TENANTID": "ç§Ÿæˆ·æ ‡è¯†ç¬¦",
+            "LATEST": "æœ€æ–°ç‰ˆæœ¬",
+            "LATEST-HELP": "ä»…æ˜¾ç¤ºæœ€è¿‘çš„éƒ¨ç½²æ—¶é—´"
         },
         "SORT": {
             "ID": "ID",
-            "NAME": "名称"
+            "NAME": "å��ç§°"
         },
         "HEADER": {
             "ID": "ID",
-            "APP-DEFINITION-ID": "应用程序ID",
-            "DEPLOYMENT-ID": "流程部署ID",
-            "DMN-DEPLOYMENT-ID": "DMN部署ID",
-            "NAME": "名称",
-            "DEPLOY-TIME": "部署时间",
+            "APP-DEFINITION-ID": "åº”ç”¨ç¨‹åº�ID",
+            "DEPLOYMENT-ID": "æµ�ç¨‹éƒ¨ç½²ID",
+            "DMN-DEPLOYMENT-ID": "DMNéƒ¨ç½²ID",
+            "NAME": "å��ç§°",
+            "DEPLOY-TIME": "éƒ¨ç½²æ—¶é—´",
             "DEPLOYED-BY": "Deployed by",
-            "TENANT": "租户ID"
+            "TENANT": "ç§Ÿæˆ·ID"
         },
         "ACTION": {
-            "UPLOAD": "上传和发布应用程序"
+            "UPLOAD": "ä¸Šä¼ å’Œå�‘å¸ƒåº”ç”¨ç¨‹åº�"
         },
         "POPUP": {
             "UPLOAD": {
-                "DESCRIPTION": "选择一个.zip应用程序定义去部署",
-                "WARNING": "只能在Flowable UI实例中上传一个流程。",
-                "DROPZONE": "或在此处拖拽一个文件",
-                "NO-DROP": "浏览器不支持文件丢拖拽",
-                "CANCEL-UPLOAD": "取消上传",
-                "ERROR": "不能上传这个文件"
+                "DESCRIPTION": "é€‰æ‹©ä¸€ä¸ª.zipåº”ç”¨ç¨‹åº�å®šä¹‰å�»éƒ¨ç½²",
+                "WARNING": "å�ªèƒ½åœ¨Flowable UIå®�ä¾‹ä¸­ä¸Šä¼ ä¸€ä¸ªæµ�ç¨‹ã€‚",
+                "DROPZONE": "æˆ–åœ¨æ­¤å¤„æ‹–æ‹½ä¸€ä¸ªæ–‡ä»¶",
+                "NO-DROP": "æµ�è§ˆå™¨ä¸�æ”¯æŒ�æ–‡ä»¶ä¸¢æ‹–æ‹½",
+                "CANCEL-UPLOAD": "å�–æ¶ˆä¸Šä¼ ",
+                "ERROR": "ä¸�èƒ½ä¸Šä¼ è¿™ä¸ªæ–‡ä»¶"
             }
         }
     },
     "VARIABLES": {
         "HEADER": {
-            "NAME": "名称",
-            "TYPE": "类型",
-            "VALUE": "值"
+            "NAME": "å��ç§°",
+            "TYPE": "ç±»å�‹",
+            "VALUE": "å€¼"
         }
     },
     "IDENTITY-LINKS": {
         "HEADER": {
-            "GROUP-ID": "组ID",
-            "TYPE": "类型",
-            "USER-ID": "用户ID"
+            "GROUP-ID": "ç»„ID",
+            "TYPE": "ç±»å�‹",
+            "USER-ID": "ç”¨æˆ·ID"
         }
     },
     "ALERT": {
         "GENERAL": {
-            "HTTP-ERROR": "我们无法从服务器获得数据",
-            "AUTHENTICATION-ERROR": "输入无效登录凭据"
+            "HTTP-ERROR": "æˆ‘ä»¬æ— æ³•ä»�æœ�åŠ¡å™¨è�·å¾—æ•°æ�®",
+            "AUTHENTICATION-ERROR": "è¾“å…¥æ— æ•ˆç™»å½•å‡­æ�®"
         },
         "ENGINE": {
-            "ENDPOINT-UPDATED": "Endpoint '{{name}}' 被更新.",
-            "ENDPOINT-INVALID": "Endpoint配置'{{name}}' 无效.",
-            "ENDPOINT-VALID": "Endpoint有效的, 引擎在endpoint: {{name}} - {{version}}"
+            "ENDPOINT-UPDATED": "Endpoint '{{name}}' è¢«æ›´æ–°.",
+            "ENDPOINT-INVALID": "Endpointé…�ç½®'{{name}}' æ— æ•ˆ.",
+            "ENDPOINT-VALID": "Endpointæœ‰æ•ˆçš„, å¼•æ“�åœ¨endpoint: {{name}} - {{version}}"
         },
         "JOB": {
-            "DELETED": "Job '{{id}}'成功删除。",
-            "MOVED": "Job '{{id}}'移除成功",
-            "EXECUTED": "Job '{{id}}' 执行成功"
+            "DELETED": "Job '{{id}}'æˆ�åŠŸåˆ é™¤ã€‚",
+            "MOVED": "Job '{{id}}'ç§»é™¤æˆ�åŠŸ",
+            "EXECUTED": "Job '{{id}}' æ‰§è¡Œæˆ�åŠŸ"
         },
         "EVENT-SUBSCRIPTION": {
-        	"TRIGGERED": "事件订阅 '{{id}}'成功被触发."
+        	"TRIGGERED": "äº‹ä»¶è®¢é˜… '{{id}}'æˆ�åŠŸè¢«è§¦å�‘."
         },
         "PROCESS-INSTANCE": {
-            "DELETED": "流程实例 '{{id}}'成功删除。",
-            "TERMINATED": "流程实例 '{{id}}'成功终止。"
+            "DELETED": "æµ�ç¨‹å®�ä¾‹ '{{id}}'æˆ�åŠŸåˆ é™¤ã€‚",
+            "TERMINATED": "æµ�ç¨‹å®�ä¾‹ '{{id}}'æˆ�åŠŸç»ˆæ­¢ã€‚"
         },
         "TASK": {
-            "DELETED": "任务 '{{id}}' 成功删除。",
-            "COMPLETED": "任务 '{{id}}'成功完成。",
-            "DELEGATED": "任务 '{{id}}' 委托给 {{user}}用户.",
-            "RESOLVED": "任务 '{{id}}'resolved成功.",
-            "ASSIGNED": "任务 '{{id}}' 现在已经分配给了{{user}}.",
-            "UNASSIGNED": "任务 '{{id}}' 现在未分配.",
-            "UPDATED": "任务 '{{id}}'成功更新。"
+            "DELETED": "ä»»åŠ¡ '{{id}}' æˆ�åŠŸåˆ é™¤ã€‚",
+            "COMPLETED": "ä»»åŠ¡ '{{id}}'æˆ�åŠŸå®Œæˆ�ã€‚",
+            "DELEGATED": "ä»»åŠ¡ '{{id}}' å§”æ‰˜ç»™ {{user}}ç”¨æˆ·.",
+            "RESOLVED": "ä»»åŠ¡ '{{id}}'resolvedæˆ�åŠŸ.",
+            "ASSIGNED": "ä»»åŠ¡ '{{id}}' ç�°åœ¨å·²ç»�åˆ†é…�ç»™äº†{{user}}.",
+            "UNASSIGNED": "ä»»åŠ¡ '{{id}}' ç�°åœ¨æœªåˆ†é…�.",
+            "UPDATED": "ä»»åŠ¡ '{{id}}'æˆ�åŠŸæ›´æ–°ã€‚"
         },
         "USER": {
-            "DELETED": "'{{login}}'用户删除成功。",
-            "UPDATED": "'{{login}}'用户更新成功。",
-            "CREATED": "'{{login}}' 用户被创建.",
-            "PASSWORD-CHANGED": "'{{login}}'密码修改成功。"
+            "DELETED": "'{{login}}'ç”¨æˆ·åˆ é™¤æˆ�åŠŸã€‚",
+            "UPDATED": "'{{login}}'ç”¨æˆ·æ›´æ–°æˆ�åŠŸã€‚",
+            "CREATED": "'{{login}}' ç”¨æˆ·è¢«åˆ›å»º.",
+            "PASSWORD-CHANGED": "'{{login}}'å¯†ç �ä¿®æ”¹æˆ�åŠŸã€‚"
         },
         "PROCESS-DEFINITION": {
-            "CATEGORY-UPDATED": "流程定义分类被更新"
+            "CATEGORY-UPDATED": "æµ�ç¨‹å®šä¹‰åˆ†ç±»è¢«æ›´æ–°"
         },
         "DEPLOYMENT": {
-        	"DELETED-DEPLOYMENT": "删除部署对象'{{name}}'",
-        	"DELETE-ERROR": "不能删除部署对象. {{exception || ''}}",
-        	"DEPLOYMENT-SUCCESS": "部署成功"
+        	"DELETED-DEPLOYMENT": "åˆ é™¤éƒ¨ç½²å¯¹è±¡'{{name}}'",
+        	"DELETE-ERROR": "ä¸�èƒ½åˆ é™¤éƒ¨ç½²å¯¹è±¡. {{exception || ''}}",
+        	"DEPLOYMENT-SUCCESS": "éƒ¨ç½²æˆ�åŠŸ"
         },
         "APP-DEPLOYMENT": {
-        	"DELETED-APP": "删除应用程序'{{appDefinition.name}}'",
-        	"DELETE-ERROR": "不能删除应用程序。{{message || ''}}"
+        	"DELETED-APP": "åˆ é™¤åº”ç”¨ç¨‹åº�'{{appDefinition.name}}'",
+        	"DELETE-ERROR": "ä¸�èƒ½åˆ é™¤åº”ç”¨ç¨‹åº�ã€‚{{message || ''}}"
         }
     },
     "CMMN-DEPLOYMENTS": {
-        "TITLE": "部署对象",
-        "LIST-MESSAGE": "显示{{size}} 条结果,总计{{total}}个匹配到的部署对象.",
+        "TITLE": "éƒ¨ç½²å¯¹è±¡",
+        "LIST-MESSAGE": "æ˜¾ç¤º{{size}} æ�¡ç»“æ�œ,æ€»è®¡{{total}}ä¸ªåŒ¹é…�åˆ°çš„éƒ¨ç½²å¯¹è±¡.",
         "LIST-MESSAGE-EMPTY": "No matching deployments.",
         "FILTER": {
-            "NAME": "名称 (case sensitive)",
-            "TENANTID": "租户标识符 (case sensitive)"
+            "NAME": "å��ç§° (case sensitive)",
+            "TENANTID": "ç§Ÿæˆ·æ ‡è¯†ç¬¦ (case sensitive)"
         },
         "SORT": {
             "ID": "ID",
-            "NAME": "名称"
+            "NAME": "å��ç§°"
         },
         "HEADER": {
             "ID": "ID",
-            "NAME": "名称",
-            "DEPLOY-TIME": "部署时间",
-            "CATEGORY": "分类",
-            "TENANT": "租户"
+            "NAME": "å��ç§°",
+            "DEPLOY-TIME": "éƒ¨ç½²æ—¶é—´",
+            "CATEGORY": "åˆ†ç±»",
+            "TENANT": "ç§Ÿæˆ·"
         },
         "ACTION": {
-            "UPLOAD": "上传一个流程或者包",
-            "DELETE": "删除部署"
+            "UPLOAD": "ä¸Šä¼ ä¸€ä¸ªæµ�ç¨‹æˆ–è€…åŒ…",
+            "DELETE": "åˆ é™¤éƒ¨ç½²"
         },
         "POPUP": {
             "UPLOAD": {
-                "DESCRIPTION": "选择一个.bpmn, .bpmn20.xml流程文件 去部署或者上传一个包含资产的应用程序的 .zip或者.bar文件。",
-                "DROPZONE": "或在此处拖拽一个文件",
-                "NO-DROP": "浏览器不支持文件丢拖拽",
-                "CANCEL-UPLOAD": "取消上传",
-                "ERROR": "不能上传这个文件"
+                "DESCRIPTION": "é€‰æ‹©ä¸€ä¸ª.bpmn, .bpmn20.xmlæµ�ç¨‹æ–‡ä»¶ å�»éƒ¨ç½²æˆ–è€…ä¸Šä¼ ä¸€ä¸ªåŒ…å�«èµ„äº§çš„åº”ç”¨ç¨‹åº�çš„ .zipæˆ–è€….baræ–‡ä»¶ã€‚",
+                "DROPZONE": "æˆ–åœ¨æ­¤å¤„æ‹–æ‹½ä¸€ä¸ªæ–‡ä»¶",
+                "NO-DROP": "æµ�è§ˆå™¨ä¸�æ”¯æŒ�æ–‡ä»¶ä¸¢æ‹–æ‹½",
+                "CANCEL-UPLOAD": "å�–æ¶ˆä¸Šä¼ ",
+                "ERROR": "ä¸�èƒ½ä¸Šä¼ è¿™ä¸ªæ–‡ä»¶"
             },
             "DELETE": {
-                "CONFIRM-MESSAGE": "删除部署 '{{name}}'?"
+                "CONFIRM-MESSAGE": "åˆ é™¤éƒ¨ç½² '{{name}}'?"
                 }
         }
     },
     "CMMN-DEPLOYMENT": {
         "ID": "ID:",
-        "NAME": "名称:",
-        "TIME": "部署时间:",
-        "CATEGORY": "分类:",
-        "TENANTID": "租户标识符:",
-        "PARENT-DEPLOYMENT-ID": "父部署ID:",
-        "DEFINITIONS-MESSAGE": "这个部署对象有{{total}}个Case定义, 显示 {{size}}.",
-        "DEFINITIONS-MESSAGE-EMPTY": "这个部署对象没有Case定义.",
+        "NAME": "å��ç§°:",
+        "TIME": "éƒ¨ç½²æ—¶é—´:",
+        "CATEGORY": "åˆ†ç±»:",
+        "TENANTID": "ç§Ÿæˆ·æ ‡è¯†ç¬¦:",
+        "PARENT-DEPLOYMENT-ID": "çˆ¶éƒ¨ç½²ID:",
+        "DEFINITIONS-MESSAGE": "è¿™ä¸ªéƒ¨ç½²å¯¹è±¡æœ‰{{total}}ä¸ªCaseå®šä¹‰, æ˜¾ç¤º {{size}}.",
+        "DEFINITIONS-MESSAGE-EMPTY": "è¿™ä¸ªéƒ¨ç½²å¯¹è±¡æ²¡æœ‰Caseå®šä¹‰.",
         "TITLE": {
-            "CASE-DEFINITIONS": "Case定义",
-            "RESOURCES": "资源"
+            "CASE-DEFINITIONS": "Caseå®šä¹‰",
+            "RESOURCES": "èµ„æº�"
         },
         "ACTION": {
-            "SHOW-ALL-DEFINITIONS": "显示所有定义"
+            "SHOW-ALL-DEFINITIONS": "æ˜¾ç¤ºæ‰€æœ‰å®šä¹‰"
         }
     },
     "CASE-DEFINITIONS": {
-        "LIST-MESSAGE": "显示{{size}} 条结果,总计{{total}}个匹配到的定义",
-        "LIST-MESSAGE-EMPTY": "没有匹配到Case定义.",
+        "LIST-MESSAGE": "æ˜¾ç¤º{{size}} æ�¡ç»“æ�œ,æ€»è®¡{{total}}ä¸ªåŒ¹é…�åˆ°çš„å®šä¹‰",
+        "LIST-MESSAGE-EMPTY": "æ²¡æœ‰åŒ¹é…�åˆ°Caseå®šä¹‰.",
         "FILTER": {
-            "NAME": "名称 (case sensitive)",
+            "NAME": "å��ç§° (case sensitive)",
             "KEY": "Key (case sensitive)",
-            "DEPLOYMENT-ID": "部署ID",
-            "TENANT-ID": "租户ID",
-            "LATEST": "最新版本",
-            "LATEST-HELP": "只显示最新版本"
+            "DEPLOYMENT-ID": "éƒ¨ç½²ID",
+            "TENANT-ID": "ç§Ÿæˆ·ID",
+            "LATEST": "æœ€æ–°ç‰ˆæœ¬",
+            "LATEST-HELP": "å�ªæ˜¾ç¤ºæœ€æ–°ç‰ˆæœ¬"
         },
         "TITLE": {
-            "MAIN": "Case定义"
+            "MAIN": "Caseå®šä¹‰"
         },
         "SORT": {
             "ID": "ID",
-            "NAME": "名称",
-            "VERSION": "版本"
+            "NAME": "å��ç§°",
+            "VERSION": "ç‰ˆæœ¬"
         },
         "HEADER": {
             "ID": "ID",
-            "NAME": "名称",
-            "VERSION": "版本",
+            "NAME": "å��ç§°",
+            "VERSION": "ç‰ˆæœ¬",
             "KEY": "Key",
-            "TENANT": "租户"
+            "TENANT": "ç§Ÿæˆ·"
         },
         "ACTIONS": {
-            "UPLOAD-FROM-MODELER": "从Flowable编辑器上传"
+            "UPLOAD-FROM-MODELER": "ä»�Flowableç¼–è¾‘å™¨ä¸Šä¼ "
         },
         "POPUP": {
             "UPLOAD-FROM-MODELER": {
-                "NAME": "用户名",
-                "PASSWORD": "密码",
-                "ERROR": "我们无法使用编辑器",
-                "UNAUTHORIZED": "域相关参数设置有误",
-                "UPLOAD-DESCRIPTION": "流程模型现在将被获取并部署到当前活动的Flowable集群中。为部署包选择适当的名称。"
+                "NAME": "ç”¨æˆ·å��",
+                "PASSWORD": "å¯†ç �",
+                "ERROR": "æˆ‘ä»¬æ— æ³•ä½¿ç”¨ç¼–è¾‘å™¨",
+                "UNAUTHORIZED": "åŸŸç›¸å…³å�‚æ•°è®¾ç½®æœ‰è¯¯",
+                "UPLOAD-DESCRIPTION": "æµ�ç¨‹æ¨¡å�‹ç�°åœ¨å°†è¢«è�·å�–å¹¶éƒ¨ç½²åˆ°å½“å‰�æ´»åŠ¨çš„Flowableé›†ç¾¤ä¸­ã€‚ä¸ºéƒ¨ç½²åŒ…é€‰æ‹©é€‚å½“çš„å��ç§°ã€‚"
             }
         }
     },
     "CASE-DEFINITION": {
         "ID": "ID:",
-        "NAME": "名称:",
-        "VERSION": "版本:",
-        "DESCRIPTION": "描述:",
+        "NAME": "å��ç§°:",
+        "VERSION": "ç‰ˆæœ¬:",
+        "DESCRIPTION": "æ��è¿°:",
         "KEY": "Key:",
-        "CATEGORY": "分类:",
-        "DEPLOYMENT": "部署对象:",
-        "TENANT": "租户:",
-        "START-FORM-DEFINED": "启动表单定义:",
-        "GRAPHICAL-NOTATION-DEFINED": "图形符号定义:",
-        "CASE-INSTANCES-SIZE": "定义有{{total}}个正在运行的case实例",
-        "CASE-INSTANCES-SHOWING": ", 显示 {{size}}个最近使用的",
-        "CASE-INSTANCES-EMPTY": "定义没有正在运行的case实例",
-        "JOBS-SIZE": "定义有 {{total}}个正在运行的jobs",
-        "JOBS-EMPTY": "定义没有正在运行的jobs",
-        "DECISION-TABLES-SIZE": "定义有{{total}}个决策表.",
-        "DECISION-TABLES-EMPTY": "定义没有决策表.",
-        "FORM-DEFINITIONS-SIZE": "定义有{{total}}个表单定义.",
-        "FORM-DEFINITIONS-EMPTY": "定义没有表单定义.",
+        "CATEGORY": "åˆ†ç±»:",
+        "DEPLOYMENT": "éƒ¨ç½²å¯¹è±¡:",
+        "TENANT": "ç§Ÿæˆ·:",
+        "START-FORM-DEFINED": "å�¯åŠ¨è¡¨å�•å®šä¹‰:",
+        "GRAPHICAL-NOTATION-DEFINED": "å›¾å½¢ç¬¦å�·å®šä¹‰:",
+        "CASE-INSTANCES-SIZE": "å®šä¹‰æœ‰{{total}}ä¸ªæ­£åœ¨è¿�è¡Œçš„caseå®�ä¾‹",
+        "CASE-INSTANCES-SHOWING": ", æ˜¾ç¤º {{size}}ä¸ªæœ€è¿‘ä½¿ç”¨çš„",
+        "CASE-INSTANCES-EMPTY": "å®šä¹‰æ²¡æœ‰æ­£åœ¨è¿�è¡Œçš„caseå®�ä¾‹",
+        "JOBS-SIZE": "å®šä¹‰æœ‰ {{total}}ä¸ªæ­£åœ¨è¿�è¡Œçš„jobs",
+        "JOBS-EMPTY": "å®šä¹‰æ²¡æœ‰æ­£åœ¨è¿�è¡Œçš„jobs",
+        "DECISION-TABLES-SIZE": "å®šä¹‰æœ‰{{total}}ä¸ªå†³ç­–è¡¨.",
+        "DECISION-TABLES-EMPTY": "å®šä¹‰æ²¡æœ‰å†³ç­–è¡¨.",
+        "FORM-DEFINITIONS-SIZE": "å®šä¹‰æœ‰{{total}}ä¸ªè¡¨å�•å®šä¹‰.",
+        "FORM-DEFINITIONS-EMPTY": "å®šä¹‰æ²¡æœ‰è¡¨å�•å®šä¹‰.",
         "TITLE": {
-            "CASE-INSTANCES": "Case实例",
+            "CASE-INSTANCES": "Caseå®�ä¾‹",
             "JOBS": "Jobs",
-            "DECISION-TABLES": "决策表",
-            "FORMS": "表单定义"
+            "DECISION-TABLES": "å†³ç­–è¡¨",
+            "FORMS": "è¡¨å�•å®šä¹‰"
         },
         "ACTION": {
-            "EDIT-CATEGORY": "编辑分类",
-            "SHOW-ALL-JOBS": "显示所有的 jobs",
-            "SHOW-ALL-CASES": "显示所有的cases",
-            "SHOW-DIAGRAM": "显示case图"
+            "EDIT-CATEGORY": "ç¼–è¾‘åˆ†ç±»",
+            "SHOW-ALL-JOBS": "æ˜¾ç¤ºæ‰€æœ‰çš„ jobs",
+            "SHOW-ALL-CASES": "æ˜¾ç¤ºæ‰€æœ‰çš„cases",
+            "SHOW-DIAGRAM": "æ˜¾ç¤ºcaseå›¾"
         },
         "POPUP": {
             "EDIT-CATEGORY": {
-                "TITLE": "定义编辑分类",
-                "MESSAGE": " 从CMMN 1.1 xml中的目标命名空间属性填充定义的初始分类, 但部署后可以更改。",
-                "CATEGORY": "分类",
-                "CATEGORY-PLACEHOLDER": "输入一个分类",
-                "CONFIRM": "修改分类"
+                "TITLE": "å®šä¹‰ç¼–è¾‘åˆ†ç±»",
+                "MESSAGE": " ä»�CMMN 1.1 xmlä¸­çš„ç›®æ ‡å‘½å��ç©ºé—´å±�æ€§å¡«å……å®šä¹‰çš„åˆ�å§‹åˆ†ç±», ä½†éƒ¨ç½²å��å�¯ä»¥æ›´æ”¹ã€‚",
+                "CATEGORY": "åˆ†ç±»",
+                "CATEGORY-PLACEHOLDER": "è¾“å…¥ä¸€ä¸ªåˆ†ç±»",
+                "CONFIRM": "ä¿®æ”¹åˆ†ç±»"
             },
             "SHOW-CASE-MODEL": {
-                "TITLE": "Case图"
+                "TITLE": "Caseå›¾"
             }
         }
     },
     "CASE-INSTANCES": {
-        "TITLE": "Case实例",
-        "LIST-MESSAGE": "显示{{size}} 条结果,总计{{total}}个匹配到的case实例.",
-        "LIST-MESSAGE-EMPTY": "没有匹配到到case实例.",
+        "TITLE": "Caseå®�ä¾‹",
+        "LIST-MESSAGE": "æ˜¾ç¤º{{size}} æ�¡ç»“æ�œ,æ€»è®¡{{total}}ä¸ªåŒ¹é…�åˆ°çš„caseå®�ä¾‹.",
+        "LIST-MESSAGE-EMPTY": "æ²¡æœ‰åŒ¹é…�åˆ°åˆ°caseå®�ä¾‹.",
         "FILTER": {
-            "NAME": "名称",
-            "CASE-DEFINITION": "Case定义",
-            "ALL-CASE-DEFINITIONS": "All Case定义",
-            "STATUS": "状态",
-            "STATUS-ANY": "任何状态",
-            "STATUS-ACTIVE": "激活的实例",
-            "STATUS-COMPLETE": "完成的实例",
+            "NAME": "å��ç§°",
+            "CASE-DEFINITION": "Caseå®šä¹‰",
+            "ALL-CASE-DEFINITIONS": "All Caseå®šä¹‰",
+            "STATUS": "çŠ¶æ€�",
+            "STATUS-ANY": "ä»»ä½•çŠ¶æ€�",
+            "STATUS-ACTIVE": "æ¿€æ´»çš„å®�ä¾‹",
+            "STATUS-COMPLETE": "å®Œæˆ�çš„å®�ä¾‹",
             "BUSINESS-KEY": "Business key",
-            "STARTED-BEFORE": "开始之前",
-            "STARTED-AFTER": "开始后",
-            "ENDED-BEFORE": "结束前",
-            "ENDED-AFTER": "结束后",
-            "VARIABLE": "变量",
-            "VARIABLE-NAME": "变量名称",
-            "VARIABLE-VALUE": "变量值",
-            "VARIABLE-BOOLEAN-VALUE": "Boolean值: {{value}}",
-            "TENANT-ID": "租户标识符"
+            "STARTED-BEFORE": "å¼€å§‹ä¹‹å‰�",
+            "STARTED-AFTER": "å¼€å§‹å��",
+            "ENDED-BEFORE": "ç»“æ�Ÿå‰�",
+            "ENDED-AFTER": "ç»“æ�Ÿå��",
+            "VARIABLE": "å�˜é‡�",
+            "VARIABLE-NAME": "å�˜é‡�å��ç§°",
+            "VARIABLE-VALUE": "å�˜é‡�å€¼",
+            "VARIABLE-BOOLEAN-VALUE": "Booleanå€¼: {{value}}",
+            "TENANT-ID": "ç§Ÿæˆ·æ ‡è¯†ç¬¦"
         },
         "SORT": {
             "ID": "ID",
-            "START-TIME": "开始时间"
+            "START-TIME": "å¼€å§‹æ—¶é—´"
         },
         "HEADER": {
             "ID": "ID",
-            "NAME": "名称",
+            "NAME": "å��ç§°",
             "BUSINESS-KEY": "Business key",
-            "CASE-DEFINITION": "Case定义",
-            "CREATE-TIME": "已经创建",
-            "END-TIME": "结束的",
-            "STATUS": "状态"
+            "CASE-DEFINITION": "Caseå®šä¹‰",
+            "CREATE-TIME": "å·²ç»�åˆ›å»º",
+            "END-TIME": "ç»“æ�Ÿçš„",
+            "STATUS": "çŠ¶æ€�"
         }
     },
     "CASE-INSTANCE": {
         "ID": "ID:",
-        "NAME": "名称:",
-        "DESCRIPTION": "描述:",
+        "NAME": "å��ç§°:",
+        "DESCRIPTION": "æ��è¿°:",
         "BUSINESS-KEY": "Business key:",
-        "TENANT-ID": "租户:",
-        "STATUS": "状态:",
-        "STATUS-ACTIVE": "有效",
-        "STATUS-有效": "完成的",
-        "DELETE-REASON": "删除原因:",
+        "TENANT-ID": "ç§Ÿæˆ·:",
+        "STATUS": "çŠ¶æ€�:",
+        "STATUS-ACTIVE": "æœ‰æ•ˆ",
+        "STATUS-æœ‰æ•ˆ": "å®Œæˆ�çš„",
+        "DELETE-REASON": "åˆ é™¤å�Ÿå› :",
         "STARTED-BY": "Started by:",
-        "END-TIME": "结束时间:",
-        "DURATION": "持续时间:",
-        "TASKS-SIZE": "这个case实例有{{total}}个任务.",
-        "TASKS-EMPTY": "这个case实例没有任务.",
-        "VARIABLES-SIZE": "这个case实例有{{total}}个变量.",
-        "VARIABLES-EMPTY": "这个case实例没有变量.",
-        "JOBS-SIZE": "这个case实例有{{total}}个jobs.",
-        "JOBS-EMPTY": "这个case实例没有jobs.",
-        "DECISION-TABLES-SIZE": "这个case实例有{{total}}个决策表.",
-        "DECISION-TABLES-EMPTY": "这个case实例没有决策表.",
-        "FORM-INSTANCES-SIZE": "这个case实例有{{total}}个表单实例.",
-        "FORM-INSTANCES-EMPTY": "这个case实例没有表单实例",
+        "END-TIME": "ç»“æ�Ÿæ—¶é—´:",
+        "DURATION": "æŒ�ç»­æ—¶é—´:",
+        "TASKS-SIZE": "è¿™ä¸ªcaseå®�ä¾‹æœ‰{{total}}ä¸ªä»»åŠ¡.",
+        "TASKS-EMPTY": "è¿™ä¸ªcaseå®�ä¾‹æ²¡æœ‰ä»»åŠ¡.",
+        "VARIABLES-SIZE": "è¿™ä¸ªcaseå®�ä¾‹æœ‰{{total}}ä¸ªå�˜é‡�.",
+        "VARIABLES-EMPTY": "è¿™ä¸ªcaseå®�ä¾‹æ²¡æœ‰å�˜é‡�.",
+        "JOBS-SIZE": "è¿™ä¸ªcaseå®�ä¾‹æœ‰{{total}}ä¸ªjobs.",
+        "JOBS-EMPTY": "è¿™ä¸ªcaseå®�ä¾‹æ²¡æœ‰jobs.",
+        "DECISION-TABLES-SIZE": "è¿™ä¸ªcaseå®�ä¾‹æœ‰{{total}}ä¸ªå†³ç­–è¡¨.",
+        "DECISION-TABLES-EMPTY": "è¿™ä¸ªcaseå®�ä¾‹æ²¡æœ‰å†³ç­–è¡¨.",
+        "FORM-INSTANCES-SIZE": "è¿™ä¸ªcaseå®�ä¾‹æœ‰{{total}}ä¸ªè¡¨å�•å®�ä¾‹.",
+        "FORM-INSTANCES-EMPTY": "è¿™ä¸ªcaseå®�ä¾‹æ²¡æœ‰è¡¨å�•å®�ä¾‹",
         "TITLE": {
-            "TASKS": "任务",
-            "VARIABLES": "变量",
+            "TASKS": "ä»»åŠ¡",
+            "VARIABLES": "å�˜é‡�",
             "JOBS": "Jobs",
-            "DECISION-TABLES": "决策表",
-            "FORM-INSTANCES": "表单实例"
+            "DECISION-TABLES": "å†³ç­–è¡¨",
+            "FORM-INSTANCES": "è¡¨å�•å®�ä¾‹"
         },
         "ACTION": {
-            "DELETE": "删除Case实例e",
-            "TERMINATE": "终止Case实例",
-            "SHOW-ALL-TASKS": "显示所有的tasks",
-            "SHOW-ALL-JOBS": "显示所有的jobs",
-            "SHOW-DIAGRAM": "显示case图标",
-            "TITLE-VARIABLES": "对选定变量的操作",
-            "DELETE-VARIABLE": "删除这个变量",
-            "UPDATE-VALUE": "更新变量",
-            "ADD-VARIABLE": "添加变量"
+            "DELETE": "åˆ é™¤Caseå®�ä¾‹e",
+            "TERMINATE": "ç»ˆæ­¢Caseå®�ä¾‹",
+            "SHOW-ALL-TASKS": "æ˜¾ç¤ºæ‰€æœ‰çš„tasks",
+            "SHOW-ALL-JOBS": "æ˜¾ç¤ºæ‰€æœ‰çš„jobs",
+            "SHOW-DIAGRAM": "æ˜¾ç¤ºcaseå›¾æ ‡",
+            "TITLE-VARIABLES": "å¯¹é€‰å®šå�˜é‡�çš„æ“�ä½œ",
+            "DELETE-VARIABLE": "åˆ é™¤è¿™ä¸ªå�˜é‡�",
+            "UPDATE-VALUE": "æ›´æ–°å�˜é‡�",
+            "ADD-VARIABLE": "æ·»åŠ å�˜é‡�"
         },
         "POPUP": {
             "DELETE": {
-                "TITLE": "删除Case实例",
-                "MESSAGE-DELETE": "你确定要删除这个case实例吗？",
-                "MESSAGE-TERMINATE": "你确定要终止这个case实例吗？",
-                "DELETE-REASON": "删除原因",
-                "DELETE-REASON-HELP": "输入一个可选的删除原因",
-                "CONFIRM-DELETE": "删除Case实例",
-                "CONFIRM-TERMINATE": "终止Case实例"
+                "TITLE": "åˆ é™¤Caseå®�ä¾‹",
+                "MESSAGE-DELETE": "ä½ ç¡®å®šè¦�åˆ é™¤è¿™ä¸ªcaseå®�ä¾‹å�—ï¼Ÿ",
+                "MESSAGE-TERMINATE": "ä½ ç¡®å®šè¦�ç»ˆæ­¢è¿™ä¸ªcaseå®�ä¾‹å�—ï¼Ÿ",
+                "DELETE-REASON": "åˆ é™¤å�Ÿå› ",
+                "DELETE-REASON-HELP": "è¾“å…¥ä¸€ä¸ªå�¯é€‰çš„åˆ é™¤å�Ÿå› ",
+                "CONFIRM-DELETE": "åˆ é™¤Caseå®�ä¾‹",
+                "CONFIRM-TERMINATE": "ç»ˆæ­¢Caseå®�ä¾‹"
             },
             "SHOW-CASE-MODEL": {
-                "TITLE": "Case图"
+                "TITLE": "Caseå›¾"
             },
             "CREATE-VARIABLE": {
-                "TITLE": "创建变量",
-                "NAME": "变量名称",
-                "TYPE": "Flowable变量类型",
-                "VALUE": "变量值",
-                "CREATE": "创建"
+                "TITLE": "åˆ›å»ºå�˜é‡�",
+                "NAME": "å�˜é‡�å��ç§°",
+                "TYPE": "Flowableå�˜é‡�ç±»å�‹",
+                "VALUE": "å�˜é‡�å€¼",
+                "CREATE": "åˆ›å»º"
             },
             "UPDATE-VARIABLE": {
-                "TITLE": "更新变量'{{name}}'",
-                "NAME": "变量名称",
-                "VALUE": "值",
+                "TITLE": "æ›´æ–°å�˜é‡�'{{name}}'",
+                "NAME": "å�˜é‡�å��ç§°",
+                "VALUE": "å€¼",
                 "CHECKED": "true",
                 "UNCHECKED": "false",
-                "DATE-HELP": "ISO-8601格式 (例子 : 2016-01-28T23:00:00Z)",
-                "ACTION-UPDATE": "更新"
+                "DATE-HELP": "ISO-8601æ ¼å¼� (ä¾‹å­� : 2016-01-28T23:00:00Z)",
+                "ACTION-UPDATE": "æ›´æ–°"
             },
             "DELETE-VARIABLE": {
-                "TITLE": "删除变量'{{name}}",
-                "MESSAGE": "确实要删除此变量吗?",
-                "DELETE": "删除"
+                "TITLE": "åˆ é™¤å�˜é‡�'{{name}}",
+                "MESSAGE": "ç¡®å®�è¦�åˆ é™¤æ­¤å�˜é‡�å�—?",
+                "DELETE": "åˆ é™¤"
             }
         }
     },
-    "APP-DEPLOYMENTS": {
-        "TITLE": "部署",
-        "LIST-MESSAGE": "显示{{size}}个结果, 总计{{total}}匹配到的部署对象.",
-        "LIST-MESSAGE-EMPTY": "没有匹配到的部署.",
+    "APP-DEPLOYMENTS1": {
+        "TITLE": "éƒ¨ç½²",
+        "LIST-MESSAGE": "æ˜¾ç¤º{{size}}ä¸ªç»“æ�œ, æ€»è®¡{{total}}åŒ¹é…�åˆ°çš„éƒ¨ç½²å¯¹è±¡.",
+        "LIST-MESSAGE-EMPTY": "æ²¡æœ‰åŒ¹é…�åˆ°çš„éƒ¨ç½².",
         "FILTER": {
-            "NAME": "名称(case sensitive)",
-            "TENANTID": "租户标识符(case sensitive)"
+            "NAME": "å��ç§°(case sensitive)",
+            "TENANTID": "ç§Ÿæˆ·æ ‡è¯†ç¬¦(case sensitive)"
         },
         "SORT": {
             "ID": "ID",
-            "NAME": "名称"
+            "NAME": "å��ç§°"
         },
         "HEADER": {
             "ID": "ID",
-            "NAME": "名称",
-            "DEPLOY-TIME": "部署时间",
-            "CATEGORY": "分类",
-            "TENANT": "租户"
+            "NAME": "å��ç§°",
+            "DEPLOY-TIME": "éƒ¨ç½²æ—¶é—´",
+            "CATEGORY": "åˆ†ç±»",
+            "TENANT": "ç§Ÿæˆ·"
         },
         "ACTION": {
-            "UPLOAD": "上传应用程序",
-            "DELETE": "删除部署"
+            "UPLOAD": "ä¸Šä¼ åº”ç”¨ç¨‹åº�",
+            "DELETE": "åˆ é™¤éƒ¨ç½²"
         },
         "POPUP": {
             "UPLOAD": {
-                "DESCRIPTION": "选择一个.app应用程序定义文件去部署或者上传一个包含资产的应用程序的.zip或者.bar 文件.",
-                "DROPZONE": "或在此处拖拽一个文件",
-                "NO-DROP": "浏览器不支持文件丢拖拽",
-                "CANCEL-UPLOAD": "取消上传",
-                "ERROR": "不能上传这个文件"
+                "DESCRIPTION": "é€‰æ‹©ä¸€ä¸ª.appåº”ç”¨ç¨‹åº�å®šä¹‰æ–‡ä»¶å�»éƒ¨ç½²æˆ–è€…ä¸Šä¼ ä¸€ä¸ªåŒ…å�«èµ„äº§çš„åº”ç”¨ç¨‹åº�çš„.zipæˆ–è€….bar æ–‡ä»¶.",
+                "DROPZONE": "æˆ–åœ¨æ­¤å¤„æ‹–æ‹½ä¸€ä¸ªæ–‡ä»¶",
+                "NO-DROP": "æµ�è§ˆå™¨ä¸�æ”¯æŒ�æ–‡ä»¶ä¸¢æ‹–æ‹½",
+                "CANCEL-UPLOAD": "å�–æ¶ˆä¸Šä¼ ",
+                "ERROR": "ä¸�èƒ½ä¸Šä¼ è¿™ä¸ªæ–‡ä»¶"
             },
             "DELETE": {
-                "CONFIRM-MESSAGE": "删除部署 '{{name}}'?"
+                "CONFIRM-MESSAGE": "åˆ é™¤éƒ¨ç½² '{{name}}'?"
                 }
         }
     },
     "APP-DEPLOYMENT": {
         "ID": "ID:",
-        "NAME": "名称:",
-        "TIME": "部署时间:",
+        "NAME": "å��ç§°:",
+        "TIME": "éƒ¨ç½²æ—¶é—´:",
         "KEY": "Key:",
-        "CATEGORY": "分类:",
-        "TENANTID": "租户标识符:",
-        "DEFINITIONS-MESSAGE": "这个部署有{{total}}个应用程序定义, 显示 {{size}}.",
-        "DEFINITIONS-MESSAGE-EMPTY": "这个部署没有个应用程序定义。",
+        "CATEGORY": "åˆ†ç±»:",
+        "TENANTID": "ç§Ÿæˆ·æ ‡è¯†ç¬¦:",
+        "DEFINITIONS-MESSAGE": "è¿™ä¸ªéƒ¨ç½²æœ‰{{total}}ä¸ªåº”ç”¨ç¨‹åº�å®šä¹‰, æ˜¾ç¤º {{size}}.",
+        "DEFINITIONS-MESSAGE-EMPTY": "è¿™ä¸ªéƒ¨ç½²æ²¡æœ‰ä¸ªåº”ç”¨ç¨‹åº�å®šä¹‰ã€‚",
         "TITLE": {
-            "APP-DEFINITIONS": "应用程序定义",
-            "RESOURCES": "资源"
+            "APP-DEFINITIONS": "åº”ç”¨ç¨‹åº�å®šä¹‰",
+            "RESOURCES": "èµ„æº�"
         },
         "ACTION": {
-            "SHOW-ALL-DEFINITIONS": "显示所有定义"
+            "SHOW-ALL-DEFINITIONS": "æ˜¾ç¤ºæ‰€æœ‰å®šä¹‰"
         }
     },
     "APP-DEFINITIONS": {
-        "LIST-MESSAGE": "显示{{size}} 条结果,总计{{total}}个匹配到的应用程序定义。",
-        "LIST-MESSAGE-EMPTY": "没有匹配到的应用程序定义。",
+        "LIST-MESSAGE": "æ˜¾ç¤º{{size}} æ�¡ç»“æ�œ,æ€»è®¡{{total}}ä¸ªåŒ¹é…�åˆ°çš„åº”ç”¨ç¨‹åº�å®šä¹‰ã€‚",
+        "LIST-MESSAGE-EMPTY": "æ²¡æœ‰åŒ¹é…�åˆ°çš„åº”ç”¨ç¨‹åº�å®šä¹‰ã€‚",
         "FILTER": {
-            "NAME": "名称 (case sensitive)",
+            "NAME": "å��ç§° (case sensitive)",
             "KEY": "Key (case sensitive)",
-            "DEPLOYMENT-ID": "部署ID",
-            "TENANT-ID": "租户ID",
-            "LATEST": "最新版本",
-            "LATEST-HELP": "只显示最新版本"
+            "DEPLOYMENT-ID": "éƒ¨ç½²ID",
+            "TENANT-ID": "ç§Ÿæˆ·ID",
+            "LATEST": "æœ€æ–°ç‰ˆæœ¬",
+            "LATEST-HELP": "å�ªæ˜¾ç¤ºæœ€æ–°ç‰ˆæœ¬"
         },
         "TITLE": {
-            "MAIN": "应用程序定义"
+            "MAIN": "åº”ç”¨ç¨‹åº�å®šä¹‰"
         },
         "SORT": {
             "ID": "ID",
-            "NAME": "名称",
-            "VERSION": "版本"
+            "NAME": "å��ç§°",
+            "VERSION": "ç‰ˆæœ¬"
         },
         "HEADER": {
             "ID": "ID",
-            "NAME": "名称",
-            "VERSION": "版本",
+            "NAME": "å��ç§°",
+            "VERSION": "ç‰ˆæœ¬",
             "KEY": "Key",
-            "TENANT": "租户"
+            "TENANT": "ç§Ÿæˆ·"
         }
     },
     "APP-DEFINITION": {
         "ID": "ID:",
-        "NAME": "名称:",
-        "VERSION": "版本:",
-        "DESCRIPTION": "描述:",
+        "NAME": "å��ç§°:",
+        "VERSION": "ç‰ˆæœ¬:",
+        "DESCRIPTION": "æ��è¿°:",
         "KEY": "Key:",
-        "CATEGORY": "分类:",
-        "DEPLOYMENT": "部署对象:",
-        "TENANT": "租户:",
-        "PROCESS-DEFINITIONS-SIZE": "应用程序有{{total}}个流程实例",
-        "PROCESS-DEFINITIONS-EMPTY": "应用程序没有流程实例",
-        "CASE-DEFINITIONS-SIZE": "应用程序有{{total}}个Case定义。",
-        "CASE-DEFINITIONS-EMPTY": "应用程序没有Case定义。",
-        "DECISION-TABLES-SIZE": "应用程序有{{total}}个决策表。",
-        "DECISION-TABLES-EMPTY": "应用程序有没有流程定义。",
-        "FORM-DEFINITIONS-SIZE": "应用程序有{{total}}个表单定义。",
-        "FORM-DEFINITIONS-EMPTY": "应用程序没有表单定义。",
+        "CATEGORY": "åˆ†ç±»:",
+        "DEPLOYMENT": "éƒ¨ç½²å¯¹è±¡:",
+        "TENANT": "ç§Ÿæˆ·:",
+        "PROCESS-DEFINITIONS-SIZE": "åº”ç”¨ç¨‹åº�æœ‰{{total}}ä¸ªæµ�ç¨‹å®�ä¾‹",
+        "PROCESS-DEFINITIONS-EMPTY": "åº”ç”¨ç¨‹åº�æ²¡æœ‰æµ�ç¨‹å®�ä¾‹",
+        "CASE-DEFINITIONS-SIZE": "åº”ç”¨ç¨‹åº�æœ‰{{total}}ä¸ªCaseå®šä¹‰ã€‚",
+        "CASE-DEFINITIONS-EMPTY": "åº”ç”¨ç¨‹åº�æ²¡æœ‰Caseå®šä¹‰ã€‚",
+        "DECISION-TABLES-SIZE": "åº”ç”¨ç¨‹åº�æœ‰{{total}}ä¸ªå†³ç­–è¡¨ã€‚",
+        "DECISION-TABLES-EMPTY": "åº”ç”¨ç¨‹åº�æœ‰æ²¡æœ‰æµ�ç¨‹å®šä¹‰ã€‚",
+        "FORM-DEFINITIONS-SIZE": "åº”ç”¨ç¨‹åº�æœ‰{{total}}ä¸ªè¡¨å�•å®šä¹‰ã€‚",
+        "FORM-DEFINITIONS-EMPTY": "åº”ç”¨ç¨‹åº�æ²¡æœ‰è¡¨å�•å®šä¹‰ã€‚",
         "TITLE": {
-            "PROCESS-DEFINITIONS": "流程定义",
-            "CASE-DEFINITIONS": "Case定义",
-            "DECISION-TABLES": "决策表",
-            "FORM-DEFINITIONS": "表单定义"
+            "PROCESS-DEFINITIONS": "æµ�ç¨‹å®šä¹‰",
+            "CASE-DEFINITIONS": "Caseå®šä¹‰",
+            "DECISION-TABLES": "å†³ç­–è¡¨",
+            "FORM-DEFINITIONS": "è¡¨å�•å®šä¹‰"
         },
         "ACTION": {
-            "EDIT-CATEGORY": "编辑分类"
+            "EDIT-CATEGORY": "ç¼–è¾‘åˆ†ç±»"
         }
     },
     "DECISION-TABLE-DEPLOYMENTS": {
-        "TITLE": "决策表部署对象",
-        "LIST-MESSAGE": "显示{{size}} 条结果,总计{{total}} 个匹配到的部署对象。",
-        "LIST-MESSAGE-EMPTY": "没有匹配到部署对象。",
+        "TITLE": "å†³ç­–è¡¨éƒ¨ç½²å¯¹è±¡",
+        "LIST-MESSAGE": "æ˜¾ç¤º{{size}} æ�¡ç»“æ�œ,æ€»è®¡{{total}} ä¸ªåŒ¹é…�åˆ°çš„éƒ¨ç½²å¯¹è±¡ã€‚",
+        "LIST-MESSAGE-EMPTY": "æ²¡æœ‰åŒ¹é…�åˆ°éƒ¨ç½²å¯¹è±¡ã€‚",
         "FILTER": {
-            "NAME": "名称 (case sensitive)",
-            "TENANTID": "租户标识符 (case sensitive)"
+            "NAME": "å��ç§° (case sensitive)",
+            "TENANTID": "ç§Ÿæˆ·æ ‡è¯†ç¬¦ (case sensitive)"
         },
         "SORT": {
             "ID": "ID",
-            "NAME": "名称"
+            "NAME": "å��ç§°"
         },
         "HEADER": {
             "ID": "ID",
-            "NAME": "名称",
-            "DEPLOY-TIME": "部署时间",
-            "CATEGORY": "分类",
-            "TENANT": "租户"
+            "NAME": "å��ç§°",
+            "DEPLOY-TIME": "éƒ¨ç½²æ—¶é—´",
+            "CATEGORY": "åˆ†ç±»",
+            "TENANT": "ç§Ÿæˆ·"
         },
         "ACTION": {
-            "DELETE": "删除部署"
+            "DELETE": "åˆ é™¤éƒ¨ç½²"
         }
     },
     "DECISION-TABLE-DEPLOYMENT": {
         "ID": "ID:",
-        "NAME": "名称:",
-        "TIME": "部署时间:",
-        "CATEGORY": "分类:",
-        "TENANTID": "租户标识符:",
-        "DECISION-TABLES-MESSAGE": "这个部署对象有{{total}}决策表, 显示 {{size}}.",
-        "DECISION-TABLES-MESSAGE-EMPTY": "这个部署对象没有匹配到决策表。",
-        "PARENT-DEPLOYMENT-ID": "父部署ID",
+        "NAME": "å��ç§°:",
+        "TIME": "éƒ¨ç½²æ—¶é—´:",
+        "CATEGORY": "åˆ†ç±»:",
+        "TENANTID": "ç§Ÿæˆ·æ ‡è¯†ç¬¦:",
+        "DECISION-TABLES-MESSAGE": "è¿™ä¸ªéƒ¨ç½²å¯¹è±¡æœ‰{{total}}å†³ç­–è¡¨, æ˜¾ç¤º {{size}}.",
+        "DECISION-TABLES-MESSAGE-EMPTY": "è¿™ä¸ªéƒ¨ç½²å¯¹è±¡æ²¡æœ‰åŒ¹é…�åˆ°å†³ç­–è¡¨ã€‚",
+        "PARENT-DEPLOYMENT-ID": "çˆ¶éƒ¨ç½²ID",
         "TITLE": {
-            "DECISION-TABLES": "决策表",
-            "RESOURCES": "资源"
+            "DECISION-TABLES": "å†³ç­–è¡¨",
+            "RESOURCES": "èµ„æº�"
         },
         "ACTION": {
-            "SHOW-ALL-DEFINITIONS": "显示所有的决策表"
+            "SHOW-ALL-DEFINITIONS": "æ˜¾ç¤ºæ‰€æœ‰çš„å†³ç­–è¡¨"
         }
     },
     "DECISION-TABLES": {
-        "TITLE": "决策表",
-        "LIST-MESSAGE": "显示{{size}} 条结果,总计{{total}} 个匹配到的决策表。",
-        "LIST-MESSAGE-EMPTY": "没有匹配到决策表。",
+        "TITLE": "å†³ç­–è¡¨",
+        "LIST-MESSAGE": "æ˜¾ç¤º{{size}} æ�¡ç»“æ�œ,æ€»è®¡{{total}} ä¸ªåŒ¹é…�åˆ°çš„å†³ç­–è¡¨ã€‚",
+        "LIST-MESSAGE-EMPTY": "æ²¡æœ‰åŒ¹é…�åˆ°å†³ç­–è¡¨ã€‚",
         "FILTER": {
-            "NAME": "名称",
+            "NAME": "å��ç§°",
             "KEY": "Key",
-            "TENANTID": "租户标识符"
+            "TENANTID": "ç§Ÿæˆ·æ ‡è¯†ç¬¦"
         },
         "SORT": {
             "ID": "ID",
-            "NAME": "名称"
+            "NAME": "å��ç§°"
         },
         "HEADER": {
             "ID": "ID",
-            "NAME": "名称",
-            "VERSION": "版本",
+            "NAME": "å��ç§°",
+            "VERSION": "ç‰ˆæœ¬",
             "KEY": "Key",
-            "DEPLOY-TIME": "部署时间",
-            "TENANT-ID": "租户ID"
+            "DEPLOY-TIME": "éƒ¨ç½²æ—¶é—´",
+            "TENANT-ID": "ç§Ÿæˆ·ID"
         }
     },
     "DECISION-TABLE": {
         "ID": "ID:",
-        "NAME": "名称:",
-        "VERSION": "版本:",
+        "NAME": "å��ç§°:",
+        "VERSION": "ç‰ˆæœ¬:",
         "KEY": "Key:",
-        "CATEGORY": "分类:",
-        "DEPLOYMENT-ID": "部署ID:",
-        "PARENT-DEPLOYMENT-ID": "父部署ID",
-        "RESOURCE-NAME": "资源名称:",
-        "DESCRIPTION": "描述:",
-        "TENANT": "租户:",
+        "CATEGORY": "åˆ†ç±»:",
+        "DEPLOYMENT-ID": "éƒ¨ç½²ID:",
+        "PARENT-DEPLOYMENT-ID": "çˆ¶éƒ¨ç½²ID",
+        "RESOURCE-NAME": "èµ„æº�å��ç§°:",
+        "DESCRIPTION": "æ��è¿°:",
+        "TENANT": "ç§Ÿæˆ·:",
         "TITLE": {
-            "DECISION-AUDITS": "决策审计"
+            "DECISION-AUDITS": "å†³ç­–å®¡è®¡"
         },
-        "DECISION-EXECUTION-MESSAGE": "这个决策表{{total}}个执行实例, 显示 {{size}}.",
-        "DECISION-EXECUTION-MESSAGE-EMPTY": "这个决策表没有执行实例",
+        "DECISION-EXECUTION-MESSAGE": "è¿™ä¸ªå†³ç­–è¡¨{{total}}ä¸ªæ‰§è¡Œå®�ä¾‹, æ˜¾ç¤º {{size}}.",
+        "DECISION-EXECUTION-MESSAGE-EMPTY": "è¿™ä¸ªå†³ç­–è¡¨æ²¡æœ‰æ‰§è¡Œå®�ä¾‹",
         "ACTION": {
-            "EDIT-CATEGORY": "编辑分类",
-            "SHOW-ALL-JOBS": "显示所有的jobs",
-            "SHOW-ALL-PROCESSES": "显示所有的流程",
-            "SHOW-DIAGRAM": "显示流程图片",
-            "SHOW-DECISION-TABLE": "显示决策表",
-            "SHOW-ALL-EXECUTIONS": "显示所有的执行实例对象"
+            "EDIT-CATEGORY": "ç¼–è¾‘åˆ†ç±»",
+            "SHOW-ALL-JOBS": "æ˜¾ç¤ºæ‰€æœ‰çš„jobs",
+            "SHOW-ALL-PROCESSES": "æ˜¾ç¤ºæ‰€æœ‰çš„æµ�ç¨‹",
+            "SHOW-DIAGRAM": "æ˜¾ç¤ºæµ�ç¨‹å›¾ç‰‡",
+            "SHOW-DECISION-TABLE": "æ˜¾ç¤ºå†³ç­–è¡¨",
+            "SHOW-ALL-EXECUTIONS": "æ˜¾ç¤ºæ‰€æœ‰çš„æ‰§è¡Œå®�ä¾‹å¯¹è±¡"
         },
         "POPUP": {
-            "TITLE": "决策表: ",
+            "TITLE": "å†³ç­–è¡¨: ",
             "KEY": "Key:",
-            "HIT-POLICY": "命中策略:",
+            "HIT-POLICY": "å‘½ä¸­ç­–ç•¥:",
             "HIT-POLICIES": {
                 "FIRST": "First (Single pass)",
                 "ANY": "Any (Single pass)"
@@ -1236,197 +1236,197 @@
         }
     },
     "DECISION-TABLE-EXECUTIONS": {
-        "TITLE": "决策表执行实例对象",
-        "LIST-MESSAGE": "显示{{size}} 条结果,总计{{total}}个匹配到的决策表执行实例.",
-        "LIST-MESSAGE-EMPTY": "没有匹配到决策表执行实例",
+        "TITLE": "å†³ç­–è¡¨æ‰§è¡Œå®�ä¾‹å¯¹è±¡",
+        "LIST-MESSAGE": "æ˜¾ç¤º{{size}} æ�¡ç»“æ�œ,æ€»è®¡{{total}}ä¸ªåŒ¹é…�åˆ°çš„å†³ç­–è¡¨æ‰§è¡Œå®�ä¾‹.",
+        "LIST-MESSAGE-EMPTY": "æ²¡æœ‰åŒ¹é…�åˆ°å†³ç­–è¡¨æ‰§è¡Œå®�ä¾‹",
         "FILTER": {
-            "DEFINITION-ID": "定义ID",
-            "PROCESS-INSTANCE-ID": "流程实例ID",
-            "CASE-INSTANCE-ID": "Case实例ID",
-            "TENANTID": "租户标识符"
+            "DEFINITION-ID": "å®šä¹‰ID",
+            "PROCESS-INSTANCE-ID": "æµ�ç¨‹å®�ä¾‹ID",
+            "CASE-INSTANCE-ID": "Caseå®�ä¾‹ID",
+            "TENANTID": "ç§Ÿæˆ·æ ‡è¯†ç¬¦"
         },
         "SORT": {
-            "START-TIME": "开始时间",
-            "END-TIME": "结束时间",
-            "TENANT-ID": "租户ID"
+            "START-TIME": "å¼€å§‹æ—¶é—´",
+            "END-TIME": "ç»“æ�Ÿæ—¶é—´",
+            "TENANT-ID": "ç§Ÿæˆ·ID"
         },
         "HEADER": {
             "ID": "ID",
-            "DECISION-DEFINITION-KEY": "决策Key",
-            "DECISION-DEFINITION-NAME": "决策名称",
-            "FAILED": "失败",
-            "END-TIME": "结束时间",
-            "TENANT-ID": "租户ID"
+            "DECISION-DEFINITION-KEY": "å†³ç­–Key",
+            "DECISION-DEFINITION-NAME": "å†³ç­–å��ç§°",
+            "FAILED": "å¤±è´¥",
+            "END-TIME": "ç»“æ�Ÿæ—¶é—´",
+            "TENANT-ID": "ç§Ÿæˆ·ID"
         }
     },
     "DECISION-TABLE-EXECUTION": {
         "TITLE": "Decision table execution",
-        "LIST-MESSAGE": "显示{{size}} 条结果,总计{{total}}个匹配到的决策表。",
-        "LIST-MESSAGE-EMPTY": "没有匹配到决策表。",
-        "DEFINITION-ID": "决策定义ID",
-        "DEPLOYMENT-ID": "部署ID",
-        "DEFINITION-KEY": "决策Key",
-        "DEFINITION-NAME": "决策名称",
-        "DEFINITION-VERSION": "决策版本",
-        "PROCESS-INSTANCE-ID": "流程实例ID",
-        "CASE-INSTANCE-ID": "Case实例ID",
-        "EXECUTION-START-TIME": "开始时间",
-        "EXECUTION-END-TIME": "结束时间",
-        "FAILED": "失败",
+        "LIST-MESSAGE": "æ˜¾ç¤º{{size}} æ�¡ç»“æ�œ,æ€»è®¡{{total}}ä¸ªåŒ¹é…�åˆ°çš„å†³ç­–è¡¨ã€‚",
+        "LIST-MESSAGE-EMPTY": "æ²¡æœ‰åŒ¹é…�åˆ°å†³ç­–è¡¨ã€‚",
+        "DEFINITION-ID": "å†³ç­–å®šä¹‰ID",
+        "DEPLOYMENT-ID": "éƒ¨ç½²ID",
+        "DEFINITION-KEY": "å†³ç­–Key",
+        "DEFINITION-NAME": "å†³ç­–å��ç§°",
+        "DEFINITION-VERSION": "å†³ç­–ç‰ˆæœ¬",
+        "PROCESS-INSTANCE-ID": "æµ�ç¨‹å®�ä¾‹ID",
+        "CASE-INSTANCE-ID": "Caseå®�ä¾‹ID",
+        "EXECUTION-START-TIME": "å¼€å§‹æ—¶é—´",
+        "EXECUTION-END-TIME": "ç»“æ�Ÿæ—¶é—´",
+        "FAILED": "å¤±è´¥",
         "FILTER": {
             "DEFINITION-ID": "Definition ID",
-            "PROCESS-INSTANCE-ID": "流程实例 ID",
-            "CASE-INSTANCE-ID": "Case实例ID",
-            "TENANTID": "租户标识符"
+            "PROCESS-INSTANCE-ID": "æµ�ç¨‹å®�ä¾‹ ID",
+            "CASE-INSTANCE-ID": "Caseå®�ä¾‹ID",
+            "TENANTID": "ç§Ÿæˆ·æ ‡è¯†ç¬¦"
         },
         "SORT": {
-            "START-TIME": "开始时间",
-            "END-TIME": "结束时间",
-            "TENANT-ID": "租户ID"
+            "START-TIME": "å¼€å§‹æ—¶é—´",
+            "END-TIME": "ç»“æ�Ÿæ—¶é—´",
+            "TENANT-ID": "ç§Ÿæˆ·ID"
         },
         "HEADER": {
             "ID": "ID",
             "DECISION-DEFINITION-ID": "Definition ID",
             "DECISION-KEY": "Decision Key",
-            "PROCESS-INSTANCE-ID": "流程实例 ID",
-            "CASE-INSTANCE-ID": "Case实例ID",
-            "FAILED": "失败",
-            "START-TIME": "开始时间",
-            "END-TIME": "结束时间",
-            "TENANT-ID": "租户ID"
+            "PROCESS-INSTANCE-ID": "æµ�ç¨‹å®�ä¾‹ ID",
+            "CASE-INSTANCE-ID": "Caseå®�ä¾‹ID",
+            "FAILED": "å¤±è´¥",
+            "START-TIME": "å¼€å§‹æ—¶é—´",
+            "END-TIME": "ç»“æ�Ÿæ—¶é—´",
+            "TENANT-ID": "ç§Ÿæˆ·ID"
         },
         "AUDIT-DATA": {
-            "HEADER": "审计数据",
-            "HIT-POLICY": "命中策略",
-            "STRICT-MODE": "启用严格模式",
-            "EXCEPTION-MESSAGE": "异常消息",
-            "VALIDATION-MESSAGE": "验证消息",
-            "RESULT": "结果",
-            "RULE-EXECUTIONS": "规则执行实例对象",
-            "INPUT-VARIABLES": "输入变量",
+            "HEADER": "å®¡è®¡æ•°æ�®",
+            "HIT-POLICY": "å‘½ä¸­ç­–ç•¥",
+            "STRICT-MODE": "å�¯ç”¨ä¸¥æ ¼æ¨¡å¼�",
+            "EXCEPTION-MESSAGE": "å¼‚å¸¸æ¶ˆæ�¯",
+            "VALIDATION-MESSAGE": "éªŒè¯�æ¶ˆæ�¯",
+            "RESULT": "ç»“æ�œ",
+            "RULE-EXECUTIONS": "è§„åˆ™æ‰§è¡Œå®�ä¾‹å¯¹è±¡",
+            "INPUT-VARIABLES": "è¾“å…¥å�˜é‡�",
             "VARIABLE-KEY": "Key",
-            "VARIABLE-VALUE": "值"
+            "VARIABLE-VALUE": "å€¼"
         }
     },
     "FORM-DEFINITIONS": {
-    	"TITLE": "表单定义",
-        "LIST-MESSAGE": "显示{{size}} 条结果,总计{{total}}个匹配到的表单定义.",
-        "LIST-MESSAGE-EMPTY": "没有匹配到表单定义",
+    	"TITLE": "è¡¨å�•å®šä¹‰",
+        "LIST-MESSAGE": "æ˜¾ç¤º{{size}} æ�¡ç»“æ�œ,æ€»è®¡{{total}}ä¸ªåŒ¹é…�åˆ°çš„è¡¨å�•å®šä¹‰.",
+        "LIST-MESSAGE-EMPTY": "æ²¡æœ‰åŒ¹é…�åˆ°è¡¨å�•å®šä¹‰",
         "HEADER": {
             "ID": "ID",
-            "NAME": "名称",
-            "DEPLOYMENTID": "部署ID",
-            "TENANTID": "租户ID",
+            "NAME": "å��ç§°",
+            "DEPLOYMENTID": "éƒ¨ç½²ID",
+            "TENANTID": "ç§Ÿæˆ·ID",
             "KEY": "Key",
-            "VERSION": "版本"
+            "VERSION": "ç‰ˆæœ¬"
         },
         "FILTER": {
-            "NAME": "名称",
-            "APPID": "应用程序部署ID",
-            "TENANTID": "租户标识符"
+            "NAME": "å��ç§°",
+            "APPID": "åº”ç”¨ç¨‹åº�éƒ¨ç½²ID",
+            "TENANTID": "ç§Ÿæˆ·æ ‡è¯†ç¬¦"
         },
         "SORT": {
             "ID": "ID",
-            "NAME": "名称"
+            "NAME": "å��ç§°"
         }
     },
     "FORM-DEFINITION": {
         "ID": "ID:",
-        "NAME": "名称:",
+        "NAME": "å��ç§°:",
         "KEY": "Key:",
-        "CATEGORY": "分类:",
-        "PARENT-DEPLOYMENT-ID": "父部署ID:",
-        "DEPLOYMENT-ID": "部署ID:",
-        "DESCRIPTION": "描述:",
-        "TENANT": "租户:",
+        "CATEGORY": "åˆ†ç±»:",
+        "PARENT-DEPLOYMENT-ID": "çˆ¶éƒ¨ç½²ID:",
+        "DEPLOYMENT-ID": "éƒ¨ç½²ID:",
+        "DESCRIPTION": "æ��è¿°:",
+        "TENANT": "ç§Ÿæˆ·:",
         "MESSAGE-EMPTY": "(None)",
         "TITLE": {
-            "FORM-INSTANCES": "表单实例"
+            "FORM-INSTANCES": "è¡¨å�•å®�ä¾‹"
         },
-        "FORM-INSTANCES-MESSAGE": "这个定义有{{total}}个表单实例, 显示 {{size}}.",
-        "FORM-INSTANCES-MESSAGE-EMPTY": "这个定义没有表单实例",
+        "FORM-INSTANCES-MESSAGE": "è¿™ä¸ªå®šä¹‰æœ‰{{total}}ä¸ªè¡¨å�•å®�ä¾‹, æ˜¾ç¤º {{size}}.",
+        "FORM-INSTANCES-MESSAGE-EMPTY": "è¿™ä¸ªå®šä¹‰æ²¡æœ‰è¡¨å�•å®�ä¾‹",
         "ACTION": {
-            "EDIT-CATEGORY": "编辑分类",
-            "SHOW-ALL-JOBS": "显示所有的jobs",
-            "SHOW-ALL-PROCESSES": "显示所有的流程",
-            "SHOW-DIAGRAM": "显示流程图片",
-            "SHOW-FORM": "显示表单"
+            "EDIT-CATEGORY": "ç¼–è¾‘åˆ†ç±»",
+            "SHOW-ALL-JOBS": "æ˜¾ç¤ºæ‰€æœ‰çš„jobs",
+            "SHOW-ALL-PROCESSES": "æ˜¾ç¤ºæ‰€æœ‰çš„æµ�ç¨‹",
+            "SHOW-DIAGRAM": "æ˜¾ç¤ºæµ�ç¨‹å›¾ç‰‡",
+            "SHOW-FORM": "æ˜¾ç¤ºè¡¨å�•"
         },
         "POPUP": {
-            "TITLE": "表单: "
+            "TITLE": "è¡¨å�•: "
         },
         "FIELD-PREVIEW" : {
-        	"DISPLAY-REF": "显示值",
-        	"SELECT-FIELD": "(没有选择字段)",
-        	"FIELD-VALUE": "显示\"{{name}}\" 字段值",
-        	"UNKNOWN-TYPE": "未知字段类型 {{type}}",
-        	"TEXT-VALUE": "文本",
-        	"MULTI-TEXT-VALUE": "多行文本",
+        	"DISPLAY-REF": "æ˜¾ç¤ºå€¼",
+        	"SELECT-FIELD": "(æ²¡æœ‰é€‰æ‹©å­—æ®µ)",
+        	"FIELD-VALUE": "æ˜¾ç¤º\"{{name}}\" å­—æ®µå€¼",
+        	"UNKNOWN-TYPE": "æœªçŸ¥å­—æ®µç±»å�‹ {{type}}",
+        	"TEXT-VALUE": "æ–‡æœ¬",
+        	"MULTI-TEXT-VALUE": "å¤šè¡Œæ–‡æœ¬",
         	"NUMBER-VALUE": "123",
-        	"DATE-VALUE": "日期",
-        	"DROPDOWN-VALUE": "选择...",
-        	"UPLOAD-VALUE": "上传或者导入content...",
-        	"RADIOS-OPTION1": "选择 1",
-        	"SELECT-PERSON": "选择一个人",
-        	"SELECT-GROUP": "选择一个组"
+        	"DATE-VALUE": "æ—¥æœŸ",
+        	"DROPDOWN-VALUE": "é€‰æ‹©...",
+        	"UPLOAD-VALUE": "ä¸Šä¼ æˆ–è€…å¯¼å…¥content...",
+        	"RADIOS-OPTION1": "é€‰æ‹© 1",
+        	"SELECT-PERSON": "é€‰æ‹©ä¸€ä¸ªäºº",
+        	"SELECT-GROUP": "é€‰æ‹©ä¸€ä¸ªç»„"
         	}
     },
     "FORM-DEPLOYMENTS": {
-        "TITLE": "表单部署对象",
-        "LIST-MESSAGE": "显示{{size}} 条结果,总计{{total}}个匹配到的表单部署对象",
-        "LIST-MESSAGE-EMPTY": "没有匹配到表单部署对象。",
+        "TITLE": "è¡¨å�•éƒ¨ç½²å¯¹è±¡",
+        "LIST-MESSAGE": "æ˜¾ç¤º{{size}} æ�¡ç»“æ�œ,æ€»è®¡{{total}}ä¸ªåŒ¹é…�åˆ°çš„è¡¨å�•éƒ¨ç½²å¯¹è±¡",
+        "LIST-MESSAGE-EMPTY": "æ²¡æœ‰åŒ¹é…�åˆ°è¡¨å�•éƒ¨ç½²å¯¹è±¡ã€‚",
         "FILTER": {
-            "NAME": "名称(case sensitive)",
-            "TENANTID": "租户标识符(case sensitive)"
+            "NAME": "å��ç§°(case sensitive)",
+            "TENANTID": "ç§Ÿæˆ·æ ‡è¯†ç¬¦(case sensitive)"
         },
         "SORT": {
             "ID": "ID",
-            "NAME": "名称"
+            "NAME": "å��ç§°"
         },
         "HEADER": {
             "ID": "ID",
-            "NAME": "名称",
-            "DEPLOY-TIME": "部署时间",
-            "CATEGORY": "分类",
-            "TENANT": "租户"
+            "NAME": "å��ç§°",
+            "DEPLOY-TIME": "éƒ¨ç½²æ—¶é—´",
+            "CATEGORY": "åˆ†ç±»",
+            "TENANT": "ç§Ÿæˆ·"
         },
         "ACTION": {
-            "DELETE": "删除部署"
+            "DELETE": "åˆ é™¤éƒ¨ç½²"
         }
     },
     "FORM-DEPLOYMENT": {
         "ID": "ID:",
-        "NAME": "名称:",
-        "TIME": "部署时间:",
-        "CATEGORY": "分类:",
-        "TENANTID": "租户标识符:",
-        "PARENT-DEPLOYMENT-ID": "父部署ID",
-        "DEFINITIONS-MESSAGE": "这个部署有{{total}}个表单定义, 显示 {{size}}.",
-        "DEFINITIONS-MESSAGE-EMPTY": "这个部署没有表单定义。",
+        "NAME": "å��ç§°:",
+        "TIME": "éƒ¨ç½²æ—¶é—´:",
+        "CATEGORY": "åˆ†ç±»:",
+        "TENANTID": "ç§Ÿæˆ·æ ‡è¯†ç¬¦:",
+        "PARENT-DEPLOYMENT-ID": "çˆ¶éƒ¨ç½²ID",
+        "DEFINITIONS-MESSAGE": "è¿™ä¸ªéƒ¨ç½²æœ‰{{total}}ä¸ªè¡¨å�•å®šä¹‰, æ˜¾ç¤º {{size}}.",
+        "DEFINITIONS-MESSAGE-EMPTY": "è¿™ä¸ªéƒ¨ç½²æ²¡æœ‰è¡¨å�•å®šä¹‰ã€‚",
         "TITLE": {
-            "FORM-DEFINITIONS": "表单定义",
+            "FORM-DEFINITIONS": "è¡¨å�•å®šä¹‰",
             "RESOURCES": "Resources"
         },
         "ACTION": {
-            "SHOW-ALL-DEFINITIONS": "显示所有的表单定义"
+            "SHOW-ALL-DEFINITIONS": "æ˜¾ç¤ºæ‰€æœ‰çš„è¡¨å�•å®šä¹‰"
         }
     },
     "FORM-INSTANCES": {
-        "TITLE": "表单实例",
-        "LIST-MESSAGE": "显示{{size}} 条结果,总计{{total}}个匹配到的表单实例",
-        "LIST-MESSAGE-EMPTY": "没有匹配的表单实例。",
+        "TITLE": "è¡¨å�•å®�ä¾‹",
+        "LIST-MESSAGE": "æ˜¾ç¤º{{size}} æ�¡ç»“æ�œ,æ€»è®¡{{total}}ä¸ªåŒ¹é…�åˆ°çš„è¡¨å�•å®�ä¾‹",
+        "LIST-MESSAGE-EMPTY": "æ²¡æœ‰åŒ¹é…�çš„è¡¨å�•å®�ä¾‹ã€‚",
         "HEADER": {
             "ID": "ID",
-            "PROCESS-INSTANCE-ID": "流程实例ID",
-            "CASE-INSTANCE-ID": "Case实例ID",
-            "TASK-ID": "任务ID",
-            "SUBMITTED-ON": "提交日期",
+            "PROCESS-INSTANCE-ID": "æµ�ç¨‹å®�ä¾‹ID",
+            "CASE-INSTANCE-ID": "Caseå®�ä¾‹ID",
+            "TASK-ID": "ä»»åŠ¡ID",
+            "SUBMITTED-ON": "æ��äº¤æ—¥æœŸ",
             "SUBMITTED-BY": "Submitted By",
-            "TENANT-ID": "租户ID"
+            "TENANT-ID": "ç§Ÿæˆ·ID"
         },
         "FILTER": {
-            "NAME": "名称",
-            "TENANTID": "租户标识符"
+            "NAME": "å��ç§°",
+            "TENANTID": "ç§Ÿæˆ·æ ‡è¯†ç¬¦"
         },
         "SORT": {
             "SUBMITTED-DATE": "Submitted On"
@@ -1435,62 +1435,62 @@
     "FORM-INSTANCE": {
         "HEADER": {
             "ID": "ID",
-            "TASK-ID": "任务ID",
-            "PROCESS-ID": "流程实例ID",
-            "CASE-INSTANCE-ID": "Case实例ID",
+            "TASK-ID": "ä»»åŠ¡ID",
+            "PROCESS-ID": "æµ�ç¨‹å®�ä¾‹ID",
+            "CASE-INSTANCE-ID": "Caseå®�ä¾‹ID",
             "SUBMITTED": "Submitted on",
             "SUBMITTED-BY": "Submitted by",
-            "FORM-DEFINITION-ID": "表单定义ID"
+            "FORM-DEFINITION-ID": "è¡¨å�•å®šä¹‰ID"
         },
-        "FORM-FIELD-VALUES-MESSAGE": "这个实例有{{total}}个表单字段值, 显示 {{size}}",
-        "FORM-FIELD-VALUES-MESSAGE-EMPTY": "这个实例没有表单字段值",
+        "FORM-FIELD-VALUES-MESSAGE": "è¿™ä¸ªå®�ä¾‹æœ‰{{total}}ä¸ªè¡¨å�•å­—æ®µå€¼, æ˜¾ç¤º {{size}}",
+        "FORM-FIELD-VALUES-MESSAGE-EMPTY": "è¿™ä¸ªå®�ä¾‹æ²¡æœ‰è¡¨å�•å­—æ®µå€¼",
         "ACTION": {
-            "SHOW-FORM-INSTANCE": "显示表单实例"
+            "SHOW-FORM-INSTANCE": "æ˜¾ç¤ºè¡¨å�•å®�ä¾‹"
         },
         "TITLE": {
-            "FORM-FIELD-VALUES": "表单字段值"
+            "FORM-FIELD-VALUES": "è¡¨å�•å­—æ®µå€¼"
         },
         "FORM-FIELD-VALUES": {
-            "ID": "表单字段ID",
-            "NAME": "表单字段名称",
-            "TYPE": "表单字段类别",
-            "VALUE": "表单字段值"
+            "ID": "è¡¨å�•å­—æ®µID",
+            "NAME": "è¡¨å�•å­—æ®µå��ç§°",
+            "TYPE": "è¡¨å�•å­—æ®µç±»åˆ«",
+            "VALUE": "è¡¨å�•å­—æ®µå€¼"
         }
     },
     "CONTENT-ITEMS": {
         "TITLE": "Content items",
-        "LIST-MESSAGE": "显示{{size}} 条结果,总计{{total}}个匹配到的content主题。",
-        "LIST-MESSAGE-EMPTY": "没有匹配到的content主题。",
+        "LIST-MESSAGE": "æ˜¾ç¤º{{size}} æ�¡ç»“æ�œ,æ€»è®¡{{total}}ä¸ªåŒ¹é…�åˆ°çš„contentä¸»é¢˜ã€‚",
+        "LIST-MESSAGE-EMPTY": "æ²¡æœ‰åŒ¹é…�åˆ°çš„contentä¸»é¢˜ã€‚",
         "HEADER": {
             "ID": "ID",
-            "NAME": "名称",
-            "PROCESS-INSTANCE-ID": "流程实例ID",
-            "TASK-ID": "任务ID",
-            "LAST-MODIFIED-ON": "最后修改日期",
-            "LAST-MODIFIED-BY": "最后修改",
-            "TENANT-ID": "租户ID"
+            "NAME": "å��ç§°",
+            "PROCESS-INSTANCE-ID": "æµ�ç¨‹å®�ä¾‹ID",
+            "TASK-ID": "ä»»åŠ¡ID",
+            "LAST-MODIFIED-ON": "æœ€å��ä¿®æ”¹æ—¥æœŸ",
+            "LAST-MODIFIED-BY": "æœ€å��ä¿®æ”¹",
+            "TENANT-ID": "ç§Ÿæˆ·ID"
         },
         "FILTER": {
-            "NAME": "名称",
-            "TENANTID": "租户标识符"
+            "NAME": "å��ç§°",
+            "TENANTID": "ç§Ÿæˆ·æ ‡è¯†ç¬¦"
         },
         "SORT": {
-            "CREATED": "已经创建"
+            "CREATED": "å·²ç»�åˆ›å»º"
         }
     },
     "CONTENT-ITEM": {
         "HEADER": {
             "ID": "ID",
-            "TASK-ID": "任务ID",
-            "PROCESS-INSTANCE-ID": "流程实例ID",
-            "CREATED-ON": "已经创建",
-            "CREATED-BY": "创建",
-            "LAST-MODIFIED-ON": "最后修改日期",
-            "LAST-MODIFIED-BY": "最后修改",
-            "CONTENT-STORE-ID": "Content存储ID"
+            "TASK-ID": "ä»»åŠ¡ID",
+            "PROCESS-INSTANCE-ID": "æµ�ç¨‹å®�ä¾‹ID",
+            "CREATED-ON": "å·²ç»�åˆ›å»º",
+            "CREATED-BY": "åˆ›å»º",
+            "LAST-MODIFIED-ON": "æœ€å��ä¿®æ”¹æ—¥æœŸ",
+            "LAST-MODIFIED-BY": "æœ€å��ä¿®æ”¹",
+            "CONTENT-STORE-ID": "Contentå­˜å‚¨ID"
         },
         "ACTION": {
-            "SHOW-CONTENT-ITEM": "显示content主题"
+            "SHOW-CONTENT-ITEM": "æ˜¾ç¤ºcontentä¸»é¢˜"
         }
     }
 }

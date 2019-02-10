@@ -1040,7 +1040,7 @@
             }
         }
     },
-    "APP-DEPLOYMENTS": {
+    "APP-DEPLOYMENTS1": {
         "TITLE": "Deployments",
         "LIST-MESSAGE": "Showing {{size}} results, from a total of {{total}} matching deployments.",
         "LIST-MESSAGE-EMPTY": "No matching deployments.",

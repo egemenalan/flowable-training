@@ -137,7 +137,7 @@ public class FlowableAdminApplicationSecurityTest {
 
         assertThat(result.getHeaders().getFirst(HttpHeaders.LOCATION))
             .as("redirect location")
-            .isEqualTo("http://localhost:8080/flowable-idm/#/login?redirectOnAuthSuccess=true&redirectUrl=" + configsUrl);
+            .isEqualTo("http://localhost:8080/idm/#/login?redirectOnAuthSuccess=true&redirectUrl=" + configsUrl);
     }
 
     @Test
@@ -154,7 +154,7 @@ public class FlowableAdminApplicationSecurityTest {
 
         assertThat(result.getHeaders().getFirst(HttpHeaders.LOCATION))
             .as("redirect location")
-            .isEqualTo("http://localhost:8080/flowable-idm/#/login?redirectOnAuthSuccess=true&redirectUrl=" + configsUrl);
+            .isEqualTo("http://localhost:8080/idm/#/login?redirectOnAuthSuccess=true&redirectUrl=" + configsUrl);
     }
 
     @Test

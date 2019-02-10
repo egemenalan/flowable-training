@@ -14,9 +14,12 @@ package org.flowable.engine.impl.cmd;
 
 import java.util.Map;
 
+import org.flowable.bpmn.model.UserTask;
 import org.flowable.common.engine.api.FlowableIllegalArgumentException;
 import org.flowable.common.engine.impl.interceptor.CommandContext;
+import org.flowable.engine.impl.cfg.ProcessEngineConfigurationImpl;
 import org.flowable.engine.impl.util.CommandContextUtil;
+import org.flowable.engine.impl.util.ProcessDefinitionUtil;
 import org.flowable.engine.impl.util.TaskHelper;
 import org.flowable.form.api.FormFieldHandler;
 import org.flowable.form.api.FormInfo;
@@ -69,26 +72,42 @@ public class CompleteTaskWithFormCmd extends NeedsActiveTaskCmd<Void> {
 
         if (formInfo != null) {
             // Extract raw variables and complete the task
-            Map<String, Object> formVariables = formService.getVariablesFromFormSubmission(formInfo, variables, outcome);
+            Map<String, Object> taskVariables = formService.getVariablesFromFormSubmission(formInfo, variables, outcome);
 
+            // The taskVariables are the variables that should be used when completing the task
+            // the actual variables should instead be used when saving the form instances
             if (task.getProcessInstanceId() != null) {
-                formService.saveFormInstance(formVariables, formInfo, task.getId(), task.getProcessInstanceId(), 
+                formService.saveFormInstance(variables, formInfo, task.getId(), task.getProcessInstanceId(),
                                 task.getProcessDefinitionId(), task.getTenantId());
             } else {
-                formService.saveFormInstanceWithScopeId(formVariables, formInfo, task.getId(), task.getScopeId(), task.getScopeType(), 
+                formService.saveFormInstanceWithScopeId(variables, formInfo, task.getId(), task.getScopeId(), task.getScopeType(),
                                 task.getScopeDefinitionId(), task.getTenantId());
             }
 
-            FormFieldHandler formFieldHandler = CommandContextUtil.getProcessEngineConfiguration(commandContext).getFormFieldHandler();
-            formFieldHandler.handleFormFieldsOnSubmit(formInfo, task.getId(), task.getProcessInstanceId(), null, null, variables, task.getTenantId());
+            ProcessEngineConfigurationImpl processEngineConfiguration = CommandContextUtil.getProcessEngineConfiguration(commandContext);
+            FormFieldHandler formFieldHandler = processEngineConfiguration.getFormFieldHandler();
+            if (isFormFieldValidationEnabled(task, processEngineConfiguration, task.getProcessDefinitionId(), task.getTaskDefinitionKey())) {
+                formFieldHandler.validateFormFieldsOnSubmit(formInfo, task.getId(), taskVariables);
+            }
+            formFieldHandler.handleFormFieldsOnSubmit(formInfo, task.getId(), task.getProcessInstanceId(), null, null, taskVariables, task.getTenantId());
 
-            TaskHelper.completeTask(task, formVariables, transientVariables, localScope, commandContext);
+            TaskHelper.completeTask(task, taskVariables, transientVariables, localScope, commandContext);
 
         } else {
             TaskHelper.completeTask(task, variables, transientVariables, localScope, commandContext);
         }
 
         return null;
+    }
+
+    protected boolean isFormFieldValidationEnabled(TaskEntity task, ProcessEngineConfigurationImpl processEngineConfiguration, String processDefinitionId,
+        String taskDefinitionKey) {
+        if (processEngineConfiguration.isFormFieldValidationEnabled()) {
+            UserTask userTask = (UserTask) ProcessDefinitionUtil.getBpmnModel(processDefinitionId).getFlowElement(taskDefinitionKey);
+            String formFieldValidationExpression = userTask.getValidateFormFields();
+            return TaskHelper.isFormFieldValidationEnabled(task, processEngineConfiguration, formFieldValidationExpression);
+        }
+        return false;
     }
 
     @Override

@@ -29,8 +29,8 @@ services:
             - SPRING_DATASOURCE_URL=jdbc:postgresql://flowable-db:5432/flowable
             - SPRING_DATASOURCE_USERNAME=flowable
             - SPRING_DATASOURCE_PASSWORD=flowable
-            - FLOWABLE_COMMON_APP_IDM-URL=http://flowable-idm-app:8080/flowable-idm
-            - FLOWABLE_COMMON_APP_IDM-REDIRECT-URL=http://localhost:8080/flowable-idm
+            - FLOWABLE_COMMON_APP_IDM-URL=http://idm-app:8080/idm
+            - FLOWABLE_COMMON_APP_IDM-REDIRECT-URL=http://localhost:8080/idm
             - FLOWABLE_COMMON_APP_IDM-ADMIN_USER=admin
             - FLOWABLE_COMMON_APP_IDM-ADMIN_PASSWORD=test
             - FLOWABLE_ADMIN_APP_SERVER-CONFIG_PROCESS_SERVER-ADDRESS=http://flowable-rest-app
@@ -61,7 +61,7 @@ services:
             - 9988:9988
         entrypoint: ["./wait-for-something.sh", "flowable-db", "5432", "PostgreSQL", "java", "-jar", "app.war"]
     flowable-idm-app:
-        image: flowable/flowable-idm
+        image: flowable/idm
         depends_on:
             - flowable-db
         environment:

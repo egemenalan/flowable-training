@@ -20,19 +20,19 @@ import com.robusta.util.RobustaConfigPathReader;
 @WebListener
 public class RobustaContexListsener implements ServletContextListener {
 	
-	@Autowired
-	protected ObjectMapper objectMapper;
+//	@Autowired
+//	protected ObjectMapper objectMapper;
 
     public void contextInitialized(ServletContextEvent servletContextEvent) {
     	
     	String customerLogoFilePath = null;
-		try {
-			customerLogoFilePath = RobustaConfigPathReader.readPath(objectMapper, RobustaConfigModels.LOGO_PATH_MODUL);
-			
-		} catch (IOException e1) {
-			e1.printStackTrace();
-		}
-    	
+//		try {
+//			customerLogoFilePath = RobustaConfigPathReader.readPath(objectMapper, RobustaConfigModels.LOGO_PATH_MODUL);
+//			
+//		} catch (IOException e1) {
+//			e1.printStackTrace();
+//		}
+    	System.out.println("egemen");
     	System.out.println(System.getProperty("user.dir"));
     	String tomcatHomeDirectory = System.getProperty("catalina.base");
     	
@@ -49,14 +49,14 @@ public class RobustaContexListsener implements ServletContextListener {
     	
     	
     	BufferedImage img = null;
-    	try {
-    	    img = ImageIO.read(new File(customerLogoFilePath));
-    	    
-    	    ImageIO.write(img, "png", new File(outputFilePath));
-    	    
-    	} catch (IOException e) {
-    		e.printStackTrace();
-    	}
+//    	try {
+//    	    img = ImageIO.read(new File(customerLogoFilePath));
+//    	    
+//    	    ImageIO.write(img, "png", new File(outputFilePath));
+//    	    
+//    	} catch (IOException e) {
+//    		e.printStackTrace();
+//    	}
     	
     	System.out.println(tomcatHomeDirectory);
     	System.out.println(customerLogoFilePath);

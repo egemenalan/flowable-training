@@ -12,6 +12,7 @@
  */
 package org.flowable.cmmn.test.async;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNotNull;
@@ -32,9 +33,14 @@ import org.flowable.cmmn.api.runtime.PlanItemInstance;
 import org.flowable.cmmn.api.runtime.PlanItemInstanceState;
 import org.flowable.cmmn.api.runtime.UserEventListenerInstance;
 import org.flowable.cmmn.engine.CmmnEngineConfiguration;
+import org.flowable.cmmn.engine.impl.util.CommandContextUtil;
 import org.flowable.cmmn.engine.test.CmmnDeployment;
 import org.flowable.cmmn.test.impl.CustomCmmnConfigurationFlowableTestCase;
 import org.flowable.common.engine.api.scope.ScopeTypes;
+import org.flowable.common.engine.impl.interceptor.CommandExecutor;
+import org.flowable.entitylink.api.EntityLinkType;
+import org.flowable.entitylink.api.history.HistoricEntityLink;
+import org.flowable.entitylink.api.history.HistoricEntityLinkService;
 import org.flowable.identitylink.api.IdentityLinkType;
 import org.flowable.task.api.Task;
 import org.flowable.task.api.history.HistoricTaskInstance;
@@ -235,7 +241,7 @@ public class AsyncCmmnHistoryTest extends CustomCmmnConfigurationFlowableTestCas
         assertEquals(caseInstance.getId(), historicTaskInstance.getScopeId());
         assertEquals(caseInstance.getCaseDefinitionId(), historicTaskInstance.getScopeDefinitionId());
         assertEquals(ScopeTypes.CMMN, historicTaskInstance.getScopeType());
-        assertNotNull(historicTaskInstance.getStartTime());
+        assertNotNull(historicTaskInstance.getCreateTime());
         
         // Update
         cmmnTaskService.setAssignee(historicTaskInstance.getId(), "janeDoe");
@@ -250,6 +256,13 @@ public class AsyncCmmnHistoryTest extends CustomCmmnConfigurationFlowableTestCas
         historicTaskInstance = cmmnHistoryService.createHistoricTaskInstanceQuery().caseInstanceId(caseInstance.getId()).singleResult();
         assertEquals(99, historicTaskInstance.getPriority());
         assertNull(historicTaskInstance.getEndTime());
+
+        List<PlanItemInstance> planItemInstances = cmmnRuntimeService.createPlanItemInstanceQuery()
+            .planItemDefinitionType(PlanItemDefinitionType.HUMAN_TASK)
+            .orderByName().asc()
+            .list();
+        assertThat(planItemInstances).extracting(PlanItemInstance::getName).containsExactly("The Task");
+        assertThat(planItemInstances).extracting(PlanItemInstance::getCreateTime).isNotNull();
         
         // Complete
         Task task = cmmnTaskService.createTaskQuery().caseInstanceId(caseInstance.getId()).singleResult();
@@ -259,6 +272,12 @@ public class AsyncCmmnHistoryTest extends CustomCmmnConfigurationFlowableTestCas
         waitForAsyncHistoryExecutorToProcessAllJobs();
         historicTaskInstance = cmmnHistoryService.createHistoricTaskInstanceQuery().caseInstanceId(caseInstance.getId()).singleResult();
         assertNotNull(historicTaskInstance.getEndTime());
+
+        List<HistoricPlanItemInstance> historicPlanItemInstances = cmmnHistoryService.createHistoricPlanItemInstanceQuery()
+            .planItemInstanceDefinitionType(PlanItemDefinitionType.HUMAN_TASK)
+            .list();
+        assertThat(historicPlanItemInstances).extracting(HistoricPlanItemInstance::getName).containsExactly("The Task");
+        assertThat(historicPlanItemInstances).extracting(HistoricPlanItemInstance::getCreateTime).isNotNull();
     }
     
     @Test
@@ -499,4 +518,35 @@ public class AsyncCmmnHistoryTest extends CustomCmmnConfigurationFlowableTestCas
         assertEquals(0l, cmmnHistoryService.createHistoricTaskLogEntryQuery().taskId(task.getId()).count());
     }
 
+    @Test
+    @CmmnDeployment
+    public void createRootEntityLink() {
+        CaseInstance caseInstance = cmmnRuntimeService.createCaseInstanceBuilder()
+            .caseDefinitionKey("oneHumanTaskCase")
+            .name("someName")
+            .businessKey("someBusinessKey")
+            .start();
+        assertEquals(0, cmmnHistoryService.createHistoricCaseInstanceQuery().count());
+
+        waitForAsyncHistoryExecutorToProcessAllJobs();
+        assertEquals(1, cmmnHistoryService.createHistoricCaseInstanceQuery().count());
+
+        Task task = cmmnTaskService.createTaskQuery().caseInstanceId(caseInstance.getId()).singleResult();
+        cmmnTaskService.complete(task.getId());
+
+        waitForAsyncHistoryExecutorToProcessAllJobs();
+
+        assertCaseInstanceEnded(caseInstance);
+
+        CommandExecutor commandExecutor = cmmnEngine.getCmmnEngineConfiguration().getCommandExecutor();
+
+        List<HistoricEntityLink> entityLinksByScopeIdAndType = commandExecutor.execute(commandContext -> {
+            HistoricEntityLinkService historicEntityLinkService = CommandContextUtil.getHistoricEntityLinkService(commandContext);
+
+            return historicEntityLinkService.findHistoricEntityLinksByReferenceScopeIdAndType(task.getId(), ScopeTypes.TASK, EntityLinkType.CHILD);
+        });
+
+        assertEquals(1, entityLinksByScopeIdAndType.size());
+        assertEquals("root", entityLinksByScopeIdAndType.get(0).getHierarchyType());
+    }
 }

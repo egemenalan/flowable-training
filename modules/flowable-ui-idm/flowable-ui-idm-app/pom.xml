@@ -411,7 +411,7 @@
                             </execution>
                         </executions>
                         <configuration>
-                            <repository>flowable/flowable-idm</repository>
+                            <repository>flowable/idm</repository>
                             <buildArgs>
                                 <WAR_FILE>${project.build.finalName}.war</WAR_FILE>
                             </buildArgs>

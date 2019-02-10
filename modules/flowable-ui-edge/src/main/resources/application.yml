@@ -32,8 +32,8 @@ zuul:
       path: /flowable-admin/**
       url: http://localhost:9988/flowable-admin/
     flowable_idm:
-      path: /flowable-idm/**
-      url: http://localhost:8080/flowable-idm/
+      path: /idm/**
+      url: http://localhost:8080/idm/
     flowable_modeler:
       path: /flowable-modeler/**
       url: http://localhost:8888/flowable-modeler/
