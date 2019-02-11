@@ -12,10 +12,12 @@
  */
 package org.flowable.validation.validator;
 
+import org.flowable.validation.validator.robusta.Problems.RobustaProblems;
+
 /**
  * @author jbarrez
  */
-public interface Problems extends RobustaWebProblems {
+public interface Problems extends RobustaProblems {
 
     String ALL_PROCESS_DEFINITIONS_NOT_EXECUTABLE = "flowable-process-definition-not-executable";
     String PROCESS_DEFINITION_NOT_EXECUTABLE = "flowable-specific-process-definition-not-executable";
@@ -131,5 +133,4 @@ public interface Problems extends RobustaWebProblems {
     String DI_DOES_NOT_REFERENCE_FLOWNODE = "flowable-di-does-not-reference-flownode";
     String DI_DOES_NOT_REFERENCE_SEQ_FLOW = "flowable-di-does-not-reference-seq-flow";
     
-    // Custom Part End
 }

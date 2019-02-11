@@ -21,7 +21,7 @@ import org.flowable.bpmn.model.TaskWithFieldExtensions;
 import org.flowable.validation.ValidationError;
 import org.flowable.validation.validator.Problems;
 import org.flowable.validation.validator.ProcessLevelValidator;
-import org.flowable.validation.validator.RobustaWebProblems;
+import org.flowable.validation.validator.robusta.Problems.RobustaWebProblems;
 
 public abstract class ExternalInvocationTaskValidator extends ProcessLevelValidator {
 

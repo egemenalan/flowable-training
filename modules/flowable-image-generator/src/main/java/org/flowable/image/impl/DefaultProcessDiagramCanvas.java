@@ -124,24 +124,7 @@ public class DefaultProcessDiagramCanvas {
     protected static BufferedImage CAMEL_TASK_IMAGE;
     protected static BufferedImage HTTP_TASK_IMAGE;
 
-    /*
-     * 
-     *
-     *
-     *
-     * 
-     * 
-     * 
-     *  C U S T O M     P A R T
-     *
-     * 
-     * 
-     * 
-     * 
-     * 
-     * 
-     * 
-     */
+    //Robusta Custom Part Egemen ALAN
     protected static BufferedImage BROWSER_TASK_IMAGE;
     protected static BufferedImage BRWMOUSE_TASK_IMAGE;
     protected static BufferedImage BRWWAIT_TASK_IMAGE;
@@ -164,13 +147,7 @@ public class DefaultProcessDiagramCanvas {
     protected static BufferedImage SCRAPBROWSER_TASK_IMAGE;
     protected static BufferedImage SCRAPGET_TASK_IMAGE;
     protected static BufferedImage SCRAPEXPORTCSV_TASK_IMAGE;
-    /*
-     * 
-     * 
-     * END OF CUSTOM
-     * 
-     * 
-     */
+    // Robusta Custom End
 
     protected static BufferedImage TIMER_IMAGE;
     protected static BufferedImage COMPENSATE_THROW_IMAGE;
