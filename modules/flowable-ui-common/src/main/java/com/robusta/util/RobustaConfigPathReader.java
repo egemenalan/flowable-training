@@ -14,8 +14,8 @@ public class RobustaConfigPathReader {
 		JsonNode robustaConfig = objectMapper
 				.readTree(RobustaConfigPathReader.class.getClassLoader().getResourceAsStream("robusta_config.json"));
 		
-		robustaConfig.get("modulesfiles");
-		JsonNode modulesfiles = robustaConfig.path("modulesfiles");
+		robustaConfig.get("modules");
+		JsonNode modulesfiles = robustaConfig.path("modules");
 		Iterator<JsonNode> elements = modulesfiles.elements();
 		while(elements.hasNext()){
 			JsonNode modulesfile = elements.next();

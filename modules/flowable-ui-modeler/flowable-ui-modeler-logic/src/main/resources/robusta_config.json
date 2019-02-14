@@ -5,16 +5,17 @@
 	"summary": "Installs, configures, and manages the BPMN service.",
 	"license": "Apache-2.0",
 	"source": "https://EArobusta@bitbucket.org/RobustaCA/robustaflowablebpmstudio.git",
-	"modulesfiles": [
+	"modules": [
 		{
 			"module": "Robusta_Web_Application_Automation_Config",
 			"path": "robusta_custom_stencilset_webapp.json",
 			"description": "Robusta Custom Stencilset Web Apps"
 		},
 		{
-			"module": "Logo_Path",
-			"path": "C://customer_logo.png",
-			"description": "Robusta Custom logo"
+			"module": "Robusta_Win_Application_Automation_Config",
+			"path": "robusta_custom_stencilset_winapp.json",
+			"description": "Robusta Custom Stencilset Windows Apps"
 		}
-	]
+	],
+	"logo" : "C://customer_logo.png"
 }

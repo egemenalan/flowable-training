@@ -925,27 +925,7 @@ public class DefaultProcessDiagramCanvas {
         drawTask(MULE_TASK_IMAGE, name, graphicInfo, scaleFactor);
     }
 
-    /*
-     *
-     *
-     *
-     *
-     *
-     *
-     *
-     * 
-     * 
-     * C U S T O M   P A R T
-     *
-     * 
-     * 
-     * 
-     *
-     * 
-     * 
-     * 
-     * 
-     */
+    //Robusta Custom Part Egemen ALAN
        
     public void drawBrowserTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
         drawTask(BROWSER_TASK_IMAGE, name, graphicInfo, scaleFactor);
@@ -1026,14 +1006,7 @@ public class DefaultProcessDiagramCanvas {
     public void drawScrapExportCsvTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
         drawTask(SCRAPEXPORTCSV_TASK_IMAGE, name, graphicInfo, scaleFactor);
     }
-    /*
-     * 
-     * 
-     * End of custom
-     * 
-     * 
-     * 
-     */
+   // Custom End
     public void drawHttpTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
         drawTask(HTTP_TASK_IMAGE, name, graphicInfo, scaleFactor);
     }

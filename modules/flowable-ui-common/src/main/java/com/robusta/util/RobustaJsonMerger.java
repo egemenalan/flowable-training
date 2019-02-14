@@ -8,6 +8,8 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 public class RobustaJsonMerger {
 
 	/**
+	 * Author Egemen ALAN
+	 * 
 	 * Robusta Custom Stencils Merge two JSON tree into one i.e mainNode.
 	 *
 	 * @param mainNode
