@@ -96,37 +96,37 @@ public abstract class ExternalInvocationTaskValidator extends ProcessLevelValida
 
      
     // Robusta Custom Part Egemen ALAN
-    protected void validateFieldDeclarationsForBrowser(org.flowable.bpmn.model.Process process, TaskWithFieldExtensions task, List<FieldExtension> fieldExtensions, List<ValidationError> errors) {
-    	boolean urlDefined = false;
-    	boolean typeDefined = false;
-        boolean nameDefined = false;
-
-        for (FieldExtension fieldExtension : fieldExtensions) {
-            String fieldName = fieldExtension.getFieldName();
-            String fieldValue = fieldExtension.getStringValue();
-            String fieldExpression = fieldExtension.getExpression();
-
-            if (fieldName.equals("url") && ((fieldValue != null && fieldValue.length() > 0) || (fieldExpression != null && fieldExpression.length() > 0))) {
-                urlDefined = true;
-            }
-            if (fieldName.equals("type") && ((fieldValue != null && fieldValue.length() > 0) || (fieldExpression != null && fieldExpression.length() > 0))) {
-                typeDefined = true;
-            }
-            if (fieldName.equals("resultVariable") && ((fieldValue != null && fieldValue.length() > 0) || (fieldExpression != null && fieldExpression.length() > 0))) {
-                nameDefined = true;
-            }
-        }
-
-        if (!urlDefined) {
-            addError(errors, RobustaWebProblems.BRW_URL_NO_KEY, process, task, "No url address is defined on the browser activity");
-        }
-        if (!nameDefined) {
-            addError(errors, RobustaWebProblems.BRW_NAME_NO_KEY, process, task, "No browser name is defined on the browser activity");
-        }
-        if (!typeDefined) {
-            addError(errors, RobustaWebProblems.BRW_TYPE_NO_KEY, process, task, "No browser type is defined on the browser activity(e.g. CHROME)");
-        }
-    }
+//    protected void validateFieldDeclarationsForBrowser(org.flowable.bpmn.model.Process process, TaskWithFieldExtensions task, List<FieldExtension> fieldExtensions, List<ValidationError> errors) {
+//    	boolean urlDefined = false;
+//    	boolean typeDefined = false;
+//        boolean nameDefined = false;
+//
+//        for (FieldExtension fieldExtension : fieldExtensions) {
+//            String fieldName = fieldExtension.getFieldName();
+//            String fieldValue = fieldExtension.getStringValue();
+//            String fieldExpression = fieldExtension.getExpression();
+//
+//            if (fieldName.equals("url") && ((fieldValue != null && fieldValue.length() > 0) || (fieldExpression != null && fieldExpression.length() > 0))) {
+//                urlDefined = true;
+//            }
+//            if (fieldName.equals("type") && ((fieldValue != null && fieldValue.length() > 0) || (fieldExpression != null && fieldExpression.length() > 0))) {
+//                typeDefined = true;
+//            }
+//            if (fieldName.equals("resultVariable") && ((fieldValue != null && fieldValue.length() > 0) || (fieldExpression != null && fieldExpression.length() > 0))) {
+//                nameDefined = true;
+//            }
+//        }
+//
+//        if (!urlDefined) {
+//            addError(errors, RobustaWebProblems.BRW_URL_NO_KEY, process, task, "No url address is defined on the browser activity");
+//        }
+//        if (!nameDefined) {
+//            addError(errors, RobustaWebProblems.BRW_NAME_NO_KEY, process, task, "No browser name is defined on the browser activity");
+//        }
+//        if (!typeDefined) {
+//            addError(errors, RobustaWebProblems.BRW_TYPE_NO_KEY, process, task, "No browser type is defined on the browser activity(e.g. CHROME)");
+//        }
+//    }
 
     protected void validateFieldDeclarationsForBrwMouse(org.flowable.bpmn.model.Process process, TaskWithFieldExtensions task, List<FieldExtension> fieldExtensions, List<ValidationError> errors) {
         boolean fieldDefined = false;
