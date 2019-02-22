@@ -61,11 +61,14 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import com.robusta.constant.RobustaConstants;
+import com.robusta.converter.RobustaBaseBpmnJsonConverter;
+
 
 /**
  * @author Tijs Rademakers
  */
-public abstract class BaseBpmnJsonConverter implements EditorJsonConstants, StencilConstants {
+public abstract class BaseBpmnJsonConverter implements EditorJsonConstants, StencilConstants,RobustaConstants {
 
     protected static final Logger LOGGER = LoggerFactory.getLogger(BaseBpmnJsonConverter.class);
 
@@ -88,6 +91,7 @@ public abstract class BaseBpmnJsonConverter implements EditorJsonConstants, Sten
         this.subProcessY = subProcessY;
         this.shapesArrayNode = shapesArrayNode;
         GraphicInfo graphicInfo = model.getGraphicInfo(baseElement.getId());
+        
 
         String stencilId = null;
         System.out.println("BaseBpmnJsonConverter-convertToJson: BaseElement :"+baseElement.getId());
@@ -109,46 +113,8 @@ public abstract class BaseBpmnJsonConverter implements EditorJsonConstants, Sten
                 /*
                  /Robusta Custom Part Egemen ALAN 
                  */
-            } else if ("customwebclose".equalsIgnoreCase(serviceTask.getType())) {
-                stencilId = STENCIL_TASK_WEBCLOSE;
-            } else if ("customwebcapture".equalsIgnoreCase(serviceTask.getType())) {
-                stencilId = STENCIL_TASK_WEBCAPTURE;
-            } else if ("customwebfunction".equalsIgnoreCase(serviceTask.getType())) {
-                stencilId = STENCIL_TASK_WEBFUNCTION;
-            } else if ("customwebdownload".equalsIgnoreCase(serviceTask.getType())) {
-                stencilId = STENCIL_TASK_WEBDOWNLOAD;
-            } else if ("customwebscroll".equalsIgnoreCase(serviceTask.getType())) {
-                stencilId = STENCIL_TASK_WEBSCROLL;
-            } else if ("customwebswitch".equalsIgnoreCase(serviceTask.getType())) {
-                stencilId = STENCIL_TASK_WEBSWITCH;
-            } else if ("customwebalert".equalsIgnoreCase(serviceTask.getType())) {
-                stencilId = STENCIL_TASK_WEBALERT;
-            } else if ("customwebmouse".equalsIgnoreCase(serviceTask.getType())) {
-                stencilId = STENCIL_TASK_WEBMOUSE;
-            } else if ("customwebwait".equalsIgnoreCase(serviceTask.getType())) {
-                stencilId = STENCIL_TASK_WEBWAIT;
-            } else if ("customwebset".equalsIgnoreCase(serviceTask.getType())) {
-                stencilId = STENCIL_TASK_WEBSET;
-            } else if ("customwebget".equalsIgnoreCase(serviceTask.getType())) {
-                stencilId = STENCIL_TASK_WEBGET;
-            } else if ("customwebapp".equalsIgnoreCase(serviceTask.getType())) {
-                stencilId = STENCIL_TASK_WEBAPP;
-            } else if ("customexcelapp".equalsIgnoreCase(serviceTask.getType())) {
-                stencilId = STENCIL_TASK_EXCELAPP;
-            } else if ("customexcelclose".equalsIgnoreCase(serviceTask.getType())) {
-                stencilId = STENCIL_TASK_EXCELCLOSE;
-            } else if ("customexcelget".equalsIgnoreCase(serviceTask.getType())) {
-                stencilId = STENCIL_TASK_EXCELGET;
-            } else if ("customexcelset".equalsIgnoreCase(serviceTask.getType())) {
-                stencilId = STENCIL_TASK_EXCELSET;
-            } else if ("customscrapexcel".equalsIgnoreCase(serviceTask.getType())) {
-                stencilId = STENCIL_TASK_SCRAPEXCEL;
-            } else if ("customscrapbrowser".equalsIgnoreCase(serviceTask.getType())) {
-                stencilId = STENCIL_TASK_SCRAPBROWSER;
-            } else if ("customscrapget".equalsIgnoreCase(serviceTask.getType())) {
-                stencilId = STENCIL_TASK_SCRAPGET;
-            } else if ("customscrapexportcsv".equalsIgnoreCase(serviceTask.getType())) {
-                stencilId = STENCIL_TASK_SCRAPEXPORTCSV;
+            } else if (serviceTask.getType().startsWith("custom")) {
+            	stencilId = RobustaBaseBpmnJsonConverter.handleCustomWeb(serviceTask.getType());
             } else {
                 stencilId = getStencilId(baseElement);
             }

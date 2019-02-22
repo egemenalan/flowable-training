@@ -1,11 +1,12 @@
 package org.flowable.editor.language.json.converter;
 
+import org.flowable.bpmn.model.BaseElement;
+import org.flowable.bpmn.model.ServiceTask;
+
 /*
  * Author Egemen ALAN
  */
 
-import org.flowable.bpmn.model.BaseElement;
-import org.flowable.bpmn.model.ServiceTask;
 
 import com.fasterxml.jackson.databind.node.ObjectNode;
 

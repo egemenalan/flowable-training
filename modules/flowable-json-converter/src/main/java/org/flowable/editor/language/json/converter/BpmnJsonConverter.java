@@ -66,11 +66,12 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import com.robusta.constant.RobustaConstants;
 
 /**
  * @author Tijs Rademakers
  */
-public class BpmnJsonConverter implements EditorJsonConstants, StencilConstants, ActivityProcessor {
+public class BpmnJsonConverter implements EditorJsonConstants, StencilConstants, ActivityProcessor,RobustaConstants {
 
     protected static final Logger LOGGER = LoggerFactory.getLogger(BpmnJsonConverter.class);
 

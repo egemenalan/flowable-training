@@ -9,6 +9,8 @@ import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.robusta.util.RobustaConfigModels;
@@ -16,12 +18,14 @@ import com.robusta.util.RobustaConfigPathReader;
 /**
  * @author Egemen Alan
  */
-
+@Configurable
 @WebListener
 public class RobustaContexListsener implements ServletContextListener {
 	
+	//TO-DO Egemen, bu kisimda objectMapper null geliyor, objeyi nasıl tasiyacagini bul...
+	
 //	@Autowired
-//	protected ObjectMapper objectMapper;
+//	protected ObjectMapper objectMapper = new ObjectMapper();
 
     public void contextInitialized(ServletContextEvent servletContextEvent) {
     	
@@ -36,8 +40,8 @@ public class RobustaContexListsener implements ServletContextListener {
     	System.out.println(System.getProperty("user.dir"));
     	String tomcatHomeDirectory = System.getProperty("catalina.base");
     	
-//    	customerLogoFilePath = tomcatHomeDirectory + java.io.File.separator 
-//    			+ "customer_configuration" + java.io.File.separator + "customer_logo.png";
+    	customerLogoFilePath = tomcatHomeDirectory + java.io.File.separator 
+    			+ "customer_configuration" + java.io.File.separator + "customer_logo.png";
 //    	String customerLogoFilePath = System.getProperty("user.dir")+ java.io.File.separator 
 //    			+ "customer_configuration" + java.io.File.separator + "customer_logo.png";
     	

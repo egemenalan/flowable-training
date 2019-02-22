@@ -18,23 +18,16 @@ public class RobustaContexListsener implements ServletContextListener {
     public void contextInitialized(ServletContextEvent servletContextEvent) {
 
     	System.out.println(System.getProperty("user.dir"));
-    	String WasHomeDirectory = System.getProperty("user.dir");
-    	//String tomcatHomeDirectory = System.getProperty("catalina.base");
+    	String tomcatHomeDirectory = System.getProperty("catalina.base");
     	
-    	String customerLogoFilePath = WasHomeDirectory + java.io.File.separator 
+    	String customerLogoFilePath = tomcatHomeDirectory + java.io.File.separator 
     			+ "customer_configuration" + java.io.File.separator + "customer_logo.png";
-//    	String customerLogoFilePath = System.getProperty("user.dir")+ java.io.File.separator 
-//    			+ "customer_configuration" + java.io.File.separator + "customer_logo.png";
     	
-    	String outputFilePath = WasHomeDirectory + java.io.File.separator 
+    	String outputFilePath = tomcatHomeDirectory + java.io.File.separator 
     			// FIXME prje ismi ve klasorler hard coded yazildi ileride degistirilirse sorun olur bunlari toplu bir konfigden almak gerek
     			+ "wtpwebapps"  + java.io.File.separator + "flowable-ui-modeler-app" + java.io.File.separator + "WEB-INF"  + java.io.File.separator + "classes" + java.io.File.separator + "static"
     			//+ servletContextEvent.getServletContext().getContextPath()
     			+ java.io.File.separator + "images" + java.io.File.separator +  "flowable-logo.png";
-    	
-//    	String outputFilePath = "wtpwebapps"  + java.io.File.separator + "flowable-ui-idm-app" + java.io.File.separator + "WEB-INF"  + java.io.File.separator + "classes" + java.io.File.separator + "static"
-//    			+ servletContextEvent.getServletContext().getContextPath()
-//    			+ java.io.File.separator + "images" + java.io.File.separator +  "flowable-logo.png";
     			//C:\Flowable-Engine-WS\flowable-engine\modules\flowable-ui-idm\flowable-ui-idm-app\src\main
     			
     			//\wtpwebapps\flowable-ui-idm-app\WEB-INF\classes\static\images
@@ -54,16 +47,16 @@ public class RobustaContexListsener implements ServletContextListener {
     	//write
     	
     	BufferedImage img = null;
-//    	try {
-//    	    img = ImageIO.read(new File(customerLogoFilePath));
-//    	    
-//    	    ImageIO.write(img, "png", new File(outputFilePath));
-//    	    
-//    	} catch (IOException e) {
-//    		e.printStackTrace();
-//    	}
+    	try {
+    	    img = ImageIO.read(new File(customerLogoFilePath));
+    	    
+    	    ImageIO.write(img, "png", new File(outputFilePath));
+    	    
+    	} catch (IOException e) {
+    		e.printStackTrace();
+    	}
     	
-    	System.out.println(WasHomeDirectory);
+    	System.out.println(tomcatHomeDirectory);
     	System.out.println(customerLogoFilePath);
     	System.out.println(outputFilePath);
     	

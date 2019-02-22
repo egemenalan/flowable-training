@@ -9,6 +9,7 @@ import org.flowable.bpmn.model.ServiceTask;
 
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
+
 public class RobustaServiceTaskJsonConverter extends RobustaWebServiceTaskJsonConverter {
 
 	public void robustaConvertElementToJson(ObjectNode propertiesNode, BaseElement baseElement,ServiceTask serviceTask) {

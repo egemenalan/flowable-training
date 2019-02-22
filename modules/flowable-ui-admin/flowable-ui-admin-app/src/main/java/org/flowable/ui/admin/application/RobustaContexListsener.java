@@ -29,14 +29,14 @@ public class RobustaContexListsener implements ServletContextListener {
 
     	
     	BufferedImage img = null;
-    	try {
-    	    img = ImageIO.read(new File(customerLogoFilePath));
-    	    
-    	    ImageIO.write(img, "png", new File(outputFilePath));
-    	    
-    	} catch (IOException e) {
-    		e.printStackTrace();
-    	}
+//    	try {
+//    	    img = ImageIO.read(new File(customerLogoFilePath));
+//    	    
+//    	    ImageIO.write(img, "png", new File(outputFilePath));
+//    	    
+//    	} catch (IOException e) {
+//    		e.printStackTrace();
+//    	}
     	
     	System.out.println(tomcatHomeDirectory);
     	System.out.println(customerLogoFilePath);
