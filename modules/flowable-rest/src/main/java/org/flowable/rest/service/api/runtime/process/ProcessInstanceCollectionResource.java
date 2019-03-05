@@ -204,7 +204,7 @@ public class ProcessInstanceCollectionResource extends BaseProcessInstanceResour
         return getQueryResponse(queryRequest, allRequestParams);
     }
 
-    @ApiOperation(value = "Start a process instance", tags = { "Process Instances" },
+        @ApiOperation(value = "Start a process instance", tags = { "Process Instances" },
             notes = "Note that also a *transientVariables* property is accepted as part of this json, that follows the same structure as the *variables* property.\n\n"
             + "Only one of *processDefinitionId*, *processDefinitionKey* or *message* can be used in the request body. \n\n"
             + "Parameters *businessKey*, *variables* and *tenantId* are optional.\n\n "
@@ -214,134 +214,275 @@ public class ProcessInstanceCollectionResource extends BaseProcessInstanceResour
             @ApiResponse(code = 201, message = "Indicates the process instance was created."),
             @ApiResponse(code = 400, message = "Indicates either the process-definition was not found (based on id or key), no process is started by sending the given message or an invalid variable has been passed. Status description contains additional information about the error.")
     })
-    @PostMapping(value = "/runtime/process-instances", produces = "application/json")
-    public ProcessInstanceResponse createProcessInstance(@RequestBody ProcessInstanceCreateRequest request, HttpServletRequest httpRequest, HttpServletResponse response) {
+        @PostMapping(value = "/runtime/process-instances", produces = "application/json")
+        public ProcessInstanceResponse createProcessInstance(@RequestBody ProcessInstanceCreateRequest request, HttpServletRequest httpRequest, HttpServletResponse response) {
 
-        if (request.getProcessDefinitionId() == null && request.getProcessDefinitionKey() == null && request.getMessage() == null) {
-            throw new FlowableIllegalArgumentException("Either processDefinitionId, processDefinitionKey or message is required.");
-        }
+            if (request.getProcessDefinitionId() == null && request.getProcessDefinitionKey() == null && request.getMessage() == null) {
+                throw new FlowableIllegalArgumentException("Either processDefinitionId, processDefinitionKey or message is required.");
+            }
 
-        int paramsSet = ((request.getProcessDefinitionId() != null) ? 1 : 0) + ((request.getProcessDefinitionKey() != null) ? 1 : 0) + ((request.getMessage() != null) ? 1 : 0);
+            int paramsSet = ((request.getProcessDefinitionId() != null) ? 1 : 0) + ((request.getProcessDefinitionKey() != null) ? 1 : 0) + ((request.getMessage() != null) ? 1 : 0);
 
-        if (paramsSet > 1) {
-            throw new FlowableIllegalArgumentException("Only one of processDefinitionId, processDefinitionKey or message should be set.");
-        }
+            if (paramsSet > 1) {
+                throw new FlowableIllegalArgumentException("Only one of processDefinitionId, processDefinitionKey or message should be set.");
+            }
 
-        if (request.isTenantSet()) {
-            // Tenant-id can only be used with either key or message
-            if (request.getProcessDefinitionId() != null) {
-                throw new FlowableIllegalArgumentException("TenantId can only be used with either processDefinitionKey or message.");
-            }
-        }
-        
-        Map<String, Object> startVariables = null;
-        Map<String, Object> transientVariables = null;
-        Map<String, Object> startFormVariables = null;
-        if (request.getStartFormVariables() != null) {
-            startFormVariables = new HashMap<>();
-            for (RestVariable variable : request.getStartFormVariables()) {
-                if (variable.getName() == null) {
-                    throw new FlowableIllegalArgumentException("Variable name is required.");
-                }
-                startFormVariables.put(variable.getName(), restResponseFactory.getVariableValue(variable));
-            }
-            
-        } else {
-            
-            if (request.getVariables() != null) {
-                startVariables = new HashMap<>();
-                for (RestVariable variable : request.getVariables()) {
-                    if (variable.getName() == null) {
-                        throw new FlowableIllegalArgumentException("Variable name is required.");
-                    }
-                    startVariables.put(variable.getName(), restResponseFactory.getVariableValue(variable));
-                }
-            }
-    
-            if (request.getTransientVariables() != null) {
-                transientVariables = new HashMap<>();
-                for (RestVariable variable : request.getTransientVariables()) {
-                    if (variable.getName() == null) {
-                        throw new FlowableIllegalArgumentException("Variable name is required.");
-                    }
-                    transientVariables.put(variable.getName(), restResponseFactory.getVariableValue(variable));
-                }
-            }
-        }
-
-        // Actually start the instance based on key or id
-        try {
-            ProcessInstance instance = null;
-
-            ProcessInstanceBuilder processInstanceBuilder = runtimeService.createProcessInstanceBuilder();
-            if (request.getProcessDefinitionId() != null) {
-                processInstanceBuilder.processDefinitionId(request.getProcessDefinitionId());
-            }
-            if (request.getProcessDefinitionKey() != null) {
-                processInstanceBuilder.processDefinitionKey(request.getProcessDefinitionKey());
-            }
-            if (request.getMessage() != null) {
-                processInstanceBuilder.messageName(request.getMessage());
-            }
-            if (request.getName() != null) {
-                processInstanceBuilder.name(request.getName());
-            }
-            if (request.getBusinessKey() != null) {
-                processInstanceBuilder.businessKey(request.getBusinessKey());
-            }
             if (request.isTenantSet()) {
-                processInstanceBuilder.tenantId(request.getTenantId());
-            }
-            if (request.getOverrideDefinitionTenantId() != null && request.getOverrideDefinitionTenantId().length() > 0) {
-                processInstanceBuilder.overrideProcessDefinitionTenantId(request.getOverrideDefinitionTenantId());
-            }
-            if (startFormVariables != null) {
-                processInstanceBuilder.startFormVariables(startFormVariables);
-            }
-            if (startVariables != null) {
-                processInstanceBuilder.variables(startVariables);
-            }
-            if (transientVariables != null) {
-                processInstanceBuilder.transientVariables(transientVariables);
-            }
-            if (request.getOutcome() != null) {
-                processInstanceBuilder.outcome(request.getOutcome());
-            }
-            
-            if (restApiInterceptor != null) {
-                restApiInterceptor.createProcessInstance(processInstanceBuilder, request);
-            }
-
-            instance = processInstanceBuilder.start();
-
-            response.setStatus(HttpStatus.CREATED.value());
-
-            ProcessInstanceResponse processInstanceResponse = null;
-            if (request.getReturnVariables()) {
-                Map<String, Object> runtimeVariableMap = null;
-                List<HistoricVariableInstance> historicVariableList = null;
-                if (instance.isEnded()) {
-                    historicVariableList = historyService.createHistoricVariableInstanceQuery().processInstanceId(instance.getId()).list();
-                } else {
-                    runtimeVariableMap = runtimeService.getVariables(instance.getId());
+                // Tenant-id can only be used with either key or message
+                if (request.getProcessDefinitionId() != null) {
+                    throw new FlowableIllegalArgumentException("TenantId can only be used with either processDefinitionKey or message.");
                 }
-                processInstanceResponse = restResponseFactory.createProcessInstanceResponse(instance, true, runtimeVariableMap, historicVariableList);
-
+            }
+            
+            Map<String, Object> startVariables = null;
+            Map<String, Object> transientVariables = null;
+            Map<String, Object> startFormVariables = null;
+            if (request.getStartFormVariables() != null) {
+                startFormVariables = new HashMap<>();
+                for (RestVariable variable : request.getStartFormVariables()) {
+                    if (variable.getName() == null) {
+                        throw new FlowableIllegalArgumentException("Variable name is required.");
+                    }
+                    startFormVariables.put(variable.getName(), restResponseFactory.getVariableValue(variable));
+                }
+                
             } else {
-                processInstanceResponse = restResponseFactory.createProcessInstanceResponse(instance);
+                
+                if (request.getVariables() != null) {
+                    startVariables = new HashMap<>();
+                    for (RestVariable variable : request.getVariables()) {
+                        if (variable.getName() == null) {
+                            throw new FlowableIllegalArgumentException("Variable name is required.");
+                        }
+                        startVariables.put(variable.getName(), restResponseFactory.getVariableValue(variable));
+                    }
+                }
+        
+                if (request.getTransientVariables() != null) {
+                    transientVariables = new HashMap<>();
+                    for (RestVariable variable : request.getTransientVariables()) {
+                        if (variable.getName() == null) {
+                            throw new FlowableIllegalArgumentException("Variable name is required.");
+                        }
+                        transientVariables.put(variable.getName(), restResponseFactory.getVariableValue(variable));
+                    }
+                }
             }
-            
-            ProcessDefinition processDefinition = repositoryService.createProcessDefinitionQuery().processDefinitionId(processInstanceResponse.getProcessDefinitionId()).singleResult();
-            
-            if (processDefinition != null) {
-                processInstanceResponse.setProcessDefinitionName(processDefinition.getName());
-                processInstanceResponse.setProcessDefinitionDescription(processDefinition.getDescription());
-            }
-            
-            return processInstanceResponse;
 
-        } catch (FlowableObjectNotFoundException e) {
-            throw new FlowableIllegalArgumentException(e.getMessage(), e);
-        }
+            // Actually start the instance based on key or id
+            try {
+                ProcessInstance instance = null;
+
+                ProcessInstanceBuilder processInstanceBuilder = runtimeService.createProcessInstanceBuilder();
+                if (request.getProcessDefinitionId() != null) {
+                    processInstanceBuilder.processDefinitionId(request.getProcessDefinitionId());
+                }
+                if (request.getProcessDefinitionKey() != null) {
+                    processInstanceBuilder.processDefinitionKey(request.getProcessDefinitionKey());
+                }
+                if (request.getMessage() != null) {
+                    processInstanceBuilder.messageName(request.getMessage());
+                }
+                if (request.getName() != null) {
+                    processInstanceBuilder.name(request.getName());
+                }
+                if (request.getBusinessKey() != null) {
+                    processInstanceBuilder.businessKey(request.getBusinessKey());
+                }
+                if (request.isTenantSet()) {
+                    processInstanceBuilder.tenantId(request.getTenantId());
+                }
+                if (request.getOverrideDefinitionTenantId() != null && request.getOverrideDefinitionTenantId().length() > 0) {
+                    processInstanceBuilder.overrideProcessDefinitionTenantId(request.getOverrideDefinitionTenantId());
+                }
+                if (startFormVariables != null) {
+                    processInstanceBuilder.startFormVariables(startFormVariables);
+                }
+                if (startVariables != null) {
+                    processInstanceBuilder.variables(startVariables);
+                }
+                if (transientVariables != null) {
+                    processInstanceBuilder.transientVariables(transientVariables);
+                }
+                if (request.getOutcome() != null) {
+                    processInstanceBuilder.outcome(request.getOutcome());
+                }
+                
+                if (restApiInterceptor != null) {
+                    restApiInterceptor.createProcessInstance(processInstanceBuilder, request);
+                }
+
+                instance = processInstanceBuilder.start();
+
+                response.setStatus(HttpStatus.CREATED.value());
+
+                ProcessInstanceResponse processInstanceResponse = null;
+                if (request.getReturnVariables()) {
+                    Map<String, Object> runtimeVariableMap = null;
+                    List<HistoricVariableInstance> historicVariableList = null;
+                    if (instance.isEnded()) {
+                        historicVariableList = historyService.createHistoricVariableInstanceQuery().processInstanceId(instance.getId()).list();
+                    } else {
+                        runtimeVariableMap = runtimeService.getVariables(instance.getId());
+                    }
+                    processInstanceResponse = restResponseFactory.createProcessInstanceResponse(instance, true, runtimeVariableMap, historicVariableList);
+
+                } else {
+                    processInstanceResponse = restResponseFactory.createProcessInstanceResponse(instance);
+                }
+                
+                ProcessDefinition processDefinition = repositoryService.createProcessDefinitionQuery().processDefinitionId(processInstanceResponse.getProcessDefinitionId()).singleResult();
+                
+                if (processDefinition != null) {
+                    processInstanceResponse.setProcessDefinitionName(processDefinition.getName());
+                    processInstanceResponse.setProcessDefinitionDescription(processDefinition.getDescription());
+                }
+                
+                return processInstanceResponse;
+
+            } catch (FlowableObjectNotFoundException e) {
+                throw new FlowableIllegalArgumentException(e.getMessage(), e);
+            }
     }
+        @ApiOperation(value = "Start a process instance", tags = { "Process Instances" },
+                notes = "Note that also a *transientVariables* property is accepted as part of this json, that follows the same structure as the *variables* property.\n\n"
+                + "Only one of *processDefinitionId*, *processDefinitionKey* or *message* can be used in the request body. \n\n"
+                + "Parameters *businessKey*, *variables* and *tenantId* are optional.\n\n "
+                + "If tenantId is omitted, the default tenant will be used. More information about the variable format can be found in the REST variables section.\n\n "
+                + "Note that the variable-scope that is supplied is ignored, process-variables are always local.\n\n")
+        @ApiResponses(value = {
+                @ApiResponse(code = 201, message = "Indicates the process instance was created."),
+                @ApiResponse(code = 400, message = "Indicates either the process-definition was not found (based on id or key), no process is started by sending the given message or an invalid variable has been passed. Status description contains additional information about the error.")
+        })
+        @PostMapping(value = "/runtime/process-instances-with-key/{processDefinitionKey}", produces = "application/json")
+        public ProcessInstanceResponse robustaCreateProcessWithKeyInstance(@RequestBody RobustaProcessInstanceKeyCreateRequest request, HttpServletRequest httpRequest, HttpServletResponse response) {
+
+            if (request.getProcessDefinitionKey() == null ) {
+                throw new FlowableIllegalArgumentException("processDefinitionKey is required." + " " +  request.getProcessDefinitionKey());
+            }
+
+            int paramsSet = ((request.getProcessDefinitionKey() != null) ? 1 : 0);
+
+            if (paramsSet > 1) {
+                throw new FlowableIllegalArgumentException("Only one of processDefinitionId, processDefinitionKey or message should be set.");
+            }
+    //
+//            if (request.isTenantSet()) {
+//                // Tenant-id can only be used with either key or message
+//                if (request.getProcessDefinitionKey() != null) {
+//                    throw new FlowableIllegalArgumentException("TenantId can only be used with either processDefinitionKey or message.");
+//                }
+//            }
+            
+            Map<String, Object> startVariables = null;
+            Map<String, Object> transientVariables = null;
+            Map<String, Object> startFormVariables = null;
+//            if (request.getStartFormVariables() != null) {
+//                startFormVariables = new HashMap<>();
+//                for (RestVariable variable : request.getStartFormVariables()) {
+//                    if (variable.getName() == null) {
+//                        throw new FlowableIllegalArgumentException("Variable name is required.");
+//                    }
+//                    startFormVariables.put(variable.getName(), restResponseFactory.getVariableValue(variable));
+//                }
+//                
+//            } else {
+//                
+//                if (request.getVariables() != null) {
+//                    startVariables = new HashMap<>();
+//                    for (RestVariable variable : request.getVariables()) {
+//                        if (variable.getName() == null) {
+//                            throw new FlowableIllegalArgumentException("Variable name is required.");
+//                        }
+//                        startVariables.put(variable.getName(), restResponseFactory.getVariableValue(variable));
+//                    }
+//                }
+    //    
+//                if (request.getTransientVariables() != null) {
+//                    transientVariables = new HashMap<>();
+//                    for (RestVariable variable : request.getTransientVariables()) {
+//                        if (variable.getName() == null) {
+//                            throw new FlowableIllegalArgumentException("Variable name is required.");
+//                        }
+//                        transientVariables.put(variable.getName(), restResponseFactory.getVariableValue(variable));
+//                    }
+//                }
+//            }
+
+            // Actually start the instance based on key or id
+            try {
+                ProcessInstance instance = null;
+
+                ProcessInstanceBuilder processInstanceBuilder = runtimeService.createProcessInstanceBuilder();
+//                if (request.getProcessDefinitionId() != null) {
+//                    processInstanceBuilder.processDefinitionId(request.getProcessDefinitionId());
+//                }
+                if (request.getProcessDefinitionKey() != null) {
+                    processInstanceBuilder.processDefinitionKey(request.getProcessDefinitionKey());
+                }
+//                if (request.getMessage() != null) {
+//                    processInstanceBuilder.messageName(request.getMessage());
+//                }
+//                if (request.getName() != null) {
+//                    processInstanceBuilder.name(request.getName());
+//                }
+//                if (request.getBusinessKey() != null) {
+//                    processInstanceBuilder.businessKey(request.getBusinessKey());
+//                }
+//                if (request.isTenantSet()) {
+//                    processInstanceBuilder.tenantId(request.getTenantId());
+//                }
+//                if (request.getOverrideDefinitionTenantId() != null && request.getOverrideDefinitionTenantId().length() > 0) {
+//                    processInstanceBuilder.overrideProcessDefinitionTenantId(request.getOverrideDefinitionTenantId());
+//                }
+//                if (startFormVariables != null) {
+//                    processInstanceBuilder.startFormVariables(startFormVariables);
+//                }
+//                if (startVariables != null) {
+//                    processInstanceBuilder.variables(startVariables);
+//                }
+//                if (transientVariables != null) {
+//                    processInstanceBuilder.transientVariables(transientVariables);
+//                }
+//                if (request.getOutcome() != null) {
+//                    processInstanceBuilder.outcome(request.getOutcome());
+//                }
+                
+                if (restApiInterceptor != null) {
+                    restApiInterceptor.robustaCreateProcessInstanceWithKey(processInstanceBuilder, request);
+                }
+
+                instance = processInstanceBuilder.start();
+
+                response.setStatus(HttpStatus.CREATED.value());
+
+                ProcessInstanceResponse processInstanceResponse = null;
+                if (request.getReturnVariables()) {
+                    Map<String, Object> runtimeVariableMap = null;
+                    List<HistoricVariableInstance> historicVariableList = null;
+                    if (instance.isEnded()) {
+                        historicVariableList = historyService.createHistoricVariableInstanceQuery().processInstanceId(instance.getId()).list();
+                    } else {
+                        runtimeVariableMap = runtimeService.getVariables(instance.getId());
+                    }
+                    processInstanceResponse = restResponseFactory.createProcessInstanceResponse(instance, true, runtimeVariableMap, historicVariableList);
+
+                } else {
+                    processInstanceResponse = restResponseFactory.createProcessInstanceResponse(instance);
+                }
+                
+                ProcessDefinition processDefinition = repositoryService.createProcessDefinitionQuery().processDefinitionId(processInstanceResponse.getProcessDefinitionId()).singleResult();
+                
+                if (processDefinition != null) {
+                    processInstanceResponse.setProcessDefinitionName(processDefinition.getName());
+                    processInstanceResponse.setProcessDefinitionDescription(processDefinition.getDescription());
+                }
+                
+                return processInstanceResponse;
+
+            } catch (FlowableObjectNotFoundException e) {
+                throw new FlowableIllegalArgumentException(e.getMessage(), e);
+            }
+        }
+
 }
