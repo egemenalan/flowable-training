@@ -12,10 +12,12 @@
  */
 package org.flowable.editor.constants;
 
+import com.robusta.constant.*;
+
 /**
  * @author Tijs Rademakers
  */
-public interface StencilConstants{
+public interface StencilConstants {
 
     // stencil items
     final String STENCIL_EVENT_START_NONE = "StartNoneEvent";

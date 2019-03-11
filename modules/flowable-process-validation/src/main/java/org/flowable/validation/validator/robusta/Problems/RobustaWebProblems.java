@@ -7,7 +7,13 @@ package org.flowable.validation.validator.robusta.Problems;
 
 public interface RobustaWebProblems {
 
+	
+	// validasyondaki mesaj tanimlari yapilir
 	String BRW_URL_NO_KEY = "flowable-browsertask-no-url-key";
+	
+	//for attribure
+	String BRW_ATTRIBUTE_NO_KEY = "flowable-browsertask-no-attribute-key";
+	
 	String BRW_NAME_NO_KEY = "flowable-browsertask-no-name-key";
 	String BRW_TYPE_NO_KEY = "flowable-browsertask-no-type-key";
 	String BRW_FIELD_NO_KEY = "flowable-browsertask-no-field-key";

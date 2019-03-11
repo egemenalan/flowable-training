@@ -63,7 +63,7 @@ import org.slf4j.LoggerFactory;
  * @see DefaultProcessDiagramGenerator
  * @author Joram Barrez
  */
-public class DefaultProcessDiagramCanvas {
+public class DefaultProcessDiagramCanvas extends RobustaProcessDiagramCanvas{
 
     protected static final Logger LOGGER = LoggerFactory.getLogger(DefaultProcessDiagramCanvas.class);
 
@@ -124,30 +124,6 @@ public class DefaultProcessDiagramCanvas {
     protected static BufferedImage CAMEL_TASK_IMAGE;
     protected static BufferedImage HTTP_TASK_IMAGE;
 
-    //Robusta Custom Part Egemen ALAN
-    protected static BufferedImage BROWSER_TASK_IMAGE;
-    protected static BufferedImage BRWMOUSE_TASK_IMAGE;
-    protected static BufferedImage BRWWAIT_TASK_IMAGE;
-    protected static BufferedImage BRWSET_TASK_IMAGE;
-    protected static BufferedImage BRWGET_TASK_IMAGE;
-    protected static BufferedImage BRWCLOSE_TASK_IMAGE;
-    protected static BufferedImage BRWSCROLL_TASK_IMAGE;
-    protected static BufferedImage BRWALERT_TASK_IMAGE;
-    protected static BufferedImage BRWSWITCH_TASK_IMAGE;
-    protected static BufferedImage BRWDOWNLOAD_TASK_IMAGE;
-    protected static BufferedImage BRWCAPTURE_TASK_IMAGE;
-    protected static BufferedImage BRWFUNCTION_TASK_IMAGE;
-    
-    protected static BufferedImage EXCELAPP_TASK_IMAGE;
-    protected static BufferedImage EXCELCLOSE_TASK_IMAGE;
-    protected static BufferedImage EXCELGET_TASK_IMAGE;
-    protected static BufferedImage EXCELSET_TASK_IMAGE;
-
-    protected static BufferedImage SCRAPEXCEL_TASK_IMAGE;
-    protected static BufferedImage SCRAPBROWSER_TASK_IMAGE;
-    protected static BufferedImage SCRAPGET_TASK_IMAGE;
-    protected static BufferedImage SCRAPEXPORTCSV_TASK_IMAGE;
-    // Robusta Custom End
 
     protected static BufferedImage TIMER_IMAGE;
     protected static BufferedImage COMPENSATE_THROW_IMAGE;
@@ -258,28 +234,8 @@ public class DefaultProcessDiagramCanvas {
             HTTP_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/httpTask.png", customClassLoader));
 
             //Robusta Custom Part Egemen Alan
-            BROWSER_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/browserTask.png", customClassLoader));
-//            BRWMOUSE_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwMouseTask.png", customClassLoader));
-//            BRWWAIT_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwWaitTask.png", customClassLoader));
-//            BRWSET_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwSetTask.png", customClassLoader));
-//            BRWGET_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwGetTask.png", customClassLoader));
-//            BRWCLOSE_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwCloseTask.png", customClassLoader));
-//            BRWSCROLL_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwScrollTask.png", customClassLoader));
-//            BRWALERT_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwAlertTask.png", customClassLoader));
-//            BRWSWITCH_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwSwitchTask.png", customClassLoader));
-//            BRWDOWNLOAD_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwDownloadTask.png", customClassLoader));
-//            BRWCAPTURE_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwCaptureTask.png", customClassLoader));
-//            BRWFUNCTION_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/brwFunctionTask.png", customClassLoader));
-
-//            EXCELAPP_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/excelTask.png", customClassLoader));
-//            EXCELCLOSE_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/excelSaveTask.png", customClassLoader));
-//            EXCELGET_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/excelGetTask.png", customClassLoader));
-//            EXCELSET_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/excelSetTask.png", customClassLoader));
-//
-//            SCRAPEXCEL_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/excelTask.png", customClassLoader));
-//            SCRAPBROWSER_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/browserTask.png", customClassLoader));
-//            SCRAPGET_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/scrapGetTask.png", customClassLoader));
-//            SCRAPEXPORTCSV_TASK_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/scrapExportCsvTask.png", customClassLoader));
+            // stencilsetteki her bir stencil icin logo cizimi
+            readImages(customClassLoader);
             // Robusta End Custom
             
             TIMER_IMAGE = ImageIO.read(ReflectUtil.getResource("org/flowable/icons/timer.png", customClassLoader));
@@ -926,86 +882,10 @@ public class DefaultProcessDiagramCanvas {
     }
 
     //Robusta Custom Part Egemen ALAN
+    public void drawCustomTask(String type, String name, GraphicInfo graphicInfo, double scaleFactor) {
+        drawTask(getImage(type), name, graphicInfo, scaleFactor);
+    }
        
-    public void drawBrowserTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
-        drawTask(BROWSER_TASK_IMAGE, name, graphicInfo, scaleFactor);
-    }
-
-    public void drawBrwMouseTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
-        drawTask(BRWMOUSE_TASK_IMAGE, name, graphicInfo, scaleFactor);
-    }
-
-    public void drawBrwCaptureTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
-        drawTask(BRWCAPTURE_TASK_IMAGE, name, graphicInfo, scaleFactor);
-    }
-
-    public void drawBrwDownloadTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
-        drawTask(BRWDOWNLOAD_TASK_IMAGE, name, graphicInfo, scaleFactor);
-    }
-
-    public void drawBrwFunctionTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
-        drawTask(BRWFUNCTION_TASK_IMAGE, name, graphicInfo, scaleFactor);
-    }
-
-    public void drawBrwSwitchTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
-        drawTask(BRWSWITCH_TASK_IMAGE, name, graphicInfo, scaleFactor);
-    }
-
-    public void drawBrwAlertTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
-        drawTask(BRWALERT_TASK_IMAGE, name, graphicInfo, scaleFactor);
-    }
-
-    public void drawBrwCloseTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
-        drawTask(BRWCLOSE_TASK_IMAGE, name, graphicInfo, scaleFactor);
-    }
-
-    public void drawBrwWaitTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
-        drawTask(BRWWAIT_TASK_IMAGE, name, graphicInfo, scaleFactor);
-    }
-
-    public void drawBrwSetTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
-        drawTask(BRWSET_TASK_IMAGE, name, graphicInfo, scaleFactor);
-    }
-
-    public void drawBrwGetTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
-        drawTask(BRWGET_TASK_IMAGE, name, graphicInfo, scaleFactor);
-    }
-
-    public void drawBrwScrollTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
-        drawTask(BRWSCROLL_TASK_IMAGE, name, graphicInfo, scaleFactor);
-    }
-
-    public void drawExcelTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
-        drawTask(EXCELAPP_TASK_IMAGE, name, graphicInfo, scaleFactor);
-    }
-
-    public void drawExcelCloseTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
-        drawTask(EXCELCLOSE_TASK_IMAGE, name, graphicInfo, scaleFactor);
-    }
-
-    public void drawExcelGetTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
-        drawTask(EXCELGET_TASK_IMAGE, name, graphicInfo, scaleFactor);
-    }
-
-    public void drawExcelSetTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
-        drawTask(EXCELSET_TASK_IMAGE, name, graphicInfo, scaleFactor);
-    }
-
-    public void drawScrapBrowserTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
-        drawTask(SCRAPBROWSER_TASK_IMAGE, name, graphicInfo, scaleFactor);
-    }
-
-    public void drawScrapExcelTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
-        drawTask(SCRAPEXCEL_TASK_IMAGE, name, graphicInfo, scaleFactor);
-    }
-
-    public void drawScrapGetTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
-        drawTask(SCRAPGET_TASK_IMAGE, name, graphicInfo, scaleFactor);
-    }
-
-    public void drawScrapExportCsvTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
-        drawTask(SCRAPEXPORTCSV_TASK_IMAGE, name, graphicInfo, scaleFactor);
-    }
    // Custom End
     public void drawHttpTask(String name, GraphicInfo graphicInfo, double scaleFactor) {
         drawTask(HTTP_TASK_IMAGE, name, graphicInfo, scaleFactor);

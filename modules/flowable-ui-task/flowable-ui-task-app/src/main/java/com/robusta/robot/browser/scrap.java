@@ -22,42 +22,49 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
-public class open implements JavaDelegate {
+public class scrap implements JavaDelegate {
 
 	private static final long serialVersionUID = 1L;
 
-    private Expression url;
-    private Expression type;
-    private Expression resultVariable;
-    private Expression pageLoad;
-    private Expression download;
-    private Expression timeout;
-    private Expression profilePath;
-    private Expression maximize;
+    private Expression browserId;
+    private Expression table;
+    private Expression header;
+    private Expression row;
+    private Expression col;
+    private Expression ad;
+    private Expression firstRecorderHeader;
+    private Expression popup;
+    private Expression nextPage;
+    
 
+	
     @Override
     public void execute(DelegateExecution execution) {
-    	String urlValue = this.getStringFromField(this.url, execution);
-    	String resultVariableValue = this.getStringFromField(this.resultVariable, execution);
-    	String type = this.getStringFromField(this.type, execution);
-    	String pageLoad = this.getStringFromField(this.pageLoad, execution);
-    	String download = this.getStringFromField(this.download, execution);
-    	String timeout = this.getStringFromField(this.timeout, execution);
-    	String profilePath = this.getStringFromField(this.profilePath, execution);
-    	String maximize = this.getStringFromField(this.maximize, execution);
+    	String browserId = this.getStringFromField(this.browserId, execution);
+    	String table = this.getStringFromField(this.table, execution);
+    	String header = this.getStringFromField(this.header, execution);
+    	String row = this.getStringFromField(this.row, execution);
+    	String col = this.getStringFromField(this.col, execution);
+    	String ad = this.getStringFromField(this.ad, execution);
+    	String firstRecorderHeader = this.getStringFromField(this.firstRecorderHeader, execution);
+    	String popup = this.getStringFromField(this.popup, execution);
+    	String nextPage = this.getStringFromField(this.nextPage, execution);
+    	
     	String usernameValue = null;
     	String passwordValue = null;
-    	String browserId = null;
 
-    	System.out.println("Web Application Open Browser Parameters");
-    	System.out.println("Url :"+urlValue);
-    	System.out.println("BrowserType :"+type);
-    	System.out.println("BrowserName :"+resultVariableValue);
-    	System.out.println("PageLoad :"+pageLoad);
-    	System.out.println("maximize :"+maximize);
-    	System.out.println("Timeout :"+timeout);
-    	System.out.println("Download Dir :"+download);
-    	System.out.println("Profile Dir :"+profilePath);
+
+    	System.out.println("Web Application Scrap Parameters");
+    	System.out.println("browserId :"+browserId);
+    	System.out.println("table :"+table);
+    	System.out.println("header :"+header);
+    	System.out.println("row :"+row);
+    	System.out.println("col :"+col);
+    	System.out.println("ad :"+ad);
+    	System.out.println("firstRecorderHeader :"+firstRecorderHeader);
+    	System.out.println("popup :"+popup);
+    	System.out.println("nextPage :"+nextPage);
+    	
     	HttpClientBuilder clientBuilder = HttpClientBuilder.create();
 
         if (usernameValue != null && passwordValue != null) {
@@ -69,19 +76,22 @@ public class open implements JavaDelegate {
 
         HttpClient client = clientBuilder.build();
 
-        HttpPost request = new HttpPost( ClientConstants.STENCIL_TASK_WEBHOST_URL + "open");
+        HttpPost request = new HttpPost( ClientConstants.STENCIL_TASK_WEBHOST_URL + "scrap");
 
         try {
         	ObjectMapper mapper = new ObjectMapper();
         	ObjectNode node = mapper.createObjectNode();
-        	node.put("action", "OPEN");
-        	node.put("type", type);
-        	node.put("url", urlValue);
-        	node.put("pageload", pageLoad);
-        	node.put("maximize", maximize);
-        	node.put("directory", download);
-        	node.put("timeout", timeout);
-        	node.put("profilepath", profilePath);
+     	    node.put("browserId", browserId);
+        	node.put("table", table);
+        	node.put("header", header);
+        	node.put("row", row);
+        	node.put("col", col);
+        	node.put("ad", ad);
+        	node.put("firstRecorderHeader",firstRecorderHeader);
+        	node.put("popup",popup);
+        	node.put("nextPage", nextPage);
+        	
+        	
         	System.out.println(node.toString());
         	StringEntity input = new StringEntity(node.toString(),"UTF-8");
     		input.setContentType("application/json");
@@ -108,9 +118,9 @@ public class open implements JavaDelegate {
 			String sResult = jResult.asText();
 			browserId = jValue.asText();
 			if (sResult.equals("success")) {
-	            if (resultVariableValue != null) {
-	                execution.setVariable(resultVariableValue, browserId);
-	            }
+//	            if (resultVariableValue != null) {
+//	                execution.setVariable(resultVariableValue, browserId);
+//	            }
 			} else {
 	        	throw new BpmnError("WA-0002", "Error on opening page "+browserId);
 			}
@@ -132,62 +142,78 @@ public class open implements JavaDelegate {
         return null;
     }
 
-    public Expression getUrl() {
-        return url;
-    }
+	public Expression getBrowserId() {
+		return browserId;
+	}
 
-    public void setUrl(Expression url) {
-        this.url = url;
-    }
+	public void setBrowserId(Expression browserId) {
+		this.browserId = browserId;
+	}
 
-    public Expression getType() {
-        return type;
-    }
+	public Expression getTable() {
+		return table;
+	}
 
-    public void setType(Expression type) {
-        this.type = type;
-    }
+	public void setTable(Expression table) {
+		this.table = table;
+	}
 
-    public Expression getResultVariable() {
-        return resultVariable;
-    }
+	public Expression getHeader() {
+		return header;
+	}
 
-    public void setResultVariable(Expression resultVariable) {
-        this.resultVariable = resultVariable;
-    }
+	public void setHeader(Expression header) {
+		this.header = header;
+	}
 
-    public Expression getPageLoad() {
-        return pageLoad;
-    }
-    public void setPageLoad(Expression pageLoad) {
-        this.pageLoad = pageLoad;
-    }
+	public Expression getRow() {
+		return row;
+	}
 
-    public Expression getDownload() {
-        return download;
-    }
-    public void setDownload(Expression download) {
-        this.download = download;
-    }
+	public void setRow(Expression row) {
+		this.row = row;
+	}
 
-    public Expression getTimeout() {
-        return timeout;
-    }
-    public void setTimeout(Expression timeout) {
-        this.timeout = timeout;
-    }
+	public Expression getCol() {
+		return col;
+	}
 
-    public Expression getProfilePath() {
-        return profilePath;
-    }
-    public void setProfilePath(Expression profilePath) {
-        this.profilePath = profilePath;
-    }
+	public void setCol(Expression col) {
+		this.col = col;
+	}
 
-    public Expression getMaximize() {
-        return maximize;
-    }
-    public void setMaximize(Expression maximize) {
-        this.maximize = maximize;
-    }
+	public Expression getAd() {
+		return ad;
+	}
+
+	public void setAd(Expression ad) {
+		this.ad = ad;
+	}
+
+	public Expression getFirstRecorderHeader() {
+		return firstRecorderHeader;
+	}
+
+	public void setFirstRecorderHeader(Expression firstRecorderHeader) {
+		this.firstRecorderHeader = firstRecorderHeader;
+	}
+
+	public Expression getPopup() {
+		return popup;
+	}
+
+	public void setPopup(Expression popup) {
+		this.popup = popup;
+	}
+
+	public Expression getNextPage() {
+		return nextPage;
+	}
+
+	public void setNextPage(Expression nextPage) {
+		this.nextPage = nextPage;
+	}
+
+   
+    
 }

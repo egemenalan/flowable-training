@@ -93,29 +93,7 @@ public class ServiceTaskValidator extends ExternalInvocationTaskValidator {
 				
 				// Robusta Custom Part Egemen ALAN
 			} else if (serviceTask.getType().startsWith("custom")) {
-				robustaTaskValidator.robustaVerifyType(process, serviceTask, serviceTask.getFieldExtensions(), errors);
-//            } else if (serviceTask.getType().equalsIgnoreCase("customwebmouse")) {
-//                validateFieldDeclarationsForBrwMouse(process, serviceTask, serviceTask.getFieldExtensions(), errors);
-//            } else if (serviceTask.getType().equalsIgnoreCase("customwebdownload")) {
-//                validateFieldDeclarationsForBrwDownload(process, serviceTask, serviceTask.getFieldExtensions(), errors);
-//            } else if (serviceTask.getType().equalsIgnoreCase("customwebcapture")) {
-//                validateFieldDeclarationsForBrwCapture(process, serviceTask, serviceTask.getFieldExtensions(), errors);
-//            } else if (serviceTask.getType().equalsIgnoreCase("customwebalert")) {
-//                validateFieldDeclarationsForBrwAlert(process, serviceTask, serviceTask.getFieldExtensions(), errors);
-//            } else if (serviceTask.getType().equalsIgnoreCase("customwebscroll")) {
-//                validateFieldDeclarationsForBrwScroll(process, serviceTask, serviceTask.getFieldExtensions(), errors);
-//            } else if (serviceTask.getType().equalsIgnoreCase("customwebfunction")) {
-//                validateFieldDeclarationsForBrwFunction(process, serviceTask, serviceTask.getFieldExtensions(), errors);
-//            } else if (serviceTask.getType().equalsIgnoreCase("customwebswitch")) {
-//                validateFieldDeclarationsForBrwSwitch(process, serviceTask, serviceTask.getFieldExtensions(), errors);
-//            } else if (serviceTask.getType().equalsIgnoreCase("customwebclose")) {
-//                validateFieldDeclarationsForBrwClose(process, serviceTask, serviceTask.getFieldExtensions(), errors);
-//            } else if (serviceTask.getType().equalsIgnoreCase("customwebwait")) {
-//                validateFieldDeclarationsForBrwWait(process, serviceTask, serviceTask.getFieldExtensions(), errors);
-//            } else if (serviceTask.getType().equalsIgnoreCase("customwebset")) {
-//                validateFieldDeclarationsForBrwSet(process, serviceTask, serviceTask.getFieldExtensions(), errors);
-//            } else if (serviceTask.getType().equalsIgnoreCase("customwebget")) {
-//                validateFieldDeclarationsForBrwGet(process, serviceTask, serviceTask.getFieldExtensions(), errors);
+				robustaVerifyType(process, serviceTask, serviceTask.getFieldExtensions(), errors);
 			//Robusta Custom Part End
 				
 			} else if (serviceTask.getType().equalsIgnoreCase("http")) {

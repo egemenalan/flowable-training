@@ -22,22 +22,30 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
-public class open implements JavaDelegate {
+public class download implements JavaDelegate {
 
 	private static final long serialVersionUID = 1L;
 
-    private Expression url;
+    /*private Expression url;
     private Expression type;
     private Expression resultVariable;
     private Expression pageLoad;
     private Expression download;
     private Expression timeout;
     private Expression profilePath;
-    private Expression maximize;
-
+    private Expression maximize;*/
+    
+    //  mouse
+    private Expression url;
+    private Expression directory;
+    private Expression filename;
+    
+    
+    
     @Override
     public void execute(DelegateExecution execution) {
-    	String urlValue = this.getStringFromField(this.url, execution);
+    	
+    	/*String urlValue = this.getStringFromField(this.url, execution);
     	String resultVariableValue = this.getStringFromField(this.resultVariable, execution);
     	String type = this.getStringFromField(this.type, execution);
     	String pageLoad = this.getStringFromField(this.pageLoad, execution);
@@ -47,41 +55,53 @@ public class open implements JavaDelegate {
     	String maximize = this.getStringFromField(this.maximize, execution);
     	String usernameValue = null;
     	String passwordValue = null;
-    	String browserId = null;
+    	String browserId = null;*/
+    	
+    	String usernameValue = null;
+    	String passwordValue = null;
+    	
+    	//mouse
+       	String url = this.getStringFromField(this.url, execution);
+    	String directory = this.getStringFromField(this.directory, execution);
+    	String filename = this.getStringFromField(this.filename, execution);
+ 	
 
-    	System.out.println("Web Application Open Browser Parameters");
-    	System.out.println("Url :"+urlValue);
-    	System.out.println("BrowserType :"+type);
-    	System.out.println("BrowserName :"+resultVariableValue);
-    	System.out.println("PageLoad :"+pageLoad);
-    	System.out.println("maximize :"+maximize);
-    	System.out.println("Timeout :"+timeout);
-    	System.out.println("Download Dir :"+download);
-    	System.out.println("Profile Dir :"+profilePath);
+    	System.out.println("Web Application Download Parameters");
+    	System.out.println("url :"+url);
+    	System.out.println("directory :"+directory);
+    	System.out.println("filename :"+filename);
+    	
     	HttpClientBuilder clientBuilder = HttpClientBuilder.create();
 
-        if (usernameValue != null && passwordValue != null) {
+        /* Credentials Provider
+         * 
+         * if (usernameValue != null && passwordValue != null) {
             CredentialsProvider provider = new BasicCredentialsProvider();
             UsernamePasswordCredentials credentials = new UsernamePasswordCredentials(usernameValue, passwordValue);
             provider.setCredentials(new AuthScope("localhost", -1, "mule-realm"), credentials);
             clientBuilder.setDefaultCredentialsProvider(provider);
-        }
+        }*/
 
         HttpClient client = clientBuilder.build();
 
-        HttpPost request = new HttpPost( ClientConstants.STENCIL_TASK_WEBHOST_URL + "open");
+        HttpPost request = new HttpPost( ClientConstants.STENCIL_TASK_WEBHOST_URL + "download");
 
         try {
         	ObjectMapper mapper = new ObjectMapper();
         	ObjectNode node = mapper.createObjectNode();
-        	node.put("action", "OPEN");
-        	node.put("type", type);
+        	//node.put("action", "OPEN");
+        	/*node.put("type", type);
         	node.put("url", urlValue);
         	node.put("pageload", pageLoad);
         	node.put("maximize", maximize);
         	node.put("directory", download);
         	node.put("timeout", timeout);
-        	node.put("profilepath", profilePath);
+        	node.put("profilepath", profilePath);*/
+        	
+        	node.put("url",url);
+        	node.put("directory",directory);
+        	node.put("filename",filename);
+            
         	System.out.println(node.toString());
         	StringEntity input = new StringEntity(node.toString(),"UTF-8");
     		input.setContentType("application/json");
@@ -106,13 +126,13 @@ public class open implements JavaDelegate {
 			JsonNode jResult = rootNode.path("result");
 			JsonNode jValue = rootNode.path("value");
 			String sResult = jResult.asText();
-			browserId = jValue.asText();
+//			browserId = jValue.asText();
 			if (sResult.equals("success")) {
-	            if (resultVariableValue != null) {
-	                execution.setVariable(resultVariableValue, browserId);
-	            }
+//	            if (resultVariableValue != null) {
+//	                execution.setVariable(resultVariableValue, browserId);
+//	            }
 			} else {
-	        	throw new BpmnError("WA-0002", "Error on opening page "+browserId);
+	        	throw new BpmnError("WA-0002", "Error on download "+url);
 			}
 			
 		} catch (Exception e) {
@@ -132,62 +152,38 @@ public class open implements JavaDelegate {
         return null;
     }
 
-    public Expression getUrl() {
-        return url;
-    }
+    
+    // mouse
 
-    public void setUrl(Expression url) {
-        this.url = url;
-    }
+	public Expression getDirectory() {
+		return directory;
+	}
 
-    public Expression getType() {
-        return type;
-    }
+	public void setDirectory(Expression directory) {
+		this.directory = directory;
+	}
 
-    public void setType(Expression type) {
-        this.type = type;
-    }
+	public Expression getFilename() {
+		return filename;
+	}
 
-    public Expression getResultVariable() {
-        return resultVariable;
-    }
+	public void setFilename(Expression filename) {
+		this.filename = filename;
+	}
 
-    public void setResultVariable(Expression resultVariable) {
-        this.resultVariable = resultVariable;
-    }
+	public Expression getUrl() {
+		return url;
+	}
 
-    public Expression getPageLoad() {
-        return pageLoad;
-    }
-    public void setPageLoad(Expression pageLoad) {
-        this.pageLoad = pageLoad;
-    }
+	public void setUrl(Expression url) {
+		this.url = url;
+	}
 
-    public Expression getDownload() {
-        return download;
-    }
-    public void setDownload(Expression download) {
-        this.download = download;
-    }
 
-    public Expression getTimeout() {
-        return timeout;
-    }
-    public void setTimeout(Expression timeout) {
-        this.timeout = timeout;
-    }
 
-    public Expression getProfilePath() {
-        return profilePath;
-    }
-    public void setProfilePath(Expression profilePath) {
-        this.profilePath = profilePath;
-    }
-
-    public Expression getMaximize() {
-        return maximize;
-    }
-    public void setMaximize(Expression maximize) {
-        this.maximize = maximize;
-    }
+    
+    
+    //mouse
+    
+    
 }

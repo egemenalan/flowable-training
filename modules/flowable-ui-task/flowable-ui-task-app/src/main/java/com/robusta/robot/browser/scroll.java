@@ -22,22 +22,29 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
-public class open implements JavaDelegate {
+public class scroll implements JavaDelegate {
 
 	private static final long serialVersionUID = 1L;
 
-    private Expression url;
+    /*private Expression url;
     private Expression type;
     private Expression resultVariable;
     private Expression pageLoad;
     private Expression download;
     private Expression timeout;
     private Expression profilePath;
-    private Expression maximize;
-
+    private Expression maximize;*/
+    
+    //  mouse
+    private Expression browserId;
+    private Expression action;
+    private Expression xOffset;
+    private Expression yOffset;
+    
     @Override
     public void execute(DelegateExecution execution) {
-    	String urlValue = this.getStringFromField(this.url, execution);
+    	
+    	/*String urlValue = this.getStringFromField(this.url, execution);
     	String resultVariableValue = this.getStringFromField(this.resultVariable, execution);
     	String type = this.getStringFromField(this.type, execution);
     	String pageLoad = this.getStringFromField(this.pageLoad, execution);
@@ -47,41 +54,56 @@ public class open implements JavaDelegate {
     	String maximize = this.getStringFromField(this.maximize, execution);
     	String usernameValue = null;
     	String passwordValue = null;
-    	String browserId = null;
+    	String browserId = null;*/
+    	
+    	String usernameValue = null;
+    	String passwordValue = null;
+    	
+    	//mouse
+       	String browserId = this.getStringFromField(this.browserId, execution);
+    	String action = this.getStringFromField(this.action, execution);
+    	String xOffset = this.getStringFromField(this.xOffset, execution);
+    	String yOffset = this.getStringFromField(this.yOffset, execution);
+ 	
 
-    	System.out.println("Web Application Open Browser Parameters");
-    	System.out.println("Url :"+urlValue);
-    	System.out.println("BrowserType :"+type);
-    	System.out.println("BrowserName :"+resultVariableValue);
-    	System.out.println("PageLoad :"+pageLoad);
-    	System.out.println("maximize :"+maximize);
-    	System.out.println("Timeout :"+timeout);
-    	System.out.println("Download Dir :"+download);
-    	System.out.println("Profile Dir :"+profilePath);
+    	System.out.println("Web Application Scroll Parameters");
+    	System.out.println("BrowserId :"+browserId);
+    	System.out.println("Action :"+action);
+    	System.out.println("xOffset :"+xOffset);
+    	System.out.println("yOffset :"+yOffset); 
+    	
     	HttpClientBuilder clientBuilder = HttpClientBuilder.create();
 
-        if (usernameValue != null && passwordValue != null) {
+        /* Credentials Provider
+         * 
+         * if (usernameValue != null && passwordValue != null) {
             CredentialsProvider provider = new BasicCredentialsProvider();
             UsernamePasswordCredentials credentials = new UsernamePasswordCredentials(usernameValue, passwordValue);
             provider.setCredentials(new AuthScope("localhost", -1, "mule-realm"), credentials);
             clientBuilder.setDefaultCredentialsProvider(provider);
-        }
+        }*/
 
         HttpClient client = clientBuilder.build();
 
-        HttpPost request = new HttpPost( ClientConstants.STENCIL_TASK_WEBHOST_URL + "open");
+        HttpPost request = new HttpPost( ClientConstants.STENCIL_TASK_WEBHOST_URL + "scroll");
 
         try {
         	ObjectMapper mapper = new ObjectMapper();
         	ObjectNode node = mapper.createObjectNode();
-        	node.put("action", "OPEN");
-        	node.put("type", type);
+        	//node.put("action", "OPEN");
+        	/*node.put("type", type);
         	node.put("url", urlValue);
         	node.put("pageload", pageLoad);
         	node.put("maximize", maximize);
         	node.put("directory", download);
         	node.put("timeout", timeout);
-        	node.put("profilepath", profilePath);
+        	node.put("profilepath", profilePath);*/
+        	
+        	node.put("browser",browserId);
+        	node.put("action",action);
+        	node.put("xOffset",xOffset);
+        	node.put("yOffset",yOffset); 
+            
         	System.out.println(node.toString());
         	StringEntity input = new StringEntity(node.toString(),"UTF-8");
     		input.setContentType("application/json");
@@ -108,11 +130,11 @@ public class open implements JavaDelegate {
 			String sResult = jResult.asText();
 			browserId = jValue.asText();
 			if (sResult.equals("success")) {
-	            if (resultVariableValue != null) {
-	                execution.setVariable(resultVariableValue, browserId);
-	            }
+//	            if (resultVariableValue != null) {
+//	                execution.setVariable(resultVariableValue, browserId);
+//	            }
 			} else {
-	        	throw new BpmnError("WA-0002", "Error on opening page "+browserId);
+	        	throw new BpmnError("WA-0002", "Error on getting from "+browserId);
 			}
 			
 		} catch (Exception e) {
@@ -132,62 +154,42 @@ public class open implements JavaDelegate {
         return null;
     }
 
-    public Expression getUrl() {
-        return url;
-    }
+    
+    // mouse
 
-    public void setUrl(Expression url) {
-        this.url = url;
-    }
+	public Expression getBrowserId() {
+		return browserId;
+	}
 
-    public Expression getType() {
-        return type;
-    }
+	public void setBrowserId(Expression browserId) {
+		this.browserId = browserId;
+	}
 
-    public void setType(Expression type) {
-        this.type = type;
-    }
 
-    public Expression getResultVariable() {
-        return resultVariable;
-    }
+	public Expression getAction() {
+		return action;
+	}
 
-    public void setResultVariable(Expression resultVariable) {
-        this.resultVariable = resultVariable;
-    }
+	public void setAction(Expression action) {
+		this.action = action;
+	}
 
-    public Expression getPageLoad() {
-        return pageLoad;
-    }
-    public void setPageLoad(Expression pageLoad) {
-        this.pageLoad = pageLoad;
-    }
+	public Expression getxOffset() {
+		return xOffset;
+	}
 
-    public Expression getDownload() {
-        return download;
-    }
-    public void setDownload(Expression download) {
-        this.download = download;
-    }
+	public void setxOffset(Expression xOffset) {
+		this.xOffset = xOffset;
+	}
 
-    public Expression getTimeout() {
-        return timeout;
-    }
-    public void setTimeout(Expression timeout) {
-        this.timeout = timeout;
-    }
+	public Expression getyOffset() {
+		return yOffset;
+	}
 
-    public Expression getProfilePath() {
-        return profilePath;
-    }
-    public void setProfilePath(Expression profilePath) {
-        this.profilePath = profilePath;
-    }
-
-    public Expression getMaximize() {
-        return maximize;
-    }
-    public void setMaximize(Expression maximize) {
-        this.maximize = maximize;
-    }
+	public void setyOffset(Expression yOffset) {
+		this.yOffset = yOffset;
+	}
+    //mouse
+    
+    
 }
