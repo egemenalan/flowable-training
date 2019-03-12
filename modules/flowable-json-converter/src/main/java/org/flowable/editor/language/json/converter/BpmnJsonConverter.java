@@ -67,6 +67,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.robusta.constant.RobustaConstants;
+import com.robusta.json.converter.RobustaCustomTaskJsonConverter;
 
 /**
  * @author Tijs Rademakers
@@ -110,28 +111,10 @@ public class BpmnJsonConverter implements EditorJsonConstants, StencilConstants,
         
          //Robusta Web Part  Egemen ALAN
      
-        RobustaCustomWebAppTaskJsonConverter.fillTypes(convertersToBpmnMap, convertersToJsonMap);
-//        RobustaCustomWebMouseTaskJsonConverter.fillTypes(convertersToBpmnMap, convertersToJsonMap);
-//        RobustaCustomWebWaitTaskJsonConverter.fillTypes(convertersToBpmnMap, convertersToJsonMap);
-//        RobustaCustomWebSetTaskJsonConverter.fillTypes(convertersToBpmnMap, convertersToJsonMap);
-//        RobustaCustomWebGetTaskJsonConverter.fillTypes(convertersToBpmnMap, convertersToJsonMap);
-//        RobustaCustomWebCloseTaskJsonConverter.fillTypes(convertersToBpmnMap, convertersToJsonMap);
-//        CustomWebScrollTaskJsonConverter.fillTypes(convertersToBpmnMap, convertersToJsonMap);
-//        CustomWebAlertTaskJsonConverter.fillTypes(convertersToBpmnMap, convertersToJsonMap);
-//        CustomWebSwitchTaskJsonConverter.fillTypes(convertersToBpmnMap, convertersToJsonMap);
-//        CustomWebDownloadTaskJsonConverter.fillTypes(convertersToBpmnMap, convertersToJsonMap);
-//        CustomWebCaptureTaskJsonConverter.fillTypes(convertersToBpmnMap, convertersToJsonMap);
-//        CustomWebFunctionTaskJsonConverter.fillTypes(convertersToBpmnMap, convertersToJsonMap);
-//		  //Robusta Excel Part  Egemen ALAN 	
-//        CustomExcelAppTaskJsonConverter.fillTypes(convertersToBpmnMap, convertersToJsonMap);
-//        CustomExcelCloseTaskJsonConverter.fillTypes(convertersToBpmnMap, convertersToJsonMap);
-//        CustomExcelGetTaskJsonConverter.fillTypes(convertersToBpmnMap, convertersToJsonMap);
-//        CustomExcelSetTaskJsonConverter.fillTypes(convertersToBpmnMap, convertersToJsonMap);
-//		  //Robusta Scrap Excel Part  Egemen ALAN
-//        CustomScrapExcelTaskJsonConverter.fillTypes(convertersToBpmnMap, convertersToJsonMap);
-//        CustomScrapBrowserTaskJsonConverter.fillTypes(convertersToBpmnMap, convertersToJsonMap);
-//        CustomScrapGetTaskJsonConverter.fillTypes(convertersToBpmnMap, convertersToJsonMap);
-//        CustomScrapExportCsvTaskJsonConverter.fillTypes(convertersToBpmnMap, convertersToJsonMap);
+        //RobustaCustomTaskJsonConverter.fillTypes(convertersToBpmnMap, convertersToJsonMap);
+        
+        
+        RobustaCustomTaskJsonConverter.fillTypes(convertersToBpmnMap, convertersToJsonMap);
         /*
          * End of Customs
          */
@@ -216,28 +199,9 @@ public class BpmnJsonConverter implements EditorJsonConstants, StencilConstants,
 
         //Robusta  C U S T O M    P A R T Egemen ALAN
          
-        DI_RECTANGLES.add(STENCIL_TASK_WEBAPP);
-        DI_RECTANGLES.add(STENCIL_TASK_WEBMOUSE);
-        DI_RECTANGLES.add(STENCIL_TASK_WEBWAIT);
-        DI_RECTANGLES.add(STENCIL_TASK_WEBSET);
-        DI_RECTANGLES.add(STENCIL_TASK_WEBGET);
-        DI_RECTANGLES.add(STENCIL_TASK_WEBCLOSE);
-        DI_RECTANGLES.add(STENCIL_TASK_WEBSCROLL);
-        DI_RECTANGLES.add(STENCIL_TASK_WEBALERT);
-        DI_RECTANGLES.add(STENCIL_TASK_WEBSWITCH);
-        DI_RECTANGLES.add(STENCIL_TASK_WEBDOWNLOAD);
-        DI_RECTANGLES.add(STENCIL_TASK_WEBCAPTURE);
-        DI_RECTANGLES.add(STENCIL_TASK_WEBFUNCTION);
+        
+        RobustaCustomTaskJsonConverter.add(DI_RECTANGLES);
 
-        DI_RECTANGLES.add(STENCIL_TASK_EXCELAPP);
-        DI_RECTANGLES.add(STENCIL_TASK_EXCELCLOSE);
-        DI_RECTANGLES.add(STENCIL_TASK_EXCELGET);
-        DI_RECTANGLES.add(STENCIL_TASK_EXCELSET);
-
-        DI_RECTANGLES.add(STENCIL_TASK_SCRAPEXCEL);
-        DI_RECTANGLES.add(STENCIL_TASK_SCRAPBROWSER);
-        DI_RECTANGLES.add(STENCIL_TASK_SCRAPGET);
-        DI_RECTANGLES.add(STENCIL_TASK_SCRAPEXPORTCSV);
         /*
          * End of custom
          */

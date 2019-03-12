@@ -10,12 +10,11 @@ import org.flowable.bpmn.model.ServiceTask;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 
-public class RobustaServiceTaskJsonConverter extends RobustaWebServiceTaskJsonConverter {
+public class RobustaServiceTaskJsonConverter extends RobustaWebTaskServiceJsonConverter {
 
-	public void robustaConvertElementToJson(ObjectNode propertiesNode, BaseElement baseElement,ServiceTask serviceTask) {
-		if ("customweb".equalsIgnoreCase(serviceTask.getType())) {
+	public void convertElementToJson(ObjectNode propertiesNode, BaseElement baseElement,ServiceTask serviceTask) {
+		if (serviceTask.getType().startsWith("customWeb")) {
 			webConvertToJson(propertiesNode, baseElement, serviceTask);
-		} else if (serviceTask.getType().startsWith("customWin")) {
-		}
+		} 
 	}
 }

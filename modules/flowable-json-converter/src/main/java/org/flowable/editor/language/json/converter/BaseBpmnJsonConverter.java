@@ -111,10 +111,10 @@ public abstract class BaseBpmnJsonConverter implements EditorJsonConstants, Sten
             } else if ("shell".equalsIgnoreCase(serviceTask.getType())) {
                 stencilId = STENCIL_TASK_SHELL;
                 /*
-                 /Robusta Custom Part Egemen ALAN 
+                 * Robustaya ait custom stencilsetlerin tipi belirlenir
                  */
             } else if (serviceTask.getType().startsWith("custom")) {
-            	stencilId = RobustaBaseBpmnJsonConverter.handleCustomWeb(serviceTask.getType());
+            	stencilId = RobustaBaseBpmnJsonConverter.handleCustom(serviceTask.getType());
             } else {
                 stencilId = getStencilId(baseElement);
             }

@@ -22,22 +22,34 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
-public class open implements JavaDelegate {
+public class mouse implements JavaDelegate {
 
 	private static final long serialVersionUID = 1L;
 
-    private Expression url;
+    /*private Expression url;
     private Expression type;
     private Expression resultVariable;
     private Expression pageLoad;
     private Expression download;
     private Expression timeout;
     private Expression profilePath;
-    private Expression maximize;
+    private Expression maximize;*/
+    
+    //  mouse
+    private Expression browserId;
+    private Expression xOffset;
+    private Expression yOffset;
+    private Expression field;
+    private Expression dbl;
+    private Expression hover;
+    private Expression button;
+    private Expression pageload;
+    private Expression visible;
 
     @Override
     public void execute(DelegateExecution execution) {
-    	String urlValue = this.getStringFromField(this.url, execution);
+    	
+    	/*String urlValue = this.getStringFromField(this.url, execution);
     	String resultVariableValue = this.getStringFromField(this.resultVariable, execution);
     	String type = this.getStringFromField(this.type, execution);
     	String pageLoad = this.getStringFromField(this.pageLoad, execution);
@@ -47,41 +59,72 @@ public class open implements JavaDelegate {
     	String maximize = this.getStringFromField(this.maximize, execution);
     	String usernameValue = null;
     	String passwordValue = null;
-    	String browserId = null;
+    	String browserId = null;*/
+    	
+    	String usernameValue = null;
+    	String passwordValue = null;
+    	
+    	//mouse
+       	String browserId = this.getStringFromField(this.browserId, execution);
+    	String xOffset = this.getStringFromField(this.xOffset, execution);
+    	String yOffset = this.getStringFromField(this.yOffset, execution);
+    	String field = this.getStringFromField(this.field, execution);
+    	String dbl = this.getStringFromField(this.dbl, execution);
+    	String hover = this.getStringFromField(this.hover, execution);
+    	String button = this.getStringFromField(this.button, execution);
+    	String pageload = this.getStringFromField(this.pageload, execution);
+    	String visible = this.getStringFromField(this.visible, execution);  
+    	
+ 	
 
-    	System.out.println("Web Application Open Browser Parameters");
-    	System.out.println("Url :"+urlValue);
-    	System.out.println("BrowserType :"+type);
-    	System.out.println("BrowserName :"+resultVariableValue);
-    	System.out.println("PageLoad :"+pageLoad);
-    	System.out.println("maximize :"+maximize);
-    	System.out.println("Timeout :"+timeout);
-    	System.out.println("Download Dir :"+download);
-    	System.out.println("Profile Dir :"+profilePath);
+    	System.out.println("Web Application Mouse Parameters");
+    	System.out.println("BrowserId :"+browserId);
+    	System.out.println("XOffset :"+xOffset);
+    	System.out.println("YOffset :"+yOffset);
+    	System.out.println("Field :"+field);
+    	System.out.println("Dbl :"+dbl);
+    	System.out.println("hover :"+hover);
+    	System.out.println("button :"+button);
+    	System.out.println("pageload :"+pageload);
+    	System.out.println("visible :"+visible);
+    	
+    	
     	HttpClientBuilder clientBuilder = HttpClientBuilder.create();
 
-        if (usernameValue != null && passwordValue != null) {
+        /* Credentials Provider
+         * 
+         * if (usernameValue != null && passwordValue != null) {
             CredentialsProvider provider = new BasicCredentialsProvider();
             UsernamePasswordCredentials credentials = new UsernamePasswordCredentials(usernameValue, passwordValue);
             provider.setCredentials(new AuthScope("localhost", -1, "mule-realm"), credentials);
             clientBuilder.setDefaultCredentialsProvider(provider);
-        }
+        }*/
 
         HttpClient client = clientBuilder.build();
 
-        HttpPost request = new HttpPost( ClientConstants.STENCIL_TASK_WEBHOST_URL + "open");
+        HttpPost request = new HttpPost( ClientConstants.STENCIL_TASK_WEBHOST_URL + "mouse");
 
         try {
         	ObjectMapper mapper = new ObjectMapper();
         	ObjectNode node = mapper.createObjectNode();
-        	node.put("action", "OPEN");
-        	node.put("type", type);
+        	//node.put("action", "OPEN");
+        	/*node.put("type", type);
         	node.put("url", urlValue);
         	node.put("pageload", pageLoad);
         	node.put("maximize", maximize);
         	node.put("directory", download);
         	node.put("timeout", timeout);
-        	node.put("profilepath", profilePath);
+        	node.put("profilepath", profilePath);*/
+        	
+        	node.put("browser",browserId);
+        	node.put("xOffset",xOffset);
+        	node.put("yOffset",yOffset);
+        	node.put("field",field);
+        	node.put("dbl",dbl);
+        	node.put("hover",hover);
+        	node.put("button",button);
+            node.put("pageload",pageload);
+            
         	System.out.println(node.toString());
         	StringEntity input = new StringEntity(node.toString(),"UTF-8");
     		input.setContentType("application/json");
@@ -108,11 +151,11 @@ public class open implements JavaDelegate {
 			String sResult = jResult.asText();
 			browserId = jValue.asText();
 			if (sResult.equals("success")) {
-	            if (resultVariableValue != null) {
-	                execution.setVariable(resultVariableValue, browserId);
-	            }
+//	            if (resultVariableValue != null) {
+//	                execution.setVariable(resultVariableValue, browserId);
+//	            }
 			} else {
-	        	throw new BpmnError("WA-0002", "Error on opening page "+browserId);
+	        	throw new BpmnError("WA-0002", "Error mouse action on "+browserId);
 			}
 			
 		} catch (Exception e) {
@@ -132,62 +175,83 @@ public class open implements JavaDelegate {
         return null;
     }
 
-    public Expression getUrl() {
-        return url;
-    }
+    
+    // mouse
 
-    public void setUrl(Expression url) {
-        this.url = url;
-    }
+	public Expression getBrowserId() {
+		return browserId;
+	}
 
-    public Expression getType() {
-        return type;
-    }
+	public void setBrowserId(Expression browserId) {
+		this.browserId = browserId;
+	}
 
-    public void setType(Expression type) {
-        this.type = type;
-    }
+	public Expression getxOffset() {
+		return xOffset;
+	}
 
-    public Expression getResultVariable() {
-        return resultVariable;
-    }
+	public void setxOffset(Expression xOffset) {
+		this.xOffset = xOffset;
+	}
 
-    public void setResultVariable(Expression resultVariable) {
-        this.resultVariable = resultVariable;
-    }
+	public Expression getyOffset() {
+		return yOffset;
+	}
 
-    public Expression getPageLoad() {
-        return pageLoad;
-    }
-    public void setPageLoad(Expression pageLoad) {
-        this.pageLoad = pageLoad;
-    }
+	public void setyOffset(Expression yOffset) {
+		this.yOffset = yOffset;
+	}
 
-    public Expression getDownload() {
-        return download;
-    }
-    public void setDownload(Expression download) {
-        this.download = download;
-    }
+	public Expression getField() {
+		return field;
+	}
 
-    public Expression getTimeout() {
-        return timeout;
-    }
-    public void setTimeout(Expression timeout) {
-        this.timeout = timeout;
-    }
+	public void setField(Expression field) {
+		this.field = field;
+	}
 
-    public Expression getProfilePath() {
-        return profilePath;
-    }
-    public void setProfilePath(Expression profilePath) {
-        this.profilePath = profilePath;
-    }
+	public Expression getDbl() {
+		return dbl;
+	}
 
-    public Expression getMaximize() {
-        return maximize;
-    }
-    public void setMaximize(Expression maximize) {
-        this.maximize = maximize;
-    }
+	public void setDbl(Expression dbl) {
+		this.dbl = dbl;
+	}
+
+	public Expression getHover() {
+		return hover;
+	}
+
+	public void setHover(Expression hover) {
+		this.hover = hover;
+	}
+
+	public Expression getButton() {
+		return button;
+	}
+
+	public void setButton(Expression button) {
+		this.button = button;
+	}
+
+	public Expression getPageload() {
+		return pageload;
+	}
+
+	public void setPageload(Expression pageload) {
+		this.pageload = pageload;
+	}
+
+	public Expression getVisible() {
+		return visible;
+	}
+
+	public void setVisible(Expression visible) {
+		this.visible = visible;
+	}
+    
+    
+    //mouse
+    
+    
 }

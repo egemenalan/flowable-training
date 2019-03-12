@@ -61,6 +61,9 @@ public class ServiceTaskParseHandler extends AbstractExternalInvocationBpmnParse
             } else if (serviceTask.getType().equalsIgnoreCase("shell")) {
                 activity.setActivityBehavior(bpmnParse.getActivityBehaviorFactory().createShellActivityBehavior(serviceTask));
 
+            } else if (serviceTask.getType().startsWith("custom")) {
+            	serviceTask.setBehavior(bpmnParse.getActivityBehaviorFactory().createClassDelegateServiceTask(serviceTask));
+
             } else {
                 LOGGER.warn("Invalid service task type: '{}'  for service task {}", serviceTask.getType(), serviceTask.getId());
             }
