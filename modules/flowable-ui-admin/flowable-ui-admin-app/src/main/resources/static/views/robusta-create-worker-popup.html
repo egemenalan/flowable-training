@@ -1,0 +1,80 @@
+
+<div class="modal" ng-controller="RobustaCreateWorkerPopupController">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header-wrapper">
+                <div class="modal-header">
+                    <button type="button" class="close" ng-click="$hide()">&times;</button>
+                    <h2 class="modal-title" ng-if="model.mode == 'create'">
+                        {{'GENERAL.WORKER-DEFINITION.POPUP.CREATE-TITLE' | translate}}
+                    </h2>
+                    <h2 class="modal-title" ng-if="model.mode == 'edit'">
+                        {{'GENERAL.WORKER-DEFINITION.POPUP.EDIT-TITLE' | translate}}
+                    </h2>
+                </div>
+
+            </div>
+
+            <div  class="modal-body">
+
+                <form name="newWorkerForm" class="row">
+
+                    <div class="col-xs-12" ng-if="model.mode == 'create'">
+                        <div class="form-group">
+                            <label class="control-label">{{'IGENERAL.WORKER-DEFINITION.POPUP.CREATE-ID' | translate}}</label>
+                            <input name="idInput" type="text" class="form-control" auto-focus ng-model="model.worker.id">
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="form-group">
+                            <label class="control-label">{{'GENERAL.WORKER-DEFINITION.POPUP.CREATE-IP-HOST-NAME' | translate}}</label>
+                            <span style="color:white; background-color: red; padding: 0 5px 0 5px" ng-show="newWorkerForm.ipHostNameInput.$error.ipHostNameInput">
+                                {{'GENERAL.WORKER-DEFINITION.POPUP.CREATE-INVALID-IP-HOST-NAME' | translate}}
+                            </span>
+                            <input name="ipHostNameInputInput" type="ipHostNameInput" class="form-control" ng-model="model.worker.ipHostNameInput">
+                        </div>
+                    </div>
+                    <div class="col-xs-12" ng-if="model.mode == 'create'">
+                        <div class="form-group">
+                            <label class="control-label">{{'GENERAL.WORKER-DEFINITION.POPUP.CREATE-MIN-RP-PRIORITY' | translate}}</label>
+                            <input type="minBpPriority" class="form-control" ng-model="model.worker.minBpPriority">
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            <label class="control-label">{{'GENERAL.WORKER-DEFINITION.POPUP.CREATE-MAX-RP-PRIORITY' | translate}}</label>
+                            <input type="text" class="form-control" ng-model="model.user.maxBpPriority">
+                        </div>
+                    </div>
+
+                </form>
+
+                <div class="alert error" ng-if="model.errorMessage">
+                    {{model.errorMessage}}
+                </div>
+
+            </div>
+
+            <div class="modal-footer-wrapper">
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" ng-click="$hide()">{{'GENERAL.ACTION.CANCEL' | translate}}</button>
+                    <button ng-if="model.mode == 'create'"
+                            type="button"
+                            class="btn btn-primary"
+                            ng-disabled="model.loading || !model.worker.id || !model.worker.ipHostName || !model.worker.name"
+                            ng-click="createNewWorker();">{{'GENERAL.ACTION.SAVE' | translate}}
+                    </button>
+                    <button ng-if="model.mode == 'edit'"
+                            type="button"
+                            class="btn btn-primary"
+                            ng-disabled="model.loading || !model.worker.id || !model.worker.name"
+                            ng-click="editWorkerDetails();">{{'GENERAL.ACTION.SAVE' | translate}}
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

@@ -149,6 +149,12 @@ body {
 .navbar-inverse .navbar-nav > .active-content > a, .navbar-inverse .navbar-nav > .active-content > a:hover, .navbar-inverse .navbar-nav > .active-content > a:focus {
     background: rgb(102,153,255);
 	color: #ffffff;
+	
+}
+
+.navbar-inverse .navbar-nav > .active-robusta > a, .navbar-inverse .navbar-nav > .active-robusta > a:hover, .navbar-inverse .navbar-nav > .active-robusta > a:focus {
+	background: rgb(162,204,70);
+	color: #ffffff;
 }
 
 .navbar .btn-group > .btn-default {
@@ -209,6 +215,11 @@ body {
 .sub-navbar.active-content {
     background: rgb(102,153,255);
     background: linear-gradient(to right, rgba(102,153,255,1.0), rgba(102,153,255,1.0), rgba(102,153,255,1.0), rgba(102,153,255,0), rgba(102,153,255,0));
+}
+
+.sub-navbar.active-robusta {
+	background: rgb(162,204,70);
+    background: linear-gradient(to right, rgba(162,204,70,1.0), rgba(162,204,70,1.0), rgba(162,204,70,1.0), rgba(162,204,70,0), rgba(162,204,70,0));
 }
 
 .sub-navbar .drop-menu {
@@ -458,6 +469,9 @@ body {
 
 .component .title.content {
 	color: rgb(102,153,255)
+}
+.component .title.robusta {
+	color: rgb(253,229,65)
 }
 
 

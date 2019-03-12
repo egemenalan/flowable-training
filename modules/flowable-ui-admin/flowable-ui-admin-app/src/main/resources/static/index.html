@@ -56,10 +56,10 @@
                         <li ng-class="{'active-app': navigation.main == 'app-engine'}"><a href="#app-engine" translate="GENERAL.MENU.APP-ENGINE"></a></li>
                         <li ng-class="{'active-form': navigation.main == 'form-engine'}"><a href="#form-engine" translate="GENERAL.MENU.FORM-ENGINE"></a></li>
                         <li ng-class="{'active-dmn': navigation.main == 'dmn-engine'}"><a href="#dmn-engine" translate="GENERAL.MENU.DMN-ENGINE"></a></li>
-                        <li ng-class="{'active-content': navigation.main == 'content-engine'}"><a href="#content-engine" translate="GENERAL.MENU.CONTENT-ENGINE"></a></li>
+                        <li ng-class="{'active-robusta': navigation.main == 'robusta-definition'}"><a href="#robusta-definition" translate="GENERAL.MENU.ROBUSTA-DEFINITION"></a></li>
                     </ul>
                 </div>
-                <div class="sub-navbar" ng-class="{'active-process': navigation.main == 'process-engine', 'active-cmmn': navigation.main == 'cmmn-engine', 'active-app': navigation.main == 'app-engine', 'active-form': navigation.main == 'form-engine', 'active-dmn': navigation.main == 'dmn-engine', 'active-content': navigation.main == 'content-engine'}">
+                <div class="sub-navbar" ng-class="{'active-process': navigation.main == 'process-engine', 'active-cmmn': navigation.main == 'cmmn-engine', 'active-app': navigation.main == 'app-engine', 'active-form': navigation.main == 'form-engine', 'active-dmn': navigation.main == 'dmn-engine', 'active-content': navigation.main == 'content-engine', 'active-robusta': navigation.main == 'robusta-definition'}">
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav" ng-if="navigation.main == 'process-engine'">
                             <li ng-class="{'active': navigation.sub == 'deployments'}"><a href="#deployments" translate="GENERAL.MENU.DEPLOYMENTS"></a></li>
@@ -75,6 +75,7 @@
                             <li ng-class="{'active': navigation.sub == 'instances'}"><a href="#case-instances" translate="GENERAL.MENU.INSTANCES"></a></li>
                             <li ng-class="{'active': navigation.sub == 'tasks'}"><a href="#cmmn-tasks" translate="GENERAL.MENU.TASKS"></a></li>
                             <li ng-class="{'active': navigation.sub == 'jobs'}"><a href="#cmmn-jobs" translate="GENERAL.MENU.JOBS"></a></li>
+                            
                         </ul>
                         <ul class="nav navbar-nav" ng-if="navigation.main == 'app-engine'">
                             <li ng-class="{'active': navigation.sub == 'deployments'}"><a href="#app-deployments" translate="GENERAL.MENU.DEPLOYMENTS"></a></li>
@@ -93,6 +94,11 @@
                         <ul class="nav navbar-nav" ng-if="navigation.main == 'content-engine'">
                             <li ng-class="{active: navigation.sub == 'content-items'}"><a href="#content-items" translate="GENERAL.MENU.CONTENT-ITEMS"></a></li>
                         </ul>
+                        <ul class="nav navbar-nav" ng-if="navigation.main == 'robusta-definition'">
+                            <li ng-class="{active: navigation.sub == 'worker-definitions'}"><a href="#robusta-worker-definitions" translate="GENERAL.MENU.WORKER-DEFINITIONS"></a></li>
+                        
+                        </ul>
+                        </ul>
                     </div>
                 </div>
 
@@ -110,10 +116,12 @@
 				</div>
 			</div>
 		</div>
+		
+		
 
         <div ng-view="" ng-show="serverLoaded || authenticated" ng-cloak></div>
         <script type="text/ng-template" id="userItemTemplate.html"><a typeahead-scroll-item="$parent.$index"><span class="glyphicon glyphicon-user"></span><span class="user-label" bind-html-unsafe="match.label | typeaheadHighlight:query"></span></a></script>
-
+	
         <!-- build:js scripts/scripts.js -->
         <script src="bower_components/modernizr/modernizr.js"></script>
         <script src="bower_components/jquery/jquery.js"></script>
@@ -200,6 +208,8 @@
         <script src="scripts/form-instance-controllers.js"></script>
         <script src="scripts/content-items-controllers.js"></script>
         <script src="scripts/content-item-controllers.js"></script>
+        <script src="scripts/robusta-worker-definitions-controllers.js"></script>
+        <script src="scripts/robusta-worker-definition-controllers.js"></script>
         <!-- endbuild -->
 </body>
 </html>

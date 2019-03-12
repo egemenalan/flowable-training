@@ -230,6 +230,62 @@
             </div>
         </div>
 
+		<div class="col-md-9 component">
+            <div class="title robusta">
+                <h2 translate="CLUSTER.TITLE.ROBUSTA-ENDPOINT"></h2>
+            </div>
+            <p class="message"><i class="glyphicon glyphicon-info-sign"></i>
+                {{'CLUSTER.ENDPOINT-HELP' | translate}}
+            </p>
+
+            <div class="property-wrapper">
+                <table>
+                    <tr class="property">
+                        <td class="property-name" translate="CLUSTER.ENDPOINT-NAME"></td>
+                        <td>{{activeServers['robusta'].name | empty}}</td>
+                        <td class="property-name" translate="CLUSTER.ENDPOINT-DESCRIPTION"></td>
+                        <td>{{activeServers['robusta'].description | empty}}</td>
+                    </tr>
+                    <tr class="property">
+                        <td class="property-name" translate="CLUSTER.ENDPOINT-ADDRESS"></td>
+                        <td>{{activeServers['robusta'].serverAddress | empty}}</td>
+                        <td class="property-name" translate="CLUSTER.ENDPOINT-PORT"></td>
+                        <td>{{activeServers['robusta'].serverPort | empty}}</td>
+                    </tr>
+                    <tr class="property">
+                        <td class="property-name" translate="CLUSTER.ENDPOINT-CONTEXT-ROOT"></td>
+                        <td>{{activeServers['robusta'].contextRoot | empty}}</td>
+                        <td class="property-name" translate="CLUSTER.ENDPOINT-REST-ROOT"></td>
+                        <td>{{activeServers['robusta'].restRoot | empty}}</td>
+                    </tr>
+                    <tr class="property">
+                        <td class="property-name" translate="CLUSTER.ENDPOINT-USERNAME"></td>
+                        <td>{{activeServers['robusta'].userName | empty}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="component tip-left">
+                <div class="title robusta">
+                    <h2 translate="GENERAL.TITLE.ACTIONS"></h2>
+                </div>
+                <div class="seperator"></div>
+                <ul class="list-group">
+                    <li>
+                        <button type="button" class="btn btn-sm btn-default" ng-click="editRobustaEndpointConfig()">
+                            <i class="glyphicon glyphicon-pencil"></i>{{'CLUSTER.ACTION.EDIT-ENDPOINT' | translate}}
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-sm btn-default" ng-click="checkRobustaEndpointConfig()">
+                            <i class="glyphicon glyphicon-ok"></i>{{'CLUSTER.ACTION.CHECK-ENDPOINT' | translate}}
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
         <div class="col-md-9 component">
 

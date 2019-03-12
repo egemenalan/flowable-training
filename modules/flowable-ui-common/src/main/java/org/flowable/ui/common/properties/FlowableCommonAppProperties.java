@@ -67,6 +67,13 @@ public class FlowableCommonAppProperties {
      */
     @NestedConfigurationProperty
     private final Cache cacheUsers = new Cache();
+    
+    /**
+     * The cache configuration for the Robusta Workers.
+     */
+    @NestedConfigurationProperty
+    private final Cache cacheWorkers = new Cache();
+
 
     /**
      * The information for the IDM Admin user.
@@ -124,6 +131,11 @@ public class FlowableCommonAppProperties {
 
     public Cache getCacheUsers() {
         return cacheUsers;
+    }
+    
+    // Custom Robusta Egemen
+    public Cache getCacheWorkers() {
+        return cacheWorkers;
     }
 
     public Admin getIdmAdmin() {

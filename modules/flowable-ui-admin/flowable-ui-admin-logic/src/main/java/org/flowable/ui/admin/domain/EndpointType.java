@@ -20,7 +20,7 @@ import java.util.Map;
  */
 public enum EndpointType {
 
-    PROCESS(1), DMN(2), FORM(3), CONTENT(4), CMMN(5), APP(6);
+    PROCESS(1), DMN(2), FORM(3), CONTENT(4), CMMN(5), APP(6), ROBUSTA(7);
 
     private static Map<Integer, EndpointType> map = new HashMap<>();
 

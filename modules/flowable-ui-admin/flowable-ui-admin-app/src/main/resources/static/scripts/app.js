@@ -59,6 +59,12 @@ flowableAdminApp
                     controller: 'ContentItemsController',
                     reloadOnSearch: true
                 })
+                .when('/robusta-definition', {
+                    templateUrl:'views/robusta-worker-definitions.html',
+                    /*controller: 'DeploymentsController',*/
+                    controller: 'RobustaWorkerDefinitionController',
+                    reloadOnSearch: true
+                })
                 .when('/process-definitions', {
                     templateUrl: 'views/process-definitions.html',
                     controller: 'ProcessDefinitionsController',
@@ -280,11 +286,21 @@ flowableAdminApp
                     controller: 'ContentItemController',
                     reloadOnSearch: true
                 })
+               .when('/robusta-workers', {
+                    templateUrl: 'views/robusta-worker-definitions.html',
+                    controller: 'RobustaWorkerDefinitionsController',
+                    reloadOnSearch: true
+                })
+                .when('/robusta-workers/:robusta-workersId', {
+                    templateUrl: 'views/robusta-worker-definitions.html',
+                    controller: 'RobustaWorkerDefinitionController',
+                    reloadOnSearch: true
+                })
                 .otherwise({
                 	templateUrl: 'views/login.html',
                     controller: 'LoginController',
                     reloadOnSearch: true
-                });
+                })
 
             // Initialize angular-translate
             $translateProvider.useStaticFilesLoader({
@@ -441,7 +457,9 @@ flowableAdminApp
                                 } else if (data[i].endpointType === 5) {
                                     $rootScope.activeServers['cmmn'] = data[i];
                                 } else if (data[i].endpointType === 6) {
-                                    $rootScope.activeServers['app'] = data[i];
+                                	$rootScope.activeServers['app'] = data[i];
+                                } else if (data[i].endpointType === 7) {
+                                    $rootScope.activeServers['robusta'] = data[i];
                                 } else {
                                     console.log('Warning! Invalid endpoint type received: '+data[i].endpointType);
                                 }

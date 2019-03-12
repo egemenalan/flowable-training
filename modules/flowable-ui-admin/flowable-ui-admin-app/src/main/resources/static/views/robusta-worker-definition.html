@@ -1,0 +1,92 @@
+
+<div class="main-list" id="main-list">
+    <div class="list-subheader clearfix" style="margin-top: 0px">
+        <div class="btn-group pull-right">
+            <button class="btn" translate="GENERAL.WORKER-DEFINITION.CREATE-USER" ng-click="addWorker()">&nbsp;</button>
+        </div>
+    </div>
+    <div class="list-wrapper" auto-height>
+
+        <div style="padding: 0 15px 15px 15px;">
+
+            <h4>{{'GENERAL.WORKER-DEFINITION.NAME-SEARCH' | translate}}</h4>
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <i class="glyphicon glyphicon-search"></i>
+                </span>
+                <input type="text" ng-model="model.pendingFilterText" class="form-control" ng-change="refreshDelayed()">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="main-content-wrapper">
+
+    <div class="main-content" ng-show="!model.loadingTenant">
+
+        <div class="header">
+
+            <div class="pull-right">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default" ng-disabled="model.selectedUserCount == 0">{{'GENERAL.WORKER-DEFINITION.ACTIONS' | translate}}</button>
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" ng-disabled="model.selectedUserCount == 0">
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li ng-click="editUserDetails()" ng-if="model.selectedUserCount == 1"><a href="">{{'GENERAL.WORKER-DEFINITION.EDIT-USER' | translate}}</a></li>
+                        <li ng-click="deleteUsers()"><a href="">{{'GENERAL.WORKER-DEFINITION.DELETE-USERS' | translate}}</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div>
+                <h2>{{'GENERAL.WORKER-DEFINITION.TITLE' | translate}}</h2>
+            </div>
+
+        </div>
+
+        <div class="content" auto-height offset="6">
+            <div style="margin-top: 10px;">
+                <div class="dropdown-subtle pull-right">
+                    <div class="btn-group btn-group-sm" style="margin-bottom: 5px;">
+                        <button type="button" class="btn btn-default dropdown-toggle"
+                                data-toggle="dropdown">{{'GENERAL.WORKER-DEFINITION.ORDER-BY' | translate}} {{model.activeSort.name}} <i class="caret"></i></button>
+                        <ul class="dropdown-menu pull-right">
+                            <li ng-repeat="sort in model.sorts">
+                                <a ng-click="activateSort(sort)">{{sort.name}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="message clearfix">
+                    <div ng-if="!model.loading">
+								<span ng-if="model.users && model.users.data.length > 0">
+                                    {{'GENERAL.WORKER-DEFINITION.MATCHING-USERS' | translate:model.users}}
+									<a ng-click="showPreviousUsers()" ng-show="model.users.start > 0">&laquo; {{'GENERAL.WORKER-DEFINITION.SHOW-PREVIOUS' | translate}} {{model.users.size}}</a>
+									<span ng-show="model.users.start > 0 && model.users.moreUsers">|</span>
+									<a ng-click="showNextUsers()" ng-show="model.users.moreUsers">{{'GENERAL.WORKER-DEFINITION.SHOW-NEXT' | translate}} {{model.users.size}} &raquo;</a>
+								</span>
+                        <span ng-if="!model.users || model.users.total == 0">{{'GENERAL.WORKER-DEFINITION.NO-MATCHING-USERS' | translate}}</span>
+                    </div>
+
+                    <table width="100%" class="users" ng-if="model.users && model.users.data.length > 0">
+                        <tr>
+                            <th width="4%"></th>
+                            <th width="20%">{{'GENERAL.WORKER-DEFINITION.ID' | translate}}</th>
+                            <th width="30%">{{'GENERAL.WORKER-DEFINITION.NAME' | translate}}</th>
+                        </tr>
+                        <tr ng-repeat="user in model.users.data" ng-click="toggleUserSelection(user)" ng-class="{'selected': model.selectedUsers[user.id]}">
+                            <td class="control"><input type="checkbox" ng-checked="model.selectedUsers[user.id]"></td>
+                            <td>{{user.id}}</td>
+                            <td>{{user.email}}</td>
+                            <td>{{user.fullName}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

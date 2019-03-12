@@ -169,6 +169,7 @@ public class ServerConfigService extends AbstractEncryptingService {
         serverConfigs.add(getDefaultServerConfig(EndpointType.DMN));
         serverConfigs.add(getDefaultServerConfig(EndpointType.FORM));
         serverConfigs.add(getDefaultServerConfig(EndpointType.CONTENT));
+        serverConfigs.add(getDefaultServerConfig(EndpointType.ROBUSTA));
 
         return serverConfigs;
     }

@@ -43,6 +43,7 @@ public class ProcessEngineInfoService {
     public static final String CONTENT_ENGINE_INFO_URL = "content-management/engine";
     public static final String CMMN_ENGINE_INFO_URL = "cmmn-management/engine";
     public static final String APP_ENGINE_INFO_URL = "app-management/engine";
+    public static final String ROBUSTA_DEFINITION_INFO_URL = "robusta-management/engine";
 
     @Autowired
     protected FlowableClientService clientUtil;
@@ -80,6 +81,10 @@ public class ProcessEngineInfoService {
             
         case APP:
             builder = clientUtil.createUriBuilder(APP_ENGINE_INFO_URL);
+            break;
+            
+        case ROBUSTA:
+            builder = clientUtil.createUriBuilder(ROBUSTA_DEFINITION_INFO_URL);
             break;
         }
 
